@@ -11,7 +11,7 @@
 \contentsline {chapter}{Methods}{1}{section*.11}
 \contentsline {chapter}{Tempo Results}{5}{section*.27}
 \contentsline {chapter}{ERP Analysis}{8}{section*.38}
-\contentsline {chapter}{Classification}{9}{section*.44}
+\contentsline {chapter}{Classification}{10}{section*.44}
 \vspace {2em}
 \contentsline {chapter}{\numberline {A}An Appendix}{13}{appendix.49}
 \vspace {2em}

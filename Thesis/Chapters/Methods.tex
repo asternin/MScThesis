@@ -111,18 +111,18 @@ Conditions 3 and 4 simulate a more realistic query scenario during which the sys
 These two conditions were identical except for the trial context.
 While the condition 1--3 trials were recorded directly back-to-back within the first part of the experiment, 
 all condition 4 trials were recorded separately in the second part, without any cue clicks or tempo priming by prior presentation of the stimulus.
-After each condition 4 trial, participants provided feedback by pressing one of two buttons indicating on whether or not they felt they had imagined the stimulus correctly.
+After each condition 4 trial, participants provided feedback by pressing one of two buttons indicating whether or not they felt they had imagined the stimulus correctly.
 In total, 240 trials (12 stimuli x 4 conditions x 5 blocks) were recorded per subject.
 %
-The event markers recorded in the raw EEG comprise:
-\begin{itemize}
-\item
-	Trial labels (as a concatenation of stimulus ID and condition) at the beginning of each trial
-\item
-	Exact audio onsets for the first cue click of each trial in conditions 1 and 2 (detected by the Stimtracker)
-\item
-	Subject feedback for the condition 4 trials (separate event IDs for positive and negative feedback)
-\end{itemize}	
+%The event markers recorded in the raw EEG comprise:
+%\begin{itemize}
+%\item
+%	Trial labels (as a concatenation of stimulus ID and condition) at the beginning of each trial
+%\item
+%	Exact audio onsets for the first cue click of each trial in conditions 1 and 2 (detected by the Stimtracker)
+%\item
+%	Subject feedback for the condition 4 trials (separate event IDs for positive and negative feedback)
+%\end{itemize}	
 
 
 %We are interested in estimating the tempo of the music stimuli from the EEG signal. 
@@ -140,4 +140,4 @@ The data were then filtered with an fft-bandpass, keeping a frequency range betw
 This also removed any slow signal drift in the EEG.
 Afterwards, we down-sampled to a sampling rate of 64 Hz.
 To remove artifacts caused by eye blinks, we computed independent components using extended Infomax \ac{ICA} \cite{lee_independent_1999} and semi-automatically removed components that had a high correlation with the EOG channels.
-Finally, the 64 EEG channels were reconstructed from the remaining independent components without reducing dimensionality.
+Finally, the 64 EEG channels were reconstructed from the remaining independent components without  \hl{reducing dimensionality.}
