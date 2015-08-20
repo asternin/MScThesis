@@ -8,10 +8,17 @@
 \contentsline {chapter}{List of Tables}{viii}{dummy.8}
 \vspace {2em}
 \contentsline {chapter}{Introduction}{1}{section*.10}
+<<<<<<< HEAD
 \contentsline {chapter}{Methods}{1}{section*.11}
 \contentsline {chapter}{Tempo Results}{5}{section*.27}
 \contentsline {chapter}{ERP Analysis}{8}{section*.38}
 \contentsline {chapter}{Classification}{10}{section*.44}
+=======
+\contentsline {chapter}{Methods}{3}{section*.17}
+\contentsline {chapter}{Tempo Results}{7}{section*.32}
+\contentsline {chapter}{ERP Analysis}{10}{section*.43}
+\contentsline {chapter}{Classification}{12}{section*.49}
+>>>>>>> ffe8e4872b5f8163e06626e0521452b91162d828
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}An Appendix}{13}{appendix.49}
+\contentsline {chapter}{\numberline {A}An Appendix}{15}{appendix.53}
 \vspace {2em}

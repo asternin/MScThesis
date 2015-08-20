@@ -1,4 +1,51 @@
 \section*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at pulvinar nisi. Phasellus hendrerit, diam placerat interdum iaculis, mauris justo cursus risus, in viverra purus eros at ligula. Ut metus justo, consequat a tristique posuere, laoreet nec nibh. Etiam et scelerisque mauris. Phasellus vel massa magna. Ut non neque id tortor pharetra bibendum vitae sit amet nisi. Duis nec quam quam, sed euismod justo. Pellentesque eu tellus vitae ante tempus malesuada. Nunc accumsan, quam in congue consequat, lectus lectus dapibus erat, id aliquet urna neque at massa. Nulla facilisi. Morbi ullamcorper eleifend posuere. Donec libero leo, faucibus nec bibendum at, mattis et urna. Proin consectetur, nunc ut imperdiet lobortis, magna neque tincidunt lectus, id iaculis nisi justo id nibh. Pellentesque vel sem in erat vulputate faucibus molestie ut lorem.
+Everybody imagines music. Imagining music can be defined as a deliberate internal recreation of the perceptual experience of listening to music \cite{Schaefer2011}.
+Individuals can imagine themselves producing music, imagine listening to others produce music, or simply "hear" the music in their heads. 
+Music imagination is used by musicians to memorize music and anyone who has ever had an "ear-worm" -- a tune stuck in their head ? has experienced imagining music.
+Furthermore, music imagery appears to be a very promising means for driving \ac{BCI} that use \ac{EEG} -- a popular non-invasive neuroimaging technique that relies on electrodes placed on the scalp to measure the electrical activity of the brain.
+For instance, Schaefer \etal\cite{schaefer_measuring_2011} argue that
+\emph{``music is especially suitable to use here as (externally or internally generated) stimulus material, since it unfolds over time, and \ac{EEG} is especially precise in measuring the timing of a response.''}
+For patients that have difficulties communicating behaviourally (e.g. patients with locked-in syndrome) \ac{BCI}s are a promising communication tool. 
+{BCI}s that currently exist are generally binary systems that allow the user to choose between two answers to answer yes/no questions limiting communication abilities. 
+A system with a larger number of answer options would offer a more complete communication experience. 
+Using music as the basis for a \ac{BCI} is a promising way to build such a system due to the large number of musical pieces that exist. 
+Ideally such a \ac{BCI} would allow the user to imagine a piece of music in order to convey a particular thought. 
+The translation from music imagination will require careful processing of the EEG data. 
+
+EEG data is full of unwanted signals (noise) and extracting the relevant information can be a challenge.
+Retrieval based on brain wave recordings is still a very young and largely unexplored domain.
+A recent review of neuroimaging methods for \ac{MIR} that also covers techniques different from EEG is given in \cite{ismir2015kaneshiro}.
+\ac{EEG} signals have been used to measure emotions induced by music perception \cite{lin_eeg_2009,cabredo_emotion_2012} and to distinguish perceived rhythmic stimuli \cite{stober2014nips}.
+It has been shown that oscillatory neural activity in the gamma frequency band (20-60 Hz) is sensitive to accented tones in a rhythmic sequence \cite{snyder_gamma-band_2005}.
+Oscillations in the beta band (20-30 Hz) entrain to rhythmic sequences \cite{cirelli_beta_2014, merchant_beta_2015} and increase in anticipation of strong tones in a non-isochronous, rhythmic sequence \cite{iversen_top-down_2009,fujioka_beta_2009,fujioka_internalized_2012}.
+The magnitude of \acp{SSEP}, which reflect neural oscillations entrained to the stimulus, changes when subjects hear rhythmic sequences for frequencies related to the metrical structure of the rhythm.
+This is a sign of entrainment to beat and meter \cite{nozaradan_tagging_2011,nozaradan_selective_2012}. 
+\ac{EEG} studies have further shown that perturbations of the rhythmic pattern lead to distinguishable \acp{ERP}\footnote{A description of how \acfp{ERP} are computed and some examples are provided in \autoref{sec:processing}.} \cite{geiser_early_2009}.
+Furthermore, Vlek \etal \cite{vlek_shared_2011} showed that imagined auditory accents imposed on top of a steady metronome click can be recognized from EEG.
+
+EEG has also been successfully used to distinguish perceived melodies. 
+In a study by Schaefer \etal \cite{schaefer_name_2011}, 10 participants listened to 7 short melody clips with a length between 3.26s and 4.36s.
+For single-trial classification, each stimulus was presented 140 times in randomized back-to-back sequences of all stimuli.
+Using a quadratically regularized linear logistic-regression classifier with 10-fold cross-validation, they were able to successfully classify the \acp{ERP} of single trials.
+Within subjects, the accuracy varied between 25\% and 70\%.
+Applying the same classification scheme across participants, they obtained between 35\% and 53\% accuracy.
+In a further analysis, they combined all trials from all subjects and stimuli into a grand average \ac{ERP}.
+Using singular-value decomposition, they obtained a fronto-central component that explained 23\% of the total signal variance.
+The time courses corresponding to this component showed significant differences between stimuli that were strong enough to allow cross-participant classification.
+
+Recently studies have identified a close relationship between the brain areas that are active during the imagination and the perception of music \cite{Halpern2004,Kraemer2005,Herholz2008,Herholz2012}.
+As Hubbard concludes in his recent review of the literature on auditory imagery, \emph{``auditory imagery preserves many structural and temporal properties of auditory stimuli''} and \emph{``involves many of the same brain areas as auditory perception''} \cite{hubbard_auditory_2010}. 
+This is also underlined by Schaefer \cite[p. 142]{schaefer_measuring_2011} whose \emph{``most important conclusion is that there is a substantial amount of overlap between the two tasks} [music perception and imagination]\emph{, and that `internally' creating a perceptual experience uses functionalities of `normal' perception.''}
+Thus, brain signals recorded while listening to a music piece could serve as reference data. The data could be used in a retrieval system to detect salient elements expected during imagination.
+By using perception data as a way to inform the system we can cut down on the amount of training time needed which will reduce any potential user fatigue.
+
+A recent meta-analysis \cite{schaefer_shared_2013} summarized evidence that \ac{EEG} is capable of detecting brain activity during the imagination of music.
+Most notably, encouraging preliminary results for recognizing imagined music fragments from \ac{EEG} recordings were reported in \cite{schaefer_single_2009} in which 4 out of 8 participants produced imagery that was classifiable (in a binary comparison) with an accuracy between 70\% and 90\% after 11 trials.%
+
+Although \ac{EEG} has been used to decode imagination this typical EEG processing techniques may not be sensitive enough to the subtle changes that occur during music imagination. 
+The sophisticated signal processing techniques from the field of \ac{MIR} can lend expertise to this challenge. 
+Using machine learning techniques like \ac{CNN}s we attempt to classify imagined pieces of music from EEG. 
+
+
