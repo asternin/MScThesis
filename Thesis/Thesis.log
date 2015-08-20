@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 AUG 2015 13:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 AUG 2015 14:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -712,77 +712,83 @@ Package natbib Warning: Citation `Schaefer2011' on page 1 undefined on input li
 ne 4.
 
 Package acronym Info: Label `acro:BCI' newly defined as it shall be overridden
-although it is yet undefined on input line 7.
+although it is yet undefined on input line 6.
 Package acronym Info: Label `acro:EEG' newly defined as it shall be overridden
-although it is yet undefined on input line 7.
+although it is yet undefined on input line 8.
 
 Package natbib Warning: Citation `schaefer_measuring_2011' on page 1 undefined 
-on input line 8.
-
-Package acronym Info: Label `acro:MIR' newly defined as it shall be overridden
-although it is yet undefined on input line 19.
-
-Package natbib Warning: Citation `ismir2015kaneshiro' on page 1 undefined on in
-put line 19.
+on input line 9.
 
 
 Package natbib Warning: Citation `lin_eeg_2009' on page 1 undefined on input li
-ne 20.
+ne 22.
 
 
 Package natbib Warning: Citation `cabredo_emotion_2012' on page 1 undefined on 
-input line 20.
+input line 22.
 
 
 Package natbib Warning: Citation `stober2014nips' on page 1 undefined on input 
-line 20.
+line 22.
 
 
 Package natbib Warning: Citation `snyder_gamma-band_2005' on page 1 undefined o
-n input line 21.
+n input line 23.
 
 
 Package natbib Warning: Citation `cirelli_beta_2014' on page 1 undefined on inp
-ut line 22.
+ut line 24.
 
 
 Package natbib Warning: Citation `merchant_beta_2015' on page 1 undefined on in
-put line 22.
+put line 24.
 
 
 Package natbib Warning: Citation `iversen_top-down_2009' on page 1 undefined on
- input line 22.
+ input line 24.
 
 
 Package natbib Warning: Citation `fujioka_beta_2009' on page 1 undefined on inp
-ut line 22.
+ut line 24.
 
 
 Package natbib Warning: Citation `fujioka_internalized_2012' on page 1 undefine
-d on input line 22.
+d on input line 24.
 
 Package acronym Info: Label `acro:SSEP' newly defined as it shall be overridden
 
-although it is yet undefined on input line 23.
+although it is yet undefined on input line 25.
 
 Package natbib Warning: Citation `nozaradan_tagging_2011' on page 1 undefined o
-n input line 24.
+n input line 26.
 
 
 Package natbib Warning: Citation `nozaradan_selective_2012' on page 1 undefined
- on input line 24.
-
-
-LaTeX Warning: Reference `sec:processing' on page 1 undefined on input line 25.
-
+ on input line 26.
 
 
 Package natbib Warning: Citation `geiser_early_2009' on page 1 undefined on inp
-ut line 25.
+ut line 27.
 
 
 Package natbib Warning: Citation `vlek_shared_2011' on page 1 undefined on inpu
-t line 26.
+t line 28.
+
+
+Package natbib Warning: Citation `Halpern2004' on page 1 undefined on input lin
+e 31.
+
+
+Package natbib Warning: Citation `Kraemer2005' on page 1 undefined on input lin
+e 31.
+
+
+Package natbib Warning: Citation `Herholz2008' on page 1 undefined on input lin
+e 31.
+
+
+Package natbib Warning: Citation `Herholz2012' on page 1 undefined on input lin
+e 31.
 
 [1
 
@@ -790,47 +796,22 @@ t line 26.
 ]
 
 Package natbib Warning: Citation `schaefer_name_2011' on page 2 undefined on in
-put line 29.
-
-
-Package natbib Warning: Citation `Halpern2004' on page 2 undefined on input lin
-e 38.
-
-
-Package natbib Warning: Citation `Kraemer2005' on page 2 undefined on input lin
-e 38.
-
-
-Package natbib Warning: Citation `Herholz2008' on page 2 undefined on input lin
-e 38.
-
-
-Package natbib Warning: Citation `Herholz2012' on page 2 undefined on input lin
-e 38.
-
-
-Package natbib Warning: Citation `hubbard_auditory_2010' on page 2 undefined on
- input line 39.
-
-
-Package natbib Warning: Citation `schaefer_measuring_2011' on page 2 undefined 
-on input line 40.
+put line 36.
 
 
 Package natbib Warning: Citation `schaefer_shared_2013' on page 2 undefined on 
-input line 44.
+input line 46.
 
 
 Package natbib Warning: Citation `schaefer_single_2009' on page 2 undefined on 
-input line 45.
+input line 46.
 
-Package acronym Info: Label `acro:CNN' newly defined as it shall be overridden
-although it is yet undefined on input line 49.
-) (./Chapters/Methods.tex [2]
+) (./Chapters/Methods.tex
 Underfull \hbox (badness 10000) in alignment at lines 36--36
 [][][][][][][] 
  []
 
+[2]
 
 Package natbib Warning: Citation `mullensiefen_musicality_2014' on page 3 undef
 ined on input line 44.
@@ -839,20 +820,20 @@ ined on input line 44.
 Package natbib Warning: Citation `willander_imagery_scale_2010' on page 3 undef
 ined on input line 44.
 
-[3] <Figures/EEG-setup.pdf, id=217, 693.41469pt x 404.48714pt>
+[3] <Figures/EEG-setup.pdf, id=211, 693.41469pt x 404.48714pt>
 File: Figures/EEG-setup.pdf Graphic file (type pdf)
 
 <use Figures/EEG-setup.pdf>
 Package pdftex.def Info: Figures/EEG-setup.pdf used on input line 60.
 (pdftex.def)             Requested size: 417.47307pt x 243.5212pt.
- [4]
-<Figures/study_design_small.pdf, id=227, 594.22pt x 307.1475pt>
+ [4 <./Figures/EEG-setup.pdf>]
+<Figures/study_design_small.pdf, id=242, 594.22pt x 307.1475pt>
 File: Figures/study_design_small.pdf Graphic file (type pdf)
 
 <use Figures/study_design_small.pdf>
 Package pdftex.def Info: Figures/study_design_small.pdf used on input line 86.
 (pdftex.def)             Requested size: 333.97972pt x 172.63881pt.
- [5 <./Figures/EEG-setup.pdf> <./Figures/study_design_small.pdf>]
+ [5 <./Figures/study_design_small.pdf>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 120.
 
 
@@ -876,28 +857,29 @@ although it is yet undefined on input line 142.
 Package natbib Warning: Citation `lee_independent_1999' on page 6 undefined on 
 input line 142.
 
-) (./Chapters/TempoResults.tex [6]
+) (./Chapters/TempoResults.tex
 
-Package natbib Warning: Citation `Ellis2007beat' on page 7 undefined on input l
+Package natbib Warning: Citation `Ellis2007beat' on page 6 undefined on input l
 ine 8.
 
-<Figures/non-overlap_bar-aligned-ERPs.pdf, id=327, 904.77243pt x 340.17087pt>
+[6]
+<Figures/non-overlap_bar-aligned-ERPs.pdf, id=320, 904.77243pt x 340.17087pt>
 File: Figures/non-overlap_bar-aligned-ERPs.pdf Graphic file (type pdf)
 
 <use Figures/non-overlap_bar-aligned-ERPs.pdf>
 Package pdftex.def Info: Figures/non-overlap_bar-aligned-ERPs.pdf used on input
  line 33.
 (pdftex.def)             Requested size: 417.47307pt x 156.95802pt.
- [7] [8 <./Figures/non-overlap_bar-aligned-ERPs.pdf>]
-<Figures/sliding-window-analysis_arrow.pdf, id=386, 887.842pt x 214.37491pt>
+ [7 <./Figures/non-overlap_bar-aligned-ERPs.pdf>]
+<Figures/sliding-window-analysis_arrow.pdf, id=373, 887.842pt x 214.37491pt>
 File: Figures/sliding-window-analysis_arrow.pdf Graphic file (type pdf)
 
 <use Figures/sliding-window-analysis_arrow.pdf>
 Package pdftex.def Info: Figures/sliding-window-analysis_arrow.pdf used on inpu
 t line 87.
 (pdftex.def)             Requested size: 417.47307pt x 100.802pt.
- [9 <./Figures/sliding-window-analysis_arrow.pdf>]
-<Figures/tempo-error-per-stim-cond-all_colour.pdf, id=427, 727.98274pt x 282.00
+ [8]
+<Figures/tempo-error-per-stim-cond-all_colour.pdf, id=384, 727.98274pt x 282.00
 557pt>
 File: Figures/tempo-error-per-stim-cond-all_colour.pdf Graphic file (type pdf)
  <use Figures/tempo-error-per-stim-cond-all_colour.pdf>
@@ -907,33 +889,33 @@ on input line 128.
 )
 (./Chapters/ERPResults.tex
 
-Package natbib Warning: Citation `schaefer_name_2011' on page 10 undefined on i
-nput line 4.
+Package natbib Warning: Citation `schaefer_name_2011' on page 9 undefined on in
+put line 4.
 
 Package acronym Info: Label `acro:PCA' newly defined as it shall be overridden
 although it is yet undefined on input line 6.
+[9 <./Figures/sliding-window-analysis_arrow.pdf>]
 
 Package natbib Warning: Citation `schaefer_name_2011' on page 10 undefined on i
 nput line 9.
 
-[10 <./Figures/tempo-error-per-stim-cond-all_colour.pdf>]
-<Figures/principle_components.pdf, id=452, 506.55704pt x 542.10103pt>
+<Figures/principle_components.pdf, id=422, 506.55704pt x 542.10103pt>
 File: Figures/principle_components.pdf Graphic file (type pdf)
 
 <use Figures/principle_components.pdf>
 Package pdftex.def Info: Figures/principle_components.pdf used on input line 13
 .
 (pdftex.def)             Requested size: 333.97972pt x 357.42383pt.
- [11 <./Figures/principle_components.pdf>]
-<Figures/component_timecourse_ballgame.pdf, id=548, 1002.24437pt x 213.5497pt>
+
+<Figures/component_timecourse_ballgame.pdf, id=425, 1002.24437pt x 213.5497pt>
 File: Figures/component_timecourse_ballgame.pdf Graphic file (type pdf)
 
 <use Figures/component_timecourse_ballgame.pdf>
 Package pdftex.def Info: Figures/component_timecourse_ballgame.pdf used on inpu
 t line 43.
 (pdftex.def)             Requested size: 333.97972pt x 71.16241pt.
-
-<Figures/component_timecourse_nachtmusic.pdf, id=549, 1002.24437pt x 213.5497pt
+ [10 <./Figures/tempo-error-per-stim-cond-all_colour.pdf>]
+<Figures/component_timecourse_nachtmusic.pdf, id=446, 1002.24437pt x 213.5497pt
 >
 File: Figures/component_timecourse_nachtmusic.pdf Graphic file (type pdf)
  <use Figures/component_timecourse_nachtmusic.pdf>
@@ -943,39 +925,42 @@ put line 53.
 )
 (./Chapters/Classification.tex
 
-Package natbib Warning: Citation `schaefer_name_2011' on page 12 undefined on i
+Package natbib Warning: Citation `schaefer_name_2011' on page 11 undefined on i
 nput line 3.
 
 
-Package natbib Warning: Citation `schaefer_name_2011' on page 12 undefined on i
+Package natbib Warning: Citation `schaefer_name_2011' on page 11 undefined on i
 nput line 5.
 
+[11 <./Figures/principle_components.pdf> <./Figures/component_timecourse_ballga
+me.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./Figures/component_timecourse_ballg
+ame.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
+e
+>]
 Package acronym Info: Label `acro:CAE' newly defined as it shall be overridden
 although it is yet undefined on input line 9.
+Package acronym Info: Label `acro:CNN' newly defined as it shall be overridden
+although it is yet undefined on input line 10.
 Package acronym Info: Label `acro:MSRE' newly defined as it shall be overridden
 
 although it is yet undefined on input line 15.
-[12 <./Figures/component_timecourse_ballgame.pdf> <./Figures/component_timecour
-se_nachtmusic.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./Figures/component_timecourse_nacht
-music.pdf): PDF inclusion: multiple pdfs with page group included in a single p
-age
->] <Figures/topoplots_all.pdf, id=622, 1104.79352pt x 453.47313pt>
+ <Figures/topoplots_all.pdf, id=573, 1104.79352pt x 453.47313pt>
 File: Figures/topoplots_all.pdf Graphic file (type pdf)
 
 <use Figures/topoplots_all.pdf>
 Package pdftex.def Info: Figures/topoplots_all.pdf used on input line 24.
 (pdftex.def)             Requested size: 417.47307pt x 171.35284pt.
- [13 <./Figures/topoplots_all.pdf>])
-(./Appendices/AppendixA.tex [14]
+ [12 <./Figures/component_timecourse_nachtmusic.pdf>]) (./Appendices/AppendixA.
+tex [13 <./Figures/topoplots_all.pdf>]
 Appendix A.
 ------------------------------------------------------------------------------
  A An Appendix
 ------------------------------------------------------------------------------
-[15
+[14
 
-]) [16]
+]) [15]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
@@ -988,17 +973,8 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
 (./Thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
-
-
-Package rerunfilecheck Warning: File `Thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Thesis.out':
-(rerunfilecheck)             Before: F9EA6BF21B5016AB8F0B4533E8FE9B8A;1252
-(rerunfilecheck)             After:  A7232E24F4F4864A4DE9DFCF610E3F87;1252.
-
-LaTeX Warning: There were undefined references.
+Package rerunfilecheck Info: File `Thesis.out' has not changed.
+(rerunfilecheck)             Checksum: FE734D2D481EBC7985B664C2F55E9100;1252.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1006,61 +982,33 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
  ) 
 Here is how much of TeX's memory you used:
- 13827 strings out of 493117
- 196413 string characters out of 6135433
- 283899 words of memory out of 5000000
- 16969 multiletter control sequences out of 15000+600000
- 15949 words of font info for 59 fonts, out of 8000000 for 9000
+ 13806 strings out of 493117
+ 196129 string characters out of 6135433
+ 287109 words of memory out of 5000000
+ 16961 multiletter control sequences out of 15000+600000
+ 15641 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,11n,45p,1092b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{table.caption.19} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.46} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.44} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.41} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.37} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.35} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.23} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.48} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.42} has been referenced but does not exist
-, replaced by a fixed one
-
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Thesis.pdf (26 pages, 5812515 bytes).
+ 49i,11n,45p,1092b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on Thesis.pdf (25 pages, 5800971 bytes).
 PDF statistics:
- 940 PDF objects out of 1000 (max. 8388607)
- 569 compressed objects within 6 object streams
- 89 named destinations out of 1000 (max. 500000)
+ 918 PDF objects out of 1000 (max. 8388607)
+ 549 compressed objects within 6 object streams
+ 77 named destinations out of 1000 (max. 500000)
  134 words of extra memory for PDF output out of 10000 (max. 10000000)
 
