@@ -49,4 +49,34 @@ Although \ac{EEG} has been used to decode music imagination the accuracy levels 
 This could be because the EEG processing techniques used may not be sensitive enough to the subtle changes that occur during music imagination. 
 The sophisticated signal processing techniques used in machine learning can lend expertise to this challenge. 
 
-MACHINE LEARNING STUFF
+Machine learning is an emerging field that explores algorithms that can learn from and make predictions on data.
+For example, the programs used by postal services to recognize handwriting on envelopes or the speech recognition software in your cell phone are based on machine learning techniques.
+One such technique uses \acp{CNN}. 
+\acp{CNN} were inspired by the powerfully complex visual system found in humans and other animals.
+In the retina we have cells that are responsive to small regions of the visual field \cite{Hubel1963}. 
+As information moves along the visual processing stream and into the brain single cells in higher layers receive input from multiple cells in lower layers.
+At each level of this process more information is combined giving cells at each processing layer an increasingly global view of what information was collected by the retinal cells.
+Complex visual information is processed farther along the processing stream than simple information as cells in these far layers are sent information from a larger number of retinal cells.
+\acp{CNN} work in a similar way.
+The processing units in a \ac{CNN} act like cells in the visual system.
+The "receptive field" of each one of these units is determined by a filter.
+Each filter is created based on a variety of parameters set by the researcher.
+In this experiment the filters used are \acp{CAE} (as described in \cite{masci2011}).
+A \ac{CAE} is an artificial neural network that is able to extract features from data without supervision.
+% feature extractor that scales well to high dimensional input.
+Importantly, \acp{CAE} preserve spatial information allowing them to learn biologically plausible features.
+Once the \ac{CAE} has extracted the important features from the training data and constructed the filters these filters can be used in a \ac{CNN}.
+In classification tasks the \ac{CNN} takes these filters and applies them to data that it has never seen before.
+As information moves higher through the \ac{CNN} the units are exposed to a larger amount of combined data, like the cells in high layers of the visual processing stream. 
+By evaluating the effects the filters have on the data the \ac{CNN} can then classify new data into existing categories -- determined by what was learned from the training data.
+
+
+
+
+
+
+
+
+
+
+
