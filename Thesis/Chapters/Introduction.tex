@@ -65,8 +65,13 @@ Each filter is created based on a variety of parameters set by the researcher.
 In this experiment the filters used are \acp{CAE} (as described in \cite{masci_stacked_2011}).
 A \ac{CAE} is an artificial neural network that is able to extract features from data without supervision.
 % feature extractor that scales well to high dimensional input.
+CAEs are a special variant of a \ac{CNN} that encode their input using convolution into a compressed internal representation. 
+This representation is then decoded using de-convolution into the original space while trying to minimize the reconstruction error. 
+This type of neural network can learn a meaningful but compressed representation of the data.
 Importantly, \acp{CAE} preserve spatial information allowing them to learn biologically plausible features.
 Once the \ac{CAE} has extracted the important features from the training data and constructed the filters these filters can be used in a \ac{CNN}.
+These filters are very similar to the components produced in \ac{PCA} and \ac{ICA} with the difference being the parameters used to compute the components. 
+The \ac{CAE} filters aim to minimize the \ac{MSRE} rather than the orthogonality or independence criteria used in \ac{PCA} and \ac{ICA} respectively. 
 In classification tasks the \ac{CNN} takes these filters and applies them to data that it has never seen before.
 As information moves higher through the \ac{CNN} the units are exposed to a larger amount of combined data, like the cells in high layers of the visual processing stream. 
 By evaluating the effects the filters have on the data the \ac{CNN} can then classify new data into existing categories -- determined by what was learned from the training data.

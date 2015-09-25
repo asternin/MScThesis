@@ -2,12 +2,63 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Avital Sternin at 2015-09-24 20:25:30 -0400 
+%% Created for Avital Sternin at 2015-09-25 12:26:22 -0400 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{hinton_improving_2012,
+	Abstract = {When a large feedforward neural network is trained on a small training set, it typically performs poorly on held-out test data. This "overfitting" is greatly reduced by randomly omitting half of the feature detectors on each training case. This prevents complex co-adaptations in which a feature detector is only helpful in the context of several other specific feature detectors. Instead, each neuron learns to detect a feature that is generally helpful for producing the correct answer given the combinatorially large variety of internal contexts in which it must operate. Random "dropout" gives big improvements on many benchmark tasks and sets new records for speech and object recognition.},
+	Author = {Hinton, Geoffrey E. and Srivastava, Nitish and Krizhevsky, Alex and Sutskever, Ilya and Salakhutdinov, Ruslan R.},
+	Date-Added = {2015-09-25 16:26:18 +0000},
+	Date-Modified = {2015-09-25 16:26:18 +0000},
+	File = {arXiv\:1207.0580 PDF:/Users/sstober/work/zotero/storage/CXJUW2FN/Hinton et al. - 2012 - Improving neural networks by preventing co-adaptat.pdf:application/pdf;arXiv.org Snapshot:/Users/sstober/work/zotero/storage/MTE9KQU5/1207.html:text/html},
+	Journal = {arXiv:1207.0580 [cs]},
+	Keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Learning, Computer Science - Neural and Evolutionary Computing},
+	Note = {arXiv: 1207.0580},
+	Title = {Improving neural networks by preventing co-adaptation of feature detectors},
+	Url = {http://arxiv.org/abs/1207.0580},
+	Urldate = {2015-04-26},
+	Xmonth = jul,
+	Year = {2012},
+	Bdsk-Url-1 = {http://arxiv.org/abs/1207.0580}}
+
+@article{tang_deep_2013,
+	Abstract = {Recently, fully-connected and convolutional neural networks have been trained to achieve state-of-the-art performance on a wide variety of tasks such as speech recognition, image classification, natural language processing, and bioinformatics. For classification tasks, most of these "deep learning" models employ the softmax activation function for prediction and minimize cross-entropy loss. In this paper, we demonstrate a small but consistent advantage of replacing the softmax layer with a linear support vector machine. Learning minimizes a margin-based loss instead of the cross-entropy loss. While there have been various combinations of neural nets and SVMs in prior art, our results using L2-SVMs show that by simply replacing softmax with linear SVMs gives significant gains on popular deep learning datasets MNIST, CIFAR-10, and the ICML 2013 Representation Learning Workshop's face expression recognition challenge.},
+	Annote = {Comment: Contribution to the ICML 2013 Challenges in Representation Learning Workshop},
+	Author = {Tang, Yichuan},
+	Date-Added = {2015-09-25 16:17:14 +0000},
+	Date-Modified = {2015-09-25 16:17:14 +0000},
+	File = {arXiv\:1306.0239 PDF:/Users/sstober/work/zotero/storage/G8I7FHCV/Tang - 2013 - Deep Learning using Linear Support Vector Machines.pdf:application/pdf;arXiv.org Snapshot:/Users/sstober/work/zotero/storage/RN7JSDGE/1306.html:text/html},
+	Journal = {arXiv:1306.0239 [cs, stat]},
+	Keywords = {Computer Science - Learning, Statistics - Machine Learning},
+	Note = {arXiv: 1306.0239},
+	Title = {Deep {Learning} using {Linear} {Support} {Vector} {Machines}},
+	Url = {http://arxiv.org/abs/1306.0239},
+	Urldate = {2015-05-05},
+	Xmonth = jun,
+	Year = {2013},
+	Bdsk-Url-1 = {http://arxiv.org/abs/1306.0239}}
+
+@article{goodfellow_pylearn2_2013,
+	Abstract = {Pylearn2 is a machine learning research library. This does not just mean that it is a collection of machine learning algorithms that share a common API; it means that it has been designed for flexibility and extensibility in order to facilitate research projects that involve new or unusual use cases. In this paper we give a brief history of the library, an overview of its basic philosophy, a summary of the library's architecture, and a description of how the Pylearn2 community functions socially.},
+	Annote = {Comment: 9 pages},
+	Author = {Goodfellow, Ian J. and Warde-Farley, David and Lamblin, Pascal and Dumoulin, Vincent and Mirza, Mehdi and Pascanu, Razvan and Bergstra, James and Bastien, Fr{\'e}d{\'e}ric and Bengio, Yoshua},
+	Date-Added = {2015-09-25 15:58:45 +0000},
+	Date-Modified = {2015-09-25 15:59:38 +0000},
+	File = {arXiv\:1308.4214 PDF:/Users/sstober/work/zotero/storage/J8AHM2IN/Goodfellow et al. - 2013 - Pylearn2 a machine learning research library.pdf:application/pdf;arXiv.org Snapshot:/Users/sstober/work/zotero/storage/UN2MXDFE/1308.html:text/html},
+	Journal = {arXiv:1308.4214 [cs, stat]},
+	Keywords = {Computer Science - Learning, Computer Science - Mathematical Software, Statistics - Machine Learning},
+	Note = {arXiv: 1308.4214},
+	Shorttitle = {Pylearn2},
+	Title = {Pylearn2: a machine learning research library},
+	Url = {http://arxiv.org/abs/1308.4214},
+	Urldate = {2015-04-26},
+	Xmonth = aug,
+	Year = {2013},
+	Bdsk-Url-1 = {http://arxiv.org/abs/1308.4214}}
 
 @article{ellis_beat_2007,
 	Abstract = {Beat tracking i.e. deriving from a music audio signal a sequence of beat instants that might correspond to when a human listener would tap his foot involves satisfying two con- straints: On the one hand, the selected instants should generally correspond to moments in the audio where a beat is indicated, for instance by the onset of a note played by one of the instru- ments. On the other hand, the set of beats should reflect a locally-constant inter-beat-interval, since it is this regular spacing between beat times that defines musical rhythm. These dual constraints map neatly onto the two constraints optimized in dynamic programming, the local match, and the transition cost. We describe a beat tracking system which first estimates a global tempo, uses this tempo to construct a transition cost function, then uses dynamic programming to find the best-scoring set of beat times that reflect the tempo as well as corresponding to moments of high onset strength in a function derived from the audio. This very simple and computationally efficient procedure is shown to perform well on the MIREX-06 beat track- ing training data, achieving an average beat accuracy of just under 60\% on the development data. We also examine the impact of the assumption of a fixed target tempo, and show that the system is typically able to track tempo changes in a range of 10\% of the target tempo.},
@@ -145,7 +196,7 @@
 	Abstract = {The current work investigates the brain activation shared between perception and imagery of music as measured with electroencephalography (EEG). Meta-analyses of four separate EEG experiments are presented, each focusing on perception and imagination of musical sound, with differing levels of stimulus complexity. Imagination and perception of simple accented metronome trains, as manifested in the clock illusion, as well as monophonic melodies are discussed, as well as more complex rhythmic patterns and ecologically natural music stimuli. By decomposing the data with principal component analysis (PCA), similar component distributions are found to explain most of the variance in each experiment. All data sets show a fronto-central and a more central component as the largest sources of variance, fitting with projections seen for the network of areas contributing to the N1/P2 complex. We expanded on these results using tensor decomposition. This allows us to add in the tasks to find shared activation, but does not make assumptions of independence or orthogonality and calculates the relative strengths of these components for each task. The components found in the PCA were shown to be further decomposable into parts that load primarily on to the perception or imagery task, or both, thereby adding more detail. It is shown that the frontal and central components have multiple parts that are differentially active during perception and imagination. A number of possible interpretations of these results are discussed, taking into account the different stimulus materials and measurement conditions.},
 	Author = {Schaefer, Rebecca S. and Desain, Peter and Farquhar, Jason},
 	Date-Added = {2015-09-25 00:18:29 +0000},
-	Date-Modified = {2015-09-25 00:18:29 +0000},
+	Date-Modified = {2015-09-25 15:51:24 +0000},
 	Doi = {10.1016/j.neuroimage.2012.12.064},
 	File = {Schaefer et al. - 2013 - Shared processing of perception and imagery of mus.pdf:/Users/sstober/work/zotero/storage/2N4GXWVD/Schaefer et al. - 2013 - Shared processing of perception and imagery of mus.pdf:application/pdf;Schaefer et al. - 2013 - Supplements for Shared processing of perception and imagery of mus.pdf:/Users/sstober/work/zotero/storage/RKNUV593/Schaefer et al. - 2013 - Supplements for Shared processing of perception and imagery of mus.pdf:application/pdf;ScienceDirect Snapshot:/Users/sstober/work/zotero/storage/K67W7GCN/S1053811913000037.html:text/html},
 	Issn = {1053-8119},
@@ -162,18 +213,18 @@
 	Bdsk-Url-2 = {http://dx.doi.org/10.1016/j.neuroimage.2012.12.064}}
 
 @incollection{schaefer_single_2009,
-	Author = {Schaefer, Rebecca and Blokland, Yvonne and Farquhar, Jason and Desain, Peter},
+	Author = {Schaefer, Rebecca S. and Blokland, Yvonne and Farquhar, Jason and Desain, Peter},
 	Booktitle = {Proceedings of the 2009 {Berlin} {BCI} {Workshop}},
 	Date-Added = {2015-09-25 00:18:29 +0000},
-	Date-Modified = {2015-09-25 00:18:29 +0000},
+	Date-Modified = {2015-09-25 15:51:19 +0000},
 	File = {Full Text PDF:/Users/sstober/work/zotero/storage/6G76QHN9/Desain - 2009 - Single trial classification of perceived and imagi.pdf:application/pdf},
 	Title = {Single trial classification of perceived and imagined music from {EEG}},
 	Year = {2009}}
 
 @phdthesis{schaefer_measuring_2011,
-	Author = {Schaefer, R.S},
+	Author = {Schaefer, Rebecca S.},
 	Date-Added = {2015-09-25 00:18:07 +0000},
-	Date-Modified = {2015-09-25 00:18:07 +0000},
+	Date-Modified = {2015-09-25 15:51:34 +0000},
 	File = {Schaefer - 2011 - Measuring the mind's ear EEG of music imagery.pdf:/Users/sstober/work/zotero/storage/9EX2AJI9/Schaefer - 2011 - Measuring the mind's ear EEG of music imagery.pdf:application/pdf},
 	School = {Radboud University Nijmegen},
 	Title = {Measuring the mind's ear {EEG} of music imagery},
@@ -187,7 +238,7 @@
 	Abstract = {In the current study we use electroencephalography (EEG) to detect heard music from the brain signal, hypothesizing that the time structure in music makes it especially suitable for decoding perception from EEG signals. While excluding music with vocals, we classified the perception of seven different musical fragments of about three seconds, both individually and cross-participants, using only time domain information (the event-related potential, ERP). The best individual results are 70\% correct in a seven-class problem while using single trials, and when using multiple trials we achieve 100\% correct after six presentations of the stimulus. When classifying across participants, a maximum rate of 53\% was reached, supporting a general representation of each musical fragment over participants. While for some music stimuli the amplitude envelope correlated well with the ERP, this was not true for all stimuli. Aspects of the stimulus that may contribute to the differences between the EEG responses to the pieces of music are discussed.},
 	Author = {Schaefer, Rebecca S. and Farquhar, Jason and Blokland, Yvonne and Sadakata, Makiko and Desain, Peter},
 	Date-Added = {2015-09-25 00:18:07 +0000},
-	Date-Modified = {2015-09-25 00:18:07 +0000},
+	Date-Modified = {2015-09-25 15:51:30 +0000},
 	Doi = {10.1016/j.neuroimage.2010.05.084},
 	File = {Schaefer et al. - 2011 - Name that tune Decoding music from the listening .pdf:/Users/sstober/work/zotero/storage/Q2XKCI2K/Schaefer et al. - 2011 - Name that tune Decoding music from the listening .pdf:application/pdf;ScienceDirect Snapshot:/Users/sstober/work/zotero/storage/WAD95PMI/S1053811910008402.html:text/html},
 	Issn = {1053-8119},

@@ -201,6 +201,40 @@ Geiser, E.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Goodfellow%
+\ \protect \BOthers {.}}{%
+Goodfellow%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+goodfellow_pylearn2_2013}
+\APACinsertmetastar {%
+goodfellow_pylearn2_2013}%
+\begin{APACrefauthors}%
+Goodfellow, I\BPBI J.%
+, Warde-Farley, D.%
+, Lamblin, P.%
+, Dumoulin, V.%
+, Mirza, M.%
+, Pascanu, R.%
+\BDBL {}Bengio, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Pylearn2: a machine learning research library}
+  {Pylearn2: a machine learning research library}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv:1308.4214 [cs, stat]}{}{}{}.
+\newblock
+\begin{APACrefURL} [{2015-04-26}]\url{http://arxiv.org/abs/1308.4214}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{arXiv: 1308.4214}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Halpern%
 , Zatorre%
 , Bouffard%
@@ -304,6 +338,43 @@ Herholz, S.%
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1111/j.1460-9568.2008.06515.x} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hinton%
+, Srivastava%
+, Krizhevsky%
+, Sutskever%
+\BCBL {}\ \BBA {} Salakhutdinov%
+}{%
+Hinton%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+hinton_improving_2012}
+\APACinsertmetastar {%
+hinton_improving_2012}%
+\begin{APACrefauthors}%
+Hinton, G\BPBI E.%
+, Srivastava, N.%
+, Krizhevsky, A.%
+, Sutskever, I.%
+\BCBL {}\ \BBA {} Salakhutdinov, R\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Improving neural networks by preventing co-adaptation of
+  feature detectors} {Improving neural networks by preventing co-adaptation of
+  feature detectors}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv:1207.0580 [cs]}{}{}{}.
+\newblock
+\begin{APACrefURL} [{2015-04-26}]\url{http://arxiv.org/abs/1207.0580}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{arXiv: 1207.0580}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -683,9 +754,9 @@ Perrin, F.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-R.~Schaefer%
+Schaefer%
 }{%
-R.~Schaefer%
+Schaefer%
 }{%
 {\protect \APACyear {2011}}%
 }]{%
@@ -693,7 +764,7 @@ schaefer_measuring_2011}
 \APACinsertmetastar {%
 schaefer_measuring_2011}%
 \begin{APACrefauthors}%
-Schaefer, R.%
+Schaefer, R\BPBI S.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -708,12 +779,12 @@ Schaefer, R.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-R.~Schaefer%
+Schaefer%
 , Blokland%
 , Farquhar%
 \BCBL {}\ \BBA {} Desain%
 }{%
-R.~Schaefer%
+Schaefer%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2009}}%
 }]{%
@@ -721,7 +792,7 @@ schaefer_single_2009}
 \APACinsertmetastar {%
 schaefer_single_2009}%
 \begin{APACrefauthors}%
-Schaefer, R.%
+Schaefer, R\BPBI S.%
 , Blokland, Y.%
 , Farquhar, J.%
 \BCBL {}\ \BBA {} Desain, P.%
@@ -739,11 +810,11 @@ Schaefer, R.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-R\BPBI S.~Schaefer%
+Schaefer%
 , Desain%
 \BCBL {}\ \BBA {} Farquhar%
 }{%
-R\BPBI S.~Schaefer%
+Schaefer%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2013}}%
 }]{%
@@ -773,13 +844,13 @@ Schaefer, R\BPBI S.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-R\BPBI S.~Schaefer%
+Schaefer%
 , Farquhar%
 , Blokland%
 , Sadakata%
 \BCBL {}\ \BBA {} Desain%
 }{%
-R\BPBI S.~Schaefer%
+Schaefer%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2011}}%
 }]{%
@@ -867,6 +938,35 @@ Stober, S.%
 \BIn{} \APACrefbtitle {Advances in Neural Information Processing Systems 27
   (NIPS'14)} {Advances in neural information processing systems 27 (nips'14)}\
   (\BPGS\ 1449--1457).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tang%
+}{%
+Tang%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+tang_deep_2013}
+\APACinsertmetastar {%
+tang_deep_2013}%
+\begin{APACrefauthors}%
+Tang, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep {Learning} using {Linear} {Support} {Vector}
+  {Machines}} {Deep {Learning} using {Linear} {Support} {Vector}
+  {Machines}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv:1306.0239 [cs, stat]}{}{}{}.
+\newblock
+\begin{APACrefURL} [{2015-05-05}]\url{http://arxiv.org/abs/1306.0239}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{arXiv: 1306.0239}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
