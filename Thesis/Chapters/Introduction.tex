@@ -1,7 +1,7 @@
 \section*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-Everybody imagines music. Imagining music can be defined as a deliberate internal recreation of the perceptual experience of listening to music \cite{Schaefer2011}.
+Everybody imagines music. Imagining music can be defined as a deliberate internal recreation of the perceptual experience of listening to music \cite{schaefer_name_2011}.
 Individuals can imagine themselves producing music, imagine listening to others produce music, or simply "hear" the music in their heads. 
 Music imagination is used by musicians to memorize music and anyone who has ever had an "ear-worm" -- a tune stuck in their head -- has experienced imagining music. Because of its simplicity no training is required to imagine a song, and researchers have been investing the utility of music imagery for \acp{BCI}.
 A \ac{BCI} is a system that allows an external device to be controlled or modified using brain activity. 
@@ -15,7 +15,7 @@ Using music as the basis for a \ac{BCI} is a promising way to build such a syste
 Ideally, a music-based \ac{BCI} would allow the user to imagine a piece of music in order to convey a particular thought. 
 However, the translation from music imagination will require careful processing of the EEG data. 
 
-EEG data contains a variety of signals, elicited by sounds, that can be exploited by a \ac{BCI}. 
+EEG data contain a variety of signals, elicited by sounds, that can be exploited by a \ac{BCI}. 
 %However, the EEG data is full of unwanted signals (noise) and extracting the relevant information can be a challenge.
 %Decoding brain wave recordings to classify different states is a relatively new field of research.
 %A recent review of neuroimaging methods for \ac{MIR} that also covers techniques different from EEG is given in \cite{ismir2015kaneshiro}.
@@ -28,7 +28,7 @@ This is a sign of entrainment to beat and meter \cite{nozaradan_tagging_2011,noz
 Furthermore, Vlek \etal \cite{vlek_shared_2011} showed that imagined auditory accents imposed on top of a steady metronome click can be recognized from EEG.
 
 Although not directly relevant to a \ac{BCI} we can learn a lot from \ac{EEG} data collected while participants listen to melodies.
-Recently studies have identified a close relationship between the brain areas that are active during the imagination and the perception of music \cite{Halpern2004,Kraemer2005,Herholz2008,Herholz2012}. 
+Recently studies have identified a close relationship between the brain areas that are active during the imagination and the perception of music \cite{halpern_fmri_2004,Kraemer2005,Herholz2008,herholz_2012}. 
 Exploring EEG data during music perception can inform how we approach music imagination data and the brain signals recorded while listening to music could serve as reference data to determine which salient elements are to be expected during imagination. 
 By using perception data as a way to inform the system we can cut down on the amount of training time needed which will reduce any potential user fatigue.
 
@@ -53,15 +53,16 @@ Machine learning is a technique that uses algorithms that can learn from and mak
 For example, the programs used by postal services to recognize handwriting on envelopes or the speech recognition software in your cell phone are based on machine learning techniques.
 One such technique uses \acp{CNN}. 
 \acp{CNN} were inspired by the powerfully complex visual system found in humans and other animals.
-In the retina we have cells that are responsive to small regions of the visual field \cite{Hubel1963}. 
+In the retina we have cells that are responsive to small regions of the visual field \cite{hubel_receptive_1963}. 
 As information moves along the visual processing stream and into the brain single cells in higher layers receive input from multiple cells in lower layers.
-At each level of this process more information is combined giving cells at each processing layer an increasingly global view of what information was collected by the retinal cells.
+At each level of this process more information is combined.
+This gives cells higher up in the processing stream an increasingly global view of what information was collected by the retinal cells.
 Complex visual information is processed farther along the processing stream than simple information as cells in these far layers are sent information from a larger number of retinal cells.
 \acp{CNN} work in a similar way.
 The processing units in a \ac{CNN} act like cells in the visual system.
 The "receptive field" of each one of these units is determined by a filter.
 Each filter is created based on a variety of parameters set by the researcher.
-In this experiment the filters used are \acp{CAE} (as described in \cite{masci2011}).
+In this experiment the filters used are \acp{CAE} (as described in \cite{masci_stacked_2011}).
 A \ac{CAE} is an artificial neural network that is able to extract features from data without supervision.
 % feature extractor that scales well to high dimensional input.
 Importantly, \acp{CAE} preserve spatial information allowing them to learn biologically plausible features.
@@ -70,7 +71,8 @@ In classification tasks the \ac{CNN} takes these filters and applies them to dat
 As information moves higher through the \ac{CNN} the units are exposed to a larger amount of combined data, like the cells in high layers of the visual processing stream. 
 By evaluating the effects the filters have on the data the \ac{CNN} can then classify new data into existing categories -- determined by what was learned from the training data.
 
-
+In this experiment we used \acp{CNN} and \acp{CAE} to analyze EEG data collected while participants listened to and imagined short clips of familiar music. 
+Using this analysis technique we aim to be able to classify what a participant was listening to or imagining based on the signal in their EEG data alone. 
 
 
 
