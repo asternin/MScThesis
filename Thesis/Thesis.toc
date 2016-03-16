@@ -5,13 +5,13 @@
 \contentsline {chapter}{Acknowledgements}{iv}{dummy.3}
 \vspace {1em}
 \contentsline {chapter}{List of Figures}{vi}{dummy.5}
-\contentsline {chapter}{List of Tables}{viii}{dummy.8}
+\contentsline {chapter}{List of Tables}{vii}{dummy.8}
 \vspace {2em}
 \contentsline {chapter}{Introduction}{1}{section*.10}
 \contentsline {chapter}{Methods}{4}{section*.19}
 \contentsline {chapter}{ERP Analysis}{8}{section*.33}
-\contentsline {chapter}{Classification}{9}{section*.38}
+\contentsline {chapter}{Classification}{10}{section*.38}
 \vspace {2em}
 \vspace {2em}
-\contentsline {chapter}{References}{12}{dummy.42}
-\contentsline {chapter}{References}{12}{appendix*.43}
+\contentsline {chapter}{References}{13}{dummy.42}
+\contentsline {chapter}{References}{13}{appendix*.43}
