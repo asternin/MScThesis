@@ -27,10 +27,10 @@ This is a sign of entrainment to beat and meter \cite{nozaradan_tagging_2011,noz
 \ac{EEG} studies have further shown that perturbations of the rhythmic pattern lead to distinguishable \acp{ERP} \cite{geiser_early_2009}.
 Furthermore, Vlek \etal \cite{vlek_shared_2011} showed that imagined auditory accents imposed on top of a steady metronome click can be recognized from EEG.
 
-Although not directly relevant to a \ac{BCI} we can learn a lot from \ac{EEG} data collected while participants listen to melodies.
 Recently studies have identified a close relationship between the brain areas that are active during the imagination and the perception of music \cite{halpern_fmri_2004,Kraemer2005,Herholz2008,herholz_2012}. 
+Although not directly relevant to a \ac{BCI}, we can learn a lot from \ac{EEG} data collected while participants listen to melodies.
 Exploring EEG data during music perception can inform how we approach music imagination data and the brain signals recorded while listening to music could serve as reference data to determine which salient elements are to be expected during imagination. 
-By using perception data as a way to inform the system we can cut down on the amount of training time needed which will reduce any potential user fatigue.
+By using perception data as a way to train our \ac{BCI} we can cut down on the amount of imagination training needed which will reduce potential user fatigue.
 
 EEG has already successfully been used to classify perceived melodies. 
 In a study by Schaefer \etal \cite{schaefer_name_2011}, 10 participants \textit{listened} to 7 short melody clips with a length between 3.26s and 4.36s.
@@ -43,47 +43,43 @@ Applying the same classification scheme across participants, they obtained betwe
 %The time courses corresponding to this component showed significant differences between stimuli that were strong enough to allow cross-participant classification.
 %As Hubbard concludes in his recent review of the literature on auditory imagery, \emph{``auditory imagery preserves many structural and temporal properties of auditory stimuli''} and \emph{``involves many of the same brain areas as auditory perception''} \cite{hubbard_auditory_2010}. 
 %This is also underlined by Schaefer \cite[p. 142]{schaefer_measuring_2011} whose \emph{``most important conclusion is that there is a substantial amount of overlap between the two tasks} [music perception and imagination]\emph{, and that `internally' creating a perceptual experience uses functionalities of `normal' perception.''}
-Brain activity during music imagination has been detected by \ac{EEG} \cite{schaefer_shared_2013}, and encouraging preliminary results for recognizing imagined music fragments from \ac{EEG} recordings were reported in \cite{schaefer_single_2009} in which 4 out of 8 participants produced imagery that was classifiable (in a binary comparison) with an accuracy between 70\% and 90\% after 11 trials.
 
-Although \ac{EEG} has been used to decode music imagination the accuracy levels are not robust enough to be used as a \ac{BCI}. 
-This could be because the EEG processing techniques used may not be sensitive enough to the subtle changes that occur during music imagination. 
+Brain activity during music imagination has also been detected by \ac{EEG} \cite{schaefer_shared_2013}, and encouraging preliminary results for recognizing imagined music fragments from \ac{EEG} recordings were reported in \cite{schaefer_single_2009} in which 4 out of 8 participants produced imagery that was classifiable (in a binary comparison) with an accuracy between 70\% and 90\% after 11 trials.
+
+Although \ac{EEG} has been used to decode music imagination the accuracy levels are not robust enough for these decoding techniques to be used in a \ac{BCI}. 
+This could be because the EEG processing methods may not be sensitive enough to the subtle changes that occur during music imagination. 
 The sophisticated signal processing techniques used in machine learning can lend expertise to this challenge. 
 
-Machine learning is a technique that uses algorithms that can learn from and make predictions on data.
+Machine learning is a technique that uses algorithms that can learn from and make predictions about data.
 For example, the programs used by postal services to recognize handwriting on envelopes or the speech recognition software in your cell phone are based on machine learning techniques.
-One such technique uses \acp{CNN}. 
+One such technique is based on convolutional neural networks (\acp{CNN}).
 \acp{CNN} were inspired by the powerfully complex visual system found in humans and other animals.
 In the retina we have cells that are responsive to small regions of the visual field \cite{hubel_receptive_1963}. 
 As information moves along the visual processing stream and into the brain single cells in higher layers receive input from multiple cells in lower layers.
 At each level of this process more information is combined.
 This gives cells higher up in the processing stream an increasingly global view of what information was collected by the retinal cells.
 Complex visual information is processed farther along the processing stream than simple information as cells in these far layers are sent information from a larger number of retinal cells.
-\acp{CNN} work in a similar way.
+\acp{CNN} work in a similar way to process complex data. 
 The processing units in a \ac{CNN} act like cells in the visual system.
-The "receptive field" of each one of these units is determined by a filter.
-Each filter is created based on a variety of parameters set by the researcher.
-In this experiment the filters used are \acp{CAE} (as described in \cite{masci_stacked_2011}).
-A \ac{CAE} is an artificial neural network that is able to extract features from data without supervision.
+The ``receptive field'' of each one of these units is determined by a filter.
+Each filter is created based on a variety of parameters set by the researcher or determined by the network during the training process.
+%In this experiment the filters used are \acp{CAE} (as described in \cite{masci_stacked_2011}).
+%A \ac{CAE} is an artificial neural network that is able to extract features from data without supervision.
 % feature extractor that scales well to high dimensional input.
-CAEs are a special variant of a \ac{CNN} that encode their input using convolution into a compressed internal representation. 
-This representation is then decoded using de-convolution into the original space while trying to minimize the reconstruction error. 
-This type of neural network can learn a meaningful but compressed representation of the data.
-Importantly, \acp{CAE} preserve spatial information allowing them to learn biologically plausible features.
-Once the \ac{CAE} has extracted the important features from the training data and constructed the filters these filters can be used in a \ac{CNN}.
-These filters are very similar to the components produced in \ac{PCA} and \ac{ICA} with the difference being the parameters used to compute the components. 
-The \ac{CAE} filters aim to minimize the \ac{MSRE} rather than the orthogonality or independence criteria used in \ac{PCA} and \ac{ICA} respectively. 
-In classification tasks the \ac{CNN} takes these filters and applies them to data that it has never seen before.
-As information moves higher through the \ac{CNN} the units are exposed to a larger amount of combined data, like the cells in high layers of the visual processing stream. 
-By evaluating the effects the filters have on the data the \ac{CNN} can then classify new data into existing categories -- determined by what was learned from the training data.
+%CAEs are a special variant of a \ac{CNN} that encode their input using convolution into a compressed internal representation. 
+%This representation is then decoded using de-convolution into the original space while trying to minimize the reconstruction error. 
+%This type of neural network can learn a meaningful but compressed representation of the data.
+%Importantly, \acp{CAE} preserve spatial information allowing them to learn biologically plausible features.%
+%Once the \ac{CAE} has extracted the important features from the training data and constructed the filters these filters can be used in a \ac{CNN}.
+%These filters are very similar to the components produced in \ac{PCA} and \ac{ICA} with the difference being the parameters used to compute the components. 
+%The \ac{CAE} filters aim to minimize the \ac{MSRE} rather than the orthogonality or independence criteria used in \ac{PCA} and \ac{ICA} respectively. 
+Before a \ac{CNN} can be used to classify data it must learn the characteristics of the data. 
+The \ac{CNN} is trained using a subset of the data and the filters are optimized to produce the best classification results. 
+The optimized filters are applied to new data and the accuracy of the classification is determined. 
 
-In this experiment we used \acp{CNN} and \acp{CAE} to analyze EEG data collected while participants listened to and imagined short clips of familiar music. 
-Using this analysis technique we aim to be able to classify what a participant was listening to or imagining based on the signal in their EEG data alone. 
-
-
-
-
-
-
-
-
-
+%SUMMARY OF WHAT WE TRIED AND THE TECHNIQUES WE USED
+%Using this analysis technique we aim to be able to classify what a participant was listening to or imagining based on the signal in their EEG data alone. 
+To approach this problem we first tried an ERP analysis similar to that of Schaefer \etal\cite{schaefer_name_2011} in order to determine which piece of music a participant was listening to or imagining.
+When this proved unsuccessful we used a machine learning technique called deep learning to detect more subtle differences in the EEG that would be more useful in classifying stimuli. 
+Using this technique we were able to classify perception of 12 music pieces with a 28.7\% accuracy (chance=8.3\%).
+We were unable to accurately classify imagination of music \hl{specific values go here}.

@@ -1,24 +1,24 @@
 \chapter*{Classification/Deep Learning Methods}
 \addcontentsline{toc}{chapter}{4. Classification/Deep Learning Methods}
+\hl{not sure how much of a summary to give here. Maybe skip is because I go into detail below?}
 Schaefer \etal \cite{schaefer_name_2011} were able to use the unique time course of the component responsible for the most variance to differentiate between stimuli.
 Analyzing our components we have not yet been able to reproduce this significant stimulus classification accuracy. 
-This could be caused by our much smaller number of trials which are substantially longer than those used by \cite{schaefer_name_2011}. 
-On average we used \hl{X number of} trials in our analysis, while Schaefer et al. (2011) collected 145 trials of each of their stimuli.
-
-We then attempted a different approach to classification using machine learning techniques. 
-We used a technique from the computer science field of Deep Learning called a \ac{CNN} in order to classify our data.
-A \ac{CNN} contains one or more convolutional layers.
-In these layers the input is processed by a weight matrix that is trained using back propagation. 
-These weight matrices move along the input dimensions with a constant step size and at each position an output value is computed 
-Our \ac{CNN} includes three different processing layers. 
-The first layer consists of a filter of electrode weights that reduces the 64 channel data to a single data stream and gives us information about which EEG channels are important for differentiating classes.
-The second layer consists of an optimized filter that convolves the single data stream.
-This results in a compressed representation of the original EEG data.
+%This could be caused by our much smaller number of trials which are substantially longer than those used by \cite{schaefer_name_2011}. 
+%On average we used \hl{X number of} trials in our analysis, while Schaefer et al. (2011) collected 145 trials of each of their stimuli.
+ 
+We approached our data using a technique from the computer science field of Deep Learning called a convolutional neural network (\ac{CNN}) in order to classify our data.
+A \ac{CNN} contains one or more convolutional layers that process the data.
+In these layers the input is processed by a filter (weight matrix) that is trained using back propagation. 
+These filters move along the input dimensions with a constant step size and at each position an output value is computed.
+Our \ac{CNN} was optimized for this classification task and includes three processing layers.
+%The first layer consists of a filter of electrode weights that reduces the 64 channel data to a single data stream and gives us information about which EEG channels are important for differentiating classes.
+%The second layer consists of an optimized filter that convolves the single data stream.
+%This results in a compressed representation of the original EEG data.
 %In the third layer, these compressed representations are classified by comparing them to learned temporal patterns (one for each class)
-During the training phase these compressed representations of each of our stimuli are optimized using back propagation.
-During the testing phase the compressed representations describing the test data are compared to the optimized versions. 
-This matching in the third layer is what allows us to classify our data.
-The full explanation of how we arrived at the best model can be found in (cite paper).
+%During the training phase these compressed representations of each of our stimuli are optimized using back propagation.
+%During the testing phase the compressed representations describing the test data are compared to the optimized versions. 
+%This matching in the third layer is what allows us to classify our data.
+The full explanation of how we arrived at the best model can be found in (cite paper) \hl{include as appendix?}.
 
 \subsection*{Layer 1: Similarity Constraint Encoding}
 The first layer was pre-trained and then was not changed during training of the entire model. 

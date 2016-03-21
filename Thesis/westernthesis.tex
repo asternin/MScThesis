@@ -25,7 +25,7 @@
 %\numberwithin{figure}{chapter}
 \usepackage[byname]{smartref}
 \usepackage{booktabs,tabularx} % nicer tables
-\usepackage{soul}
+\usepackage{soul,color}
 \usepackage{hyperref} %comment out for hardcopy
 \hypersetup{linkcolor=blue, citecolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
 \usepackage{apacite} %THIS HAS TO GO AFTER HYPERREF 
@@ -41,6 +41,7 @@
 \acrodef{MIR}{music information retrieval}
 \acrodef{BCI}{brain-computer interface}
 \acrodef{SSEP}{steady state evoked potential}
+\acrodef{SCE}{similarity constraint encoder}
 
 \newcommand{\etal}{et al.~}
 
@@ -219,7 +220,7 @@
 %\renewcommand{\author}[1]{\ifx\empty#1\else\gdef\@author{#1}\fi} 
 \newcommand{\authorname}{{\firstname} {\middlename} {\lastname}}
 \newcommand{\titl}{Classifying music perception and imagination from EEG}
-\newcommand{\spinetitle}{Plib}%only if the above is more than 60 characters
+\newcommand{\spinetitle}{}%only if the above is more than 60 characters
 \newcommand{\thesisformat}{Monograph} %or Integrated Article
 \newcommand{\gyear}{\number\year}
 %\newcommand{\makecoauthor}{
@@ -391,6 +392,8 @@ This is a really silly abstract.
 \include{Chapters/ERPResults}
 \include{Chapters/DeepLearningMethods}
 %\include{Chapters/Classification_CAE_old}
+\include{Chapters/DeepLearningResults}
+\include{Chapters/Behavioural}
 \include{Chapters/Discussion}
 
 
