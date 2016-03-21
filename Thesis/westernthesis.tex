@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % University of Western Ontario Thesis Template
 % By: Justin Quinn Veenstra, 2010
 % With thanks to Mr. (soon to be Dr.) Will Robertson.
@@ -6,7 +6,7 @@
 
 \documentclass[12pt,twoside]{report}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                                                    %%
 %%                    ***   I M P O R T A N T   ***                   %%
 %%                                                                    %%
@@ -55,11 +55,11 @@
     \ifnum \c@secnumdepth >\m@ne
         \huge\bfseries \@chapapp\space \thechapter
         \par\nobreak
-        \vskip 20\p@
+        \vskip 10\p@
     \fi
     \interlinepenalty\@M
     \Huge \bfseries #1\par\nobreak
-    \vskip 40\p@
+    \vskip 10\p@
   }}
 \def\@makeschapterhead#1{%
   %%%%%\vspace*{50\p@}% %%% removed!
@@ -67,7 +67,7 @@
     \normalfont
     \interlinepenalty\@M
     \Huge \bfseries  #1\par\nobreak
-    \vskip 40\p@
+    \vskip 10\p@
   }}
 
 \newenvironment{acknowledgements}%
@@ -387,9 +387,11 @@ This is a really silly abstract.
 
 \include{Chapters/Introduction}
 \include{Chapters/Methods}
-\include{Chapters/Tempo}
+%\include{Chapters/TempoResults}
 \include{Chapters/ERPResults}
-\include{Chapters/Classification}
+\include{Chapters/DeepLearningMethods}
+%\include{Chapters/Classification_CAE_old}
+\include{Chapters/Discussion}
 
 
 %% This adds a line for the Bibliography in the Table of Contents.
