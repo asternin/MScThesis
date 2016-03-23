@@ -22,23 +22,27 @@ From these results it does not look like the highlighted time periods are relate
   \begin{center}
     \includegraphics[width=\textwidth,keepaspectratio=true]{Figures/RecognitionTimeGraph}
 %   \\\vspace{-0.8em}
-    \caption{Average time it takes for participants to recognize these stimuli (red). Individual data is shown in black and song length is shown in blue. The magenta bars indicate the highlighted time periods from the neural net.}
+    \caption{Average time it takes for participants to recognize these stimuli (red). Individual data is shown in black and song length is shown in blue. The magenta bars indicate the highlighted time periods from layer three in the neural net (\autoref{fig:model_W_confusion}).}
     \label{fig:RecognitionTime}
   \end{center}
 %  \vspace{-1em}
 \end{figure}
 
 The second part of the experiment asked participants to give similarity ratings of pairs of songs in order to determine whether the neural net confuses songs that humans rate as similar. 
-\autoref{Similarity} shows the similarity rating results. 
+\autoref{fig:Similarity} shows the similarity rating results. 
 As expected, participants are close to perfect at identifying identical songs. 
-Lyric/non-lyric pairs of songs were also rated as highly similar. 
-\hl{go into more detail about confusion}
+Lyric/non-lyric pairs of songs were also rated as highly similar and that is seen in the four, dark squares parallel to the diagonal.
+
+To compare the confusion matrix seen in \autoref{fig:model_W_binary_confusion} to \autoref{fig:Similarity} we first took the inverse of  \autoref{fig:model_W_binary_confusion}.
+The values seen in \autoref{fig:model_W_binary_confusion} can be interpreted as ``dissimilarity'' scores, so we took it's inverse to produce similarity scores. 
+A correlation of r=0.0012 was calculated (p$>$0.05).
+This lack of correlation indicates that the neural net is doing something different than humans when determining similarities between stimuli. 
 
 \begin{figure}[h] 
   \begin{center}
     \includegraphics[width=\textwidth,keepaspectratio=true]{Figures/Similarity}
 %   \\\vspace{-0.8em}
-    \caption{Average time it takes for participants to recognize these stimuli (red). Individual data is shown in black and song length is shown in blue. The magenta bars indicate the highlighted time periods from the neural net.}
+    \caption{Similarity ratings (from 0-100) of binary comparisons of all stimuli.}
     \label{fig:Similarity}
   \end{center}
 %  \vspace{-1em}
