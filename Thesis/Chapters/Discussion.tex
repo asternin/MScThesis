@@ -1,10 +1,42 @@
 \chapter*{Discussion}
 \addcontentsline{toc}{chapter}{5. Discussion}
+The goal of these experiments was to investigate whether music perception and imagination can be detected using EEG and therefore used to control a \ac{BCI}. 
+\cite{schaefer_name_2011} were able to classify perceived music stimuli based on the unique shapes of principle component time courses, but we were unable to replicate this result. 
+The most likely reason is the number of stimuli presented to participants. 
+In the Schaefer study participants heard each stimulus more than a hundred times. 
+In our experiment participants heard each stimulus five times. 
+The small number of trials is likely also responsible for our inability to classify imagination using either the PCA technique or machine learning. 
 
-\begin{enumerate}
-\item Re-summarize what we were looking for
-\item re-summarize what we found
-\item why can't we interpret the neural net results
-\item Why does our topography look so different from the one seen in Schaefer 2011? Her component describes similarities, ours describes differences. 
-\item Imagination: we have determined what brain signals are important for classifying perception. We can now use this and apply it to data collected during music imagination.
-\end{enumerate} 
+Using machine learning techniques we were able to classify perception of music from the EEG signal. 
+However, our technique failed when we applied it to the imagination of music. 
+There are multiple reasons that could explain why we were unable to classify music imagination.
+In music perception the timing of the music is consistent across trials (e.g. the second beat of the song always occurs at a consistent time point) because the timing is driven by the stimulus. 
+In imagination this timing may fluctuate across trial and across participants, because after the end of the tempo cue there is no external stimulus.
+A single participant may imagine music at a different rate on different trials and some participants may have a tendency to speed up throughout their imagination while others may have a tendency to slow down. 
+This fluctuation in timing is likely the cause of our low imagination classification rates. 
+
+The secondary goal of these experiments was to determine what neural processes drive our ability to classify music perception and imagination.
+It is tempting to interpret the results of a neural network, but it is generally not possible to determine why a trained neural network makes a particular decision \cite{towell_1992_interpretation}.
+The results of a neural network present prediction results and are not representative of the underlying process that relate input to output \cite{intrator_2001_interpreting}.
+However, to investigate whether we could glean any brain-related information from our neural network (\autoref{fig:model_W}) we focused on whether the spatial or temporal filters can be related to any biological or musical characteristics.
+
+The spatial filter in layer 1 indicates which electrodes carry the \ac{EEG} data important for classification. 
+However, due to the nature of \ac{EEG} we are unable to comment on where the data from these electrodes is produced.
+The auditory research literature is in general consensus on what principal components of auditory processing look like, but when the biologically produced fronto-central component maps are compared to the filter in layer 1 there are no similarities. 
+To force the net to use biologically produced information we exchanged the neural net's first layer with the principal components calculated in \autoref{fig:components} (C). 
+This resulted in a decrease in classification accuracy. The results from the neural net using biologically produced spatial maps can be seen in Appendix \ref{appendix:PCAInvestigation}.
+
+The second layer of the neural net produced temporal filters that indicate time periods in the stimuli important for classification. 
+Upon closer investigation there were no auditory characteristics that stood out as being unique to each of the highlighted time periods.
+To determine whether the patterns in the filters are driven by a cognitive process we conducted a behavioural experiment.
+The results showed that the highlighted time periods do not occur at the moment when participants recognize the piece of music. 
+Based on these results we know what is \emph{not} responsible for highlighting these moments: the importance of these moments is not due to auditory characteristics of the stimuli or a moment of recognition.
+At this time we are unable to say what is causing these time periods to be flagged as important for stimuli classification. 
+
+Although we were able to classify music perception, we were not able to classify music imagination.
+Future experiments should aim to disentangle what during perception is driving the classifier and to enhance this during imagination.
+To do this we may need to take a step back and use simpler stimuli.
+Rhythm is an inherent part of music, but on its own is a series of events at time intervals without information about tone, lyrics etc.
+It is possible to classify the perception of rhythms \cite{stober2014audiomostly}, so capitalizing on rhythm's auditory simplicity may be an effective way to learn  what characteristics are necessary to drive a music-based \ac{BCI}.
+It will also be important during future experiments to continue to cue participants to the tempo during imagination using a metronome.
+This will ensure that all participants imagine at the same rate and are consistent across multiple trials.
