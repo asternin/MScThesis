@@ -23,7 +23,8 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{mathtools}
-%\numberwithin{figure}{chapter}
+\usepackage{setspace}
+\usepackage{pdfpages}
 \usepackage[byname]{smartref}
 \usepackage{booktabs,tabularx} % nicer tables
 \usepackage{soul,color}
@@ -46,12 +47,11 @@
 
 \newcommand{\etal}{et al.~}
 
-
 \usepackage{txfonts}
 \usepackage{tocloft}
 \makeatletter
 
-\def\@makechapterhead#1{%
+  \def\@makechapterhead#1{%
   %%%%\vspace*{50\p@}% %%% removed!
   {\parindent \z@ \raggedright \normalfont
     \ifnum \c@secnumdepth >\m@ne
@@ -70,7 +70,7 @@
     \interlinepenalty\@M
     \Huge \bfseries  #1\par\nobreak
     \vskip 10\p@
-  }}
+ }}
 
 \newenvironment{acknowledgements}%
 {\clearemptydoublepage
@@ -99,7 +99,7 @@
 %% corresponds to \spacing{1.5} and double spaced is \spacing{1.66}.
 %\def\normalspacing{1.25} % default line spacing
 %\def\normalspacing{1.66} % default line spacing
-\linespread{2}
+%\linespread{2}
 
 %% Define the "thesis" page style.
 \if@twoside % If two-sided printing.
@@ -387,7 +387,7 @@ This is a really silly abstract.
 %\newpage
 \end{preliminary}
 %% End of the preliminary sections: reset page style and numbering.
-
+\begin{spacing}{2} 
 \include{Chapters/Introduction}
 \include{Chapters/Methods}
 %\include{Chapters/TempoResults}
@@ -397,19 +397,14 @@ This is a really silly abstract.
 \include{Chapters/DeepLearningResults}
 \include{Chapters/Behavioural}
 \include{Chapters/Discussion}
-
+\end{spacing}
 
 %% This adds a line for the Bibliography in the Table of Contents.
-\addcontentsline{toc}{chapter}{Bibliography}
+%\addcontentsline{toc}{chapter}{Bibliography}
 %% ***   Set the bibliography style.   ***
 \bibliographystyle{apacite} % (change according to your preference)
 %%% ***   Set the bibliography file.   ***
 \bibliography{Bibliography}{}
-%% ***   NOTE   ***
-%% If you don't use bibliography files, comment out the previous line
-%% and use \begin{thebibliography}...\end{thebibliography}.  (In that
-%% case, you should probably put the bibliography in a separate file
-%% and \include or \input it here).
 
 %Appendices.
 \begin{appendices}
