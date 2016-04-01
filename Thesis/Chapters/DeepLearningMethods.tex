@@ -1,5 +1,5 @@
-\chapter*{Classification/Deep Learning Methods}
-\addcontentsline{toc}{chapter}{4. Classification/Deep Learning Methods}
+\chapter{Deep Learning}
+%\addcontentsline{toc}{chapter}{4. Classification/Deep Learning Methods}
 \hl{not sure how much of a summary to give here. Maybe skip is because I go into detail below?}
 Schaefer \etal \cite{schaefer_name_2011} were able to use the unique time course of the component responsible for the most variance to differentiate between stimuli.
 Analyzing our components we have not yet been able to reproduce this significant stimulus classification accuracy. 
@@ -20,7 +20,7 @@ Our \ac{CNN} was optimized for this classification task and includes three proce
 %This matching in the third layer is what allows us to classify our data.
 The full explanation of how we arrived at the best model can be found in (cite paper) \hl{include as appendix?}.
 
-\subsection*{Layer 1: Similarity Constraint Encoding}
+\section{Layer 1: Similarity Constraint Encoding}
 The first layer was pre-trained and then was not changed during training of the entire model. 
 432 trials (9 subjects x 12 stimuli x 4 trials) were used for training. 
 The third trial from each subject's data was left out to be used as the test set for later model testing (108 trials (9 subjects x 12 stimuli x 1 trial) ).
@@ -41,18 +41,6 @@ The topographic representation of the features learned by this \ac{SCE} is visua
 The coloured areas represent the regions that are most important for \emph{differentiating} classes. 
 These features act as electrode weights.
 As this filter processes the raw data 64 channels are reduced to a single data stream. 
-
-%\begin{figure}[h] 
-%  \begin{center}
-%    \includegraphics[width=\textwidth,keepaspectratio=true]{Figures/model_R}
-%%   \\\vspace{-0.8em}
-%    \caption{Visualization of \ac{CNN} R, which processes raw EEG at a sampling rate of 64\,Hz.
-%    Layer 1 was pre-trained using similarity-constraint encoding.}
-%    \label{fig:model_R}
-%  \end{center}
-%%  \vspace{-1em}
-%\end{figure} 
-
 \begin{figure}[h] 
   \begin{center}
     \includegraphics[width=\textwidth,keepaspectratio=true]{Figures/model_W}
@@ -63,14 +51,12 @@ As this filter processes the raw data 64 channels are reduced to a single data s
   \end{center}
 %  \vspace{-1em}
 \end{figure}
-
-\subsection*{Layer 2: Convolution Filter \& Layer 3: Templates}
+\section{Layer 2: Convolution Filter \& Layer 3: Templates}
 Layers two and three were trained together with supervised learning and optimized by back propagation through the entire model with a cost function to minimize classification error.
 We employed a 9-fold cross validation scheme by training on the data from 9 subjects (384 trials) and validating on the remaining subject (48 trials).
 The cross-validation was done within the training set with the aim of finding the optimal hyper-parameters (learning rate, filter size, etc.) for our neural network. 
 The final version of layer 2 and 3 is an average of the model parameters over all 9 fold models (see Layer 2 in \autoref{fig:model_W}).
-
-\subsection*{How the whole thing works (title)}
+\section{How the whole thing works (title)}
 The single data stream output from layer 1 enters the second layer where it is convolved with a filter. 
 After the data is convolved with the filter in layer 2 and then pooled with a subsampling factor of 11 a single stream of data, which is an optimized, compressed representation of the original raw EEG data, is produced.
 These representations are shown in Layer 3 of \autoref{fig:model_W}. 
