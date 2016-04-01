@@ -22,8 +22,30 @@ All of the raw trials were concatenated to create a single, long trial that cont
 We ran a \ac{PCA} on the concatenated raw trials without first calculating an average across trials. 
 This produced clearly defined spatial components \autoref{fig:components} (C and D).
 Except for their (arbitrary) polarity the components are very similar across the two conditions, which replicates the results found in \cite{schaefer_name_2011}.
+<<<<<<< HEAD
+
+\begin{figure}[t] 
+  \begin{center}
+    \includegraphics[scale=0.5]{Figures/principle_components.pdf}
+    \caption{%
+Topographic visualization of the top 4 principle components with percentage of the explained signal variance.
+Channel positions in the 64-channel EEG layout are shown as dots.
+Colors are interpolated based on the channel weights.
+The PCA was computed on
+\textbf{A}: the grand average \acp{ERP} of all perception trials,
+\textbf{B}: the grand average \acp{ERP} of all cued imagination trials,
+\textbf{C}: the concatenated perception trials,
+\textbf{D}: the concatenated cued imagination trials.
+}
+    \label{fig:components}
+  \end{center}
+\end{figure}
+
+\subsection*{Component Waveform Correlations}
+=======
 \newpage
 \section{Component Waveform Correlations}
+>>>>>>> 5234e5e6c3c6f88a519dccc850a9e02adc6ac6ff
 In order to investigate how similar the activation of these components is across conditions and stimuli we took the time course of component three over the first three seconds of each stimulus during perception and imagination and performed a correlation.
 We used component three as it accounts for the most variance while being similar to a typical auditory component.
 The highest correlations produced by this component is r=0.40 (p$<$0.001) for ``Eine Klein Nachtmusic'' (\autoref{fig:nachtmusic})
