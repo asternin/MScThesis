@@ -32,15 +32,19 @@ Some participants also reported imagining vivid scenes, either from existing mov
 This wide array of differences are likely the cause of our low imagination classification rates. 
 
 The secondary goal of these experiments was to determine what neural processes drive the classification of music perception and imagination.
-Although it is tempting to interpret the results of a neural network, it is generally not possible to determine why a trained neural network makes a particular decision \cite{towell_1992_interpretation}.
-A neural network does not explain \emph{why} it makes a certain decision.
-It simply chooses the best set of parameters required to complete the task based on the restrictions it has been given.
-In our experiment the network was asked to classify stimuli while minimizing the misclassification error rate. 
-The results of a neural network are not representative of how the input to the network relates to the output \cite{intrator_2001_interpreting}.
-
+Although it is tempting to interpret the results of a neural network, it is difficult to determine why a trained neural network makes a particular decision \cite{towell_1992_interpretation}.
+One way of understanding a neural network's decisions is by investigating the layers of the network separately and relating the weights within these layers to the input and the output. 
+However, understanding the structure of a neural network may not necessarily inform us about what the brain is doing to perform the same task. 
+There are a few things to keep in mind about neural network solutions. 
+First, the solution may not be unique and may simply be one of many possible solutions. 
+Although the network is constrained to minimize misclassification error, the solution reached by the network could be a local minima. 
+With further tweaking of the network it may be possible to uncover a global minima of the problem. 
+Second, interpretation is difficult because a solution is reached based on parameters set by the researcher. 
+It is not possible to untangle whether aspects of the solution are necessary for solving the problem or if they are influenced by the chosen network architecture. 
+Lastly, artificial neural networks, like the one used in this experiment, are \emph{artificial}, and only superficially resemble the way a biological system processes information. 
+It is not possible to know whether the way an artificial network solves a biological problem is the same way a biological system would solve it. 
 
 However, to investigate whether we could glean any brain-related information from our neural network (\autoref{fig:model_W}), we focused on whether the spatial or temporal filters can be related to any biological or musical characteristics.
-
 The spatial filter in layer 1 indicates which electrodes carry the \ac{EEG} data important for classification. 
 However, because of the nature of \ac{EEG} we are unable to comment on where the data from these electrodes is produced.
 \ac{EEG} collects the electrical signals produced by the brain at the scalp. 

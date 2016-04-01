@@ -63,23 +63,13 @@ Complex visual information is processed farther along the processing stream than
 The processing units in a \ac{CNN} act like cells in the visual system.
 The ``receptive field'' of each one of these units is determined by a filter.
 Each filter is created based on a variety of parameters set by the researcher or determined by the network during the training process.
-%In this experiment the filters used are \acp{CAE} (as described in \cite{masci_stacked_2011}).
-%A \ac{CAE} is an artificial neural network that is able to extract features from data without supervision.
-% feature extractor that scales well to high dimensional input.
-%CAEs are a special variant of a \ac{CNN} that encode their input using convolution into a compressed internal representation. 
-%This representation is then decoded using de-convolution into the original space while trying to minimize the reconstruction error. 
-%This type of neural network can learn a meaningful but compressed representation of the data.
-%Importantly, \acp{CAE} preserve spatial information allowing them to learn biologically plausible features.%
-%Once the \ac{CAE} has extracted the important features from the training data and constructed the filters these filters can be used in a \ac{CNN}.
-%These filters are very similar to the components produced in \ac{PCA} and \ac{ICA} with the difference being the parameters used to compute the components. 
-%The \ac{CAE} filters aim to minimize the \ac{MSRE} rather than the orthogonality or independence criteria used in \ac{PCA} and \ac{ICA} respectively. 
 Before a \ac{CNN} can be used to classify data it must learn the characteristics of the data. 
 The \ac{CNN} is trained using a subset of the data and the filters are optimized to produce the best classification results. 
 The optimized filters are applied to new data and the accuracy of the classification is determined. 
 
 %SUMMARY OF WHAT WE TRIED AND THE TECHNIQUES WE USED
-%Using this analysis technique we aim to be able to classify what a participant was listening to or imagining based on the signal in their EEG data alone. 
 To approach this problem we first tried an ERP analysis similar to that of Schaefer \etal\cite{schaefer_name_2011} in order to determine which piece of music a participant was listening to or imagining.
 When this proved unsuccessful we used a machine learning technique called deep learning to detect more subtle differences in the EEG that would be more useful in classifying stimuli. 
 Using this technique we were able to classify perception of 12 music pieces with a 28.7\% accuracy (chance=8.3\%).
-We were unable to accurately classify imagination of music \hl{specific values go here}.
+Using this same technique we were unable to accurately classify imagination of music (accuracy = 7.41\%). 
+\hl{how to finish the intro?}
