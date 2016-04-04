@@ -5,6 +5,7 @@
 \usepackage{mathtools}
 \usepackage{setspace}
 \usepackage{pdfpages}
+\usepackage{adjustbox}
 \usepackage[byname]{smartref}
 \usepackage{booktabs,tabularx}	% nicer tables
 \usepackage{soul,color}
@@ -15,7 +16,6 @@
 \usepackage{tocloft}
 \usepackage{WUthesis}			% must follow tocloft
 \pagestyle{thesis}
-%change file 
 % Set up page layout.
 \addtolength{\textheight}{1in} % Height of the main body of the text
 \addtolength{\topmargin}{-.5in} % .5" margin on top of page
@@ -49,9 +49,9 @@
 %
 %\makeatother
 %
-%%%%%%%%%% to work on a group (not all) of chapters
+%%%%%%%%%%%%%%%%%% to work on a group (not all) of chapters
 %\includeonly{frontmatter,Chapters/Introduction,Chapters/Methods,Chapters/ERPResults,Chapters/DeepLearningMethods,Chapters/DeepLearningResults,Chapters/Behavioural,Chapters/Discussion}
-%%%%%%%%%% to work on just one chapter at a time:
+%%%%%%%%%%%%%%%%%% to work on just one chapter at a time:
 %\includeonly{Chapters/Behavioural,Chapters/Discussion}
 %
 \begin{document}
@@ -68,7 +68,7 @@
 \include{Chapters/Discussion}
 \end{spacing}
 
-%% This adds a line for the Bibliography in the Table of Contents.
+%% This adds a line for the Bibliography in the Table of Contents. (called Bibliography rather than automatic "References")
 %\addcontentsline{toc}{chapter}{Bibliography}
 %% ***   Set the bibliography style.   ***
 \bibliographystyle{apacite} % (change according to your preference)
@@ -80,27 +80,9 @@
 \include{Appendices/Questionnaire}
 \include{Appendices/PCAInvestigation}
 \end{appendices}
-
 %CV only relevant stuff... not full CV.
 \addcontentsline{toc}{chapter}{Curriculum Vitae}
-\chapter*{Curriculum Vitae}
-%\begin{table}[ht]
-%\begin{tabular}{ll}
-%\textbf{Name:} & \firstname{} \lastname\\\\
-%\textbf{Post-Secondary} & La La School\\
-%\textbf{Education and}& La La Land\\
-%\textbf{Degrees:}& 1996 - 2000 M.A.\\\\
-%& University of Western Ontario\\
-%& London, ON\\
-%& 2008 - 2012 Ph.D.\\\\
-%\textbf{Honours and}& NSERC PGS M\\
-%\textbf{Awards:}& 2006-2007\\\\
-%\textbf{Related Work}& Teaching Assistant\\
-%\textbf{Experience:}& The University of Western Ontario\\
-%& 2008 - 2012\\
-%\end{tabular}
-%\end{table}
-%\subsubsection*{Publications:}
-%La La
+%\chapter*{Curriculum Vitae}
+\includepdf[pages={1,2}]{Chapters/CV-MScThesis.pdf}
 \end{document}
 

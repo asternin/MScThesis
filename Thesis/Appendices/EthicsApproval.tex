@@ -1,5 +1,16 @@
 \chapter{Ethics Approval Form}\label{appendix:ethics}
 \myappendices{Appendix \ref{appendix:ethics} {Ethics Approval Form}}
 
-The Ethics Approval Form can be found on the following page.
-\includepdf{Figures/EthicsApproval.pdf}
+% this text is not necessary even if the rest is a blank page... ES
+%The Ethics Approval Form can be found on the following page.
+%\includepdf{Figures/EthicsApproval.pdf}
+
+%Let's see if we can fit it on the same page
+\begin{figure}[h]
+% 0.6 is the largest number that can be used with your margins
+%\centerline{{\includegraphics[scale=0.6]{Figures/EthicsApproval.pdf}}
+%
+%However, if you trim the white space from the PDF, and maybe cut off the bottom address line, this might look better.
+\adjustbox{trim={.05\width} {0.30\height} {0.12\width} {.03\height},clip}%
+   {\includegraphics[width=1.2\textwidth]{Figures/EthicsApproval.pdf}}
+\end{figure}
