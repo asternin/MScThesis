@@ -18,8 +18,21 @@
 %\renewcommand{\gyear}{\number\year}
 %\newcommand{\makecoauthor}{
 %Type information about coauthorship here/ }
-\renewcommand{\makeacknowlege} {
-%Type in acknowlegements here
+\renewcommand{\makeacknowledge} {
+%Type in acknowledgements here
+I would like to thank my supervisors, Dr. Jessica Grahn and Dr. Adrian Owen for guiding me through this project. 
+Without their support and encouragement this document would not be in your hands today.
+
+I would like to thank Dr. Sebastian Stober for pushing me to explore new and difficult areas, and for being patient with me when things didn't stick the first time around.
+Without Sebastian this project would not exist. 
+
+To the lab members in the Owen and Grahn Labs: Thank you for your invaluable  suggestions, feedback, and assistance at all stages of this experiment.
+
+I would also like to thank those who shared the first floor of the Brain and Mind Institute. 
+Thank you for being there to discuss science and grapple with difficult concepts while being the kindest friends one could ask for. 
+
+Lastly, I want to thank my family for supporting me in this endeavour.
+Especially my father, for teaching me what good science is.
 }
 %% This sets the page style and numbering for preliminary sections.
 \begin{preliminary}
@@ -30,17 +43,24 @@
 %\addcontentsline{toc}{chapter}{Co-Authorship Statement}
 %\coauthor{\makecoauthor}  %comment this out if none
 %\newpage
-%\addcontentsline{toc}{chapter}{Acknowlegements}
-%\acknowlege{\makeacknowlege}	%as above
 \addcontentsline{toc}{chapter}{Abstract}
 \Large\begin{center}\textbf{Abstract}\end{center}\normalsize
+\begin{spacing}{2}
 %%  ***  Put your Abstract here.   ***
 %% (150 words for M.Sc. and 350 words for Ph.D.)
-
-This is a really silly abstract.
-
+This study explored whether we could accurately classify perceived and imagined musical stimuli from EEG data. 
+Successful EEG-based classification of what an individual is imagining could pave the way for novel communication techniques, such as brain-computer interfaces. 
+We recorded EEG with a 64-channel BioSemi system while participants heard or imagined the different musical stimuli. 
+Using principal components analysis, we identified components common to both the perception and imagination conditions however, the time courses of the components did not allow for stimuli classification. 
+We then applied deep learning techniques using artificial neural networks. 
+This technique enabled us to classify perception of music at a statistically significant level (28.7\%), but we were unable to classify imagination of music (7.41\%). 
+The next step is to determine which characteristics of music are driving perception classification rates and to capitalize on them to raise imagination classification rates. 
+\end{spacing}
 \vfill
-\textbf{Keywords:} Time series analysis, data mining
+\textbf{Keywords:} music perception, music imagination, classification, electroencephalography (EEG), machine learning, deep learning, brain-computer interface (BCI)
+\newpage
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\acknowledge{\makeacknowledge}	%as above
 \newpage
 \tableofcontents
 \newpage

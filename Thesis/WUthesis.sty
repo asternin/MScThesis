@@ -123,11 +123,11 @@
   \fi
 }
 
-\newcommand\acknowlege[1]{%
+\newcommand\acknowledge[1]{%
   \edef\@tempa{#1}%
   \def\@tempb{}%
   \ifx\@tempa\@tempb
-	\else \newpage \Large Acknowlegements\normalsize\\\indent\\#1\newpage
+	\else \newpage \Large\begin{center}\textbf{Acknowledgements}\end{center}\normalsize\indent\\#1\newpage
   \fi
 }
 
@@ -156,7 +156,7 @@
 \newcommand{\gyear}{\number\year}
 %\newcommand{\makecoauthor}{
 %Type information about coauthorship here/ }
-\newcommand{\makeacknowlege} {
+\newcommand{\makeacknowledge} {
 %Type in acknowlegements here
 }
 \newcommand{\listappendixname}{List of Appendices}
