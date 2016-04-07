@@ -1,30 +1,29 @@
 \chapter{Discussion}
 %\addcontentsline{toc}{chapter}{6. Discussion}
-The goal of these experiments was to investigate whether the perception and imagination of short musical pieces could be detected using EEG.  
-Having the ability to detect musical pieces from imagination would allow us to build a \ac{BCI} that would allow patients with motor deficits to communicate through music-imagination.
-Ideally, patients would be able to imagine a piece of music to convey a certain thought (i.e. the imagination of "Jingle Bells" to indicate hunger).
-\cite{schaefer_name_2011} were able to classify \emph{perceived} music stimuli based on the unique time courses of principal components that occurred during music perception, but we were unable to replicate this result. 
-The most likely reason is the number of stimuli presented to participants. 
-In the Schaefer study, participants heard each stimulus more than a hundred times. 
-In our experiment, participants heard each stimulus five times. 
-The small number of trials is likely also responsible for our inability to classify imagination using either the PCA technique or machine learning. 
+The goal of these experiments was to investigate whether the perception and imagination of short musical pieces could be classified using EEG.  
+The ability to classify musical pieces from imagination could lead to the building of a \ac{BCI} that would allow patients with motor deficits to communicate through music imagination.
+Ideally, patients would be able to imagine a piece of music to convey a certain thought (i.e. imagining "Jingle Bells" to indicate hunger).
+Schaefer \etal \citeyear{schaefer_name_2011} were able to classify \emph{perceived} music stimuli based on the unique time courses of principal components that occurred during music perception, but we were unable to achieve the same result. 
+The most likely reason is the number of stimuli presented to participants, as we presented far fewer trials per stimulus (5 vs 100). 
+The small number of trials is also likely responsible for our inability to classify imagination using either the PCA technique or machine learning. 
 
-The rationale for including so few trials per stimulus stems from the end-goal of building a music-based \ac{BCI}. 
-A \ac{BCI} must require as little training as possible when used with patients.
+The rationale for including so few trials per stimulus stemmed from the end-goal of building a music-based \ac{BCI}. 
+A \ac{BCI} must operate with as little training as possible when used with patients.
 The patients that require such interfaces to communicate may have difficulty directing attention, and focusing on a single task for a long time can be exhausting. 
-By creating a system that requires minimal training we can cut down on patient fatigue during the training stage, ensuring that patients have enough energy to use the system for communication. 
+A system that requires minimal training cuts down on patient fatigue during the training stage, ensuring that patients have enough energy to use the system for communication. 
 Ideally, our \ac{BCI} would be trained on brain data collected during the \emph{perception} of music and tested on brain data collected during \emph{imagination} of music. 
-By training on perception data we hope to keep patient fatigue to a minimum. 
+By training on perception data we hoped to keep patient fatigue to a minimum. 
+However, our results indicate that this is currently not a viable option with the existing data.  
 
-Using machine learning techniques we were able to train our system and classify the perception of our music stimuli from EEG signal. 
-However, our technique failed when applied data collected during imagination of music.
+Using machine learning techniques, we were able to train our system and classify the perception of music stimuli from the recorded EEG signal at a 28.7\% accuracy level (chance = 8.3\%)
+However, the technique failed when applied data collected during imagination of music.
 There are multiple reasons that could explain why we were unable to classify music imagination.
 During perception, the timing of the music is consistent across trials (e.g. the second beat of the song always occurs at a consistent time point) because the timing is driven by the stimulus. 
-In imagination this timing may fluctuate across trials and across participants, because after the end of the tempo cue there is no external stimulus.
+During imagination, this timing may fluctuate across trials and across participants, because after the end of the tempo cue there is no external stimulus.
 A single participant may imagine music at a different rate on different trials, and some participants may have a tendency to speed up or slow down throughout their imagining. 
 Another inconsistency that may occur across participants, and across trials, is the focus of the imagination. 
 It is possible that different participants focus on different aspects of the music while imagining.
-Participants may choose to imagine the melody, the lyrics, or the instrumentation, and the focus may shift across trials.
+Participants may choose to imagine the melody, the lyrics, or the instrumentation, and their focus may shift across trials.
 There are also differences in `how' participants imagine music. 
 After the experiment was completed, we asked participants what technique they had used to imagine. 
 There was a 50-50 split between participants imagining themselves producing the music (i.e. singing the music) and participants ``hearing the music in their head''. 
@@ -35,47 +34,47 @@ The secondary goal of these experiments was to determine what neural processes d
 Although it is tempting to interpret the results of a neural network, it is difficult to determine why a trained neural network makes a particular decision \cite{towell_1992_interpretation}.
 One way of understanding a neural network's decisions is by investigating the layers of the network separately and relating the weights within these layers to the input and the output. 
 However, understanding the structure of a neural network may not necessarily inform us about what the brain is doing to perform the same task. 
-There are a few things to keep in mind about neural network solutions. 
-First, the solution may not be unique and may simply be one of many possible solutions. 
-Although the network is constrained to minimize misclassification error, the solution reached by the network could be a local minima. 
-With further tweaking of the network it may be possible to uncover a global minima of the problem. 
+%There are a few things to keep in mind about neural network solutions. 
+First, the network's solution may not be unique and may simply be one of many possible solutions. 
+Although the network is constrained to minimize misclassification error, the solution reached by the network could be a local minimum. 
+With further tweaking of the network, it may be possible to uncover the global minimum of the problem. 
 Second, interpretation is difficult because a solution is reached based on parameters set by the researcher. 
 It is not possible to untangle whether aspects of the solution are necessary for solving the problem or if they are influenced by the chosen network architecture. 
 Lastly, artificial neural networks, like the one used in this experiment, are \emph{artificial}, and only superficially resemble the way a biological system processes information. 
 It is not possible to know whether the way an artificial network solves a biological problem is the same way a biological system would solve it. 
 
-However, to investigate whether we could glean any brain-related information from our neural network (\autoref{fig:model_W}), we focused on whether the spatial or temporal filters can be related to any biological or musical characteristics.
-The spatial filter in layer 1 indicates which electrodes carry the \ac{EEG} data important for classification. 
-However, because of the nature of \ac{EEG} we are unable to comment on where the data from these electrodes is produced.
-\ac{EEG} collects the electrical signals produced by the brain at the scalp. 
-By the time the electrical information reaches the electrodes it has travelled through layers of tissue and the skull and is a very diffuse signal. 
+However, to investigate whether we could glean any brain-related information from our neural network (\autoref{fig:model_W}), we focused on whether the spatial or temporal filters could be related to any biological or musical characteristics.
+The spatial filter in layer 1 indicated which electrodes carried the \ac{EEG} data important for classification. 
+However, because of the spatially imprecise nature of \ac{EEG}, we are unable to comment on where the data from these electrodes is produced.
+\ac{EEG} collects electrical signals at the scalp that are produced by the brain.
+By the time the electrical information reaches the electrodes, it has travelled through layers of tissue and the skull and is diffuse.
 Trying to reconstruct the sources of the electrical signal in three dimensional space presents a reverse inference problem with countless solutions.
-Because there is more than one way to identify sources within the brain that could produce the electrical signal patterns recorded at the scalp it is very difficult to pinpoint where the signals collected by each electrode originated.
+Because there is more than one way to identify sources within the brain that could produce the electrical signal patterns recorded at the scalp, it is very difficult to pinpoint where the signals collected by each electrode originated.
 
-One approach to breaking an EEG signal down into constituent parts is using \ac{PCA}.
+One approach to breaking an EEG signal down into constituent parts is to use \ac{PCA}.
 The auditory research literature is in consensus on what principal components of auditory processing look like.
 However, the spatial filter in layer 1 does not match what is seen in a \ac{PCA}. 
 Generally auditory component peaks are located in the fronto-central region of the topographic spatial map. 
 The layer 1 filter does not have any similarities to the biologically produced components and has lateral peaks. 
-Because we can not relate the layer 1 filter to any biological information, and we have no way to interpret what type of signals are picked up by the electrodes the model has labeled as important for classification we decided to force the net to use biologically produced information to see whether the model's classification abilities change. 
+Because we could not relate the layer 1 filter to any biological information, and we had no way to interpret what type of signals are picked up by the electrodes the model has labeled as important for classification, we decided to force the net to use biologically produced information to see whether the model's classification abilities change. 
 We exchanged the neural net's first layer with the principal components calculated in \autoref{fig:components} (C). 
 This resulted in a decrease in classification accuracy. The results from the neural net using biologically produced spatial maps can be seen in Appendix \ref{appendix:PCAInvestigation}.
 
 The second layer of the neural net produced temporal filters that indicate time periods in the stimuli that are important for classification. 
 Upon closer investigation there were no auditory characteristics that stood out as being unique to each of the important time periods.
 These time periods did not relate to salient auditory events, important points in the musical structure of the piece, or any obvious aspect of the lyrics, such as word repetition. 
-To determine whether the patterns in the filters are driven by a cognitive process such as recognition of the music we conducted a behavioural experiment.
+To determine whether the patterns in the filters were driven by a cognitive process such as recognition of the music we conducted a behavioural experiment.
 The results showed that the important time periods do not coincide with the moment participants recognize the piece of music. 
 \autoref{fig:RecognitionTime} shows that participants consistently recognize the pieces of music well before the important time periods occur in the temporal filters. 
-Based on these results we know what is \emph{not} responsible for highlighting these moments: the importance of these moments is not due to auditory characteristics of the stimuli or a moment of recognition.
+Based on these results we know what is \emph{not} responsible for highlighting these moments in the classifier: the importance of these moments is not due to auditory characteristics of the stimuli or a moment of recognition.
 At this time we are unable to say what is causing these time periods to be flagged as important for stimulus classification. 
 
-Although we were able to classify music perception (accuracy=28.7\%), we were not able to classify music imagination (accuracy=7.4\%).
-Future experiments should aim to disentangle what during perception is driving the classifier and to enhance this during imagination.
+Although we were able to classify music perception (accuracy = 28.7\%), we were not able to classify music imagination (accuracy = 7.4\%).
+Future experiments should aim to disentangle what information is driving the classifier during perception and to enhance this during imagination.
 To do this we may need to use simpler stimuli.
 Rhythm stimuli are simpler than music stimuli because they do not include melody, lyric, or instrumentation information. 
 If we are able to classify the imagination of rhythmic stimuli more accurately than the imagination of music then we may be able to say that it is the rhythmic component of music driving the classification in this experiment.
 Then, one at a time, we can add in other aspects of music like tone and lyrics to determine what effect they have on classification accuracy until we reach the optimum combination of musical characteristics.
 Previous research has shown that it is possible to classify the perception of rhythms \cite{stober2014audiomostly}, so capitalizing on rhythm's auditory simplicity may be an effective way to learn what characteristics are necessary to drive a music-based \ac{BCI}.
-It will also be important during future experiments to continue to cue participants to the tempo during imagination using a metronome.
+Finally, it will also be important during future experiments to continue to cue participants to the tempo during imagination using a metronome.
 This will ensure that all participants imagine at the same rate and are consistent across multiple trials.

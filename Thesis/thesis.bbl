@@ -1,42 +1,6 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
-Cabredo%
-, Legaspi%
-, Inventado%
-\BCBL {}\ \BBA {} Numao%
-}{%
-Cabredo%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2012}}%
-}]{%
-cabredo_emotion_2012}
-\APACinsertmetastar {%
-cabredo_emotion_2012}%
-\begin{APACrefauthors}%
-Cabredo, R.%
-, Legaspi, R\BPBI S.%
-, Inventado, P\BPBI S.%
-\BCBL {}\ \BBA {} Numao, M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2012}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {An {Emotion} {Model} for {Music} {Using} {Brain}
-  {Waves}} {An {Emotion} {Model} for {Music} {Using} {Brain} {Waves}}.{\BBCQ}
-\newblock
-\BIn{} \APACrefbtitle {Proceedings of the 13th {International} {Society} for
-  {Music} {Information} {Retrieval} {Conference} ({ISMIR}'12)} {Proceedings of
-  the 13th {International} {Society} for {Music} {Information} {Retrieval}
-  {Conference} ({ISMIR}'12)}\ (\BPGS\ 265--270).
-\newblock
-\begin{APACrefURL}
-  [{2015-04-26}]\url{http://ismir2012.ismir.net/event/papers/265-ismir-2012.pdf}
-  \end{APACrefURL}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Cirelli%
 \ \protect \BOthers {.}}{%
 Cirelli%
@@ -411,38 +375,6 @@ Lee, T\BHBI W.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Lin%
-, Jung%
-\BCBL {}\ \BBA {} Chen%
-}{%
-Lin%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2009}}%
-}]{%
-lin_eeg_2009}
-\APACinsertmetastar {%
-lin_eeg_2009}%
-\begin{APACrefauthors}%
-Lin, Y\BHBI P.%
-, Jung, T\BHBI P.%
-\BCBL {}\ \BBA {} Chen, J\BHBI H.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2009}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{EEG} dynamics during music appreciation} {{EEG}
-  dynamics during music appreciation}.{\BBCQ}
-\newblock
-\BIn{} \APACrefbtitle {Annual {International} {Conference} of the {IEEE}
-  {Engineering} in {Medicine} and {Biology} {Society} ({EMBC}'09)} {Annual
-  {International} {Conference} of the {IEEE} {Engineering} in {Medicine} and
-  {Biology} {Society} ({EMBC}'09)}\ (\BPGS\ 5316--5319).
-\newblock
-\begin{APACrefDOI} \doi{10.1109/IEMBS.2009.5333524} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Merchant%
 , Grahn%
 , Trainor%
@@ -666,8 +598,8 @@ Schaefer, R\BPBI S.%
 \APACrefYear{2011}.
 \unskip\
 \newblock
-\APACrefbtitle {Measuring the mind's ear {EEG} of music imagery} {Measuring the
-  mind's ear {EEG} of music imagery}\ \APACtypeAddressSchool {\BUPhD}{}{}.
+\APACrefbtitle {Measuring the mind's ear: {EEG} of music imagery} {Measuring
+  the mind's ear: {EEG} of music imagery}\ \APACtypeAddressSchool {\BUPhD}{}{}.
 \unskip\
 \newblock
 \APACaddressSchool {}{Radboud University Nijmegen}.
@@ -894,6 +826,33 @@ Stober, S.%
 \BIn{} \APACrefbtitle {Advances in Neural Information Processing Systems 27
   (NIPS'14)} {Advances in neural information processing systems 27 (nips'14)}\
   (\BPGS\ 1449--1457).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Stober%
+, Sternin%
+, Owen%
+\BCBL {}\ \BBA {} Grahn%
+}{%
+Stober%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+stober_ICLR2016}
+\APACinsertmetastar {%
+stober_ICLR2016}%
+\begin{APACrefauthors}%
+Stober, S.%
+, Sternin, A.%
+, Owen, A\BPBI M.%
+\BCBL {}\ \BBA {} Grahn, J\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+\APACrefbtitle {Deep Feature Learning for {EEG} Recordings.} {Deep feature
+  learning for {EEG} recordings.}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

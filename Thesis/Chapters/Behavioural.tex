@@ -6,12 +6,12 @@
 Six participants had formal music training (2-15 years), and four of the participants played instruments regularly at the time of data collection. 
 On average participants listened attentively to music 1.5 hours per day and had music playing in the background for 3.6 hours per day.
 \section{Procedure}
-The 12 stimuli used were the same songs as those used in the original experiment (See \autoref{tab:stimuli_information}.)
+The 12 stimuli were the same songs as those in the original experiment (See \autoref{tab:stimuli_information}.)
 The experiment had two parts and lasted about 50 mins.
 First, participants listened to each of the 12 stimuli and pressed a button when (and if) they recognized the piece of music.
 The timing of their key press was recorded. 
 During the second part of the experiment participants were presented with all possible paired combinations of stimuli (78 pairs). 
-They listened to the first song followed immediately by the second and then rated how similar they felt the two songs sounded on a scale from 0-100 (0=the songs sound nothing alike, 100=the songs sound exactly the same).
+They listened to the first song followed immediately by the second and then rated how similar the two songs sounded on a scale from 0-100 (0=the songs sound nothing alike, 100=the songs sound exactly the same).
 Participants were asked to focus on how generally similar the two songs sounded and not to worry about being correct.
 \section{Results}
 In order to determine whether the periods of time highlighted by the neural net in layer 3 of \autoref{fig:model_W} are representative of a moment of recognition, we collected the average time at which people recognize these musical pieces (\autoref{fig:RecognitionTime}). 
@@ -19,7 +19,7 @@ From these results it does not look like the highlighted time periods from layer
 \begin{figure}[h] 
   \begin{center}
 %    \includegraphics[width=\textwidth,keepaspectratio=true]{Figures/RecognitionTimeGraph}
-        \includegraphics[scale=0.7]{Figures/RecognitionTimeGraph}
+        \includegraphics[scale=0.55]{Figures/RecognitionTimeGraph.png}
 %   \\\vspace{-0.8em}
     \caption{Average time it takes for participants to recognize these stimuli (red). Individual data is shown in black and song length is shown in blue. The magenta bars indicate the highlighted time periods from layer three in the neural net (\autoref{fig:model_W_confusion}).}
     \label{fig:RecognitionTime}
@@ -31,9 +31,9 @@ The second part of the experiment asked participants to give similarity ratings 
 As expected, participants are close to perfect at identifying identical songs. 
 Lyric/non-lyric pairs of songs were also rated as highly similar and that is seen in the four, dark squares parallel to the diagonal.
 
-The values seen in \autoref{fig:model_W_binary_confusion} can be interpreted as ``dissimilarity'' scores, so we took their inverse (100 - score) to produce similarity scores and correlated this matrix with the average similarity ratings given by our participants.
-A correlation of r=0.03 was calculated (p$>$0.05).
-This lack of correlation indicates that the neural net is doing something different than humans when determining similarities between stimuli. 
+The classification accuracy values seen in the confusion matrix in \autoref{fig:model_W_binary_confusion} can be interpreted as ``dissimilarity'' scores, so we took their inverse (100 - score) to produce similarity scores and correlated this matrix with the average similarity ratings given by our participants.
+The correlation was r=0.03 (p$>$0.05).
+This lack of correlation indicates that the neural net is doing something different from humans when determining similarities between stimuli. 
 \begin{figure}[htb] 
   \begin{center}
 %    \includegraphics[width=\textwidth,keepaspectratio=true]{Figures/Similarity}
