@@ -3,40 +3,43 @@
 
 Everybody imagines music. Imagining music can be defined as a deliberate internal recreation of the perceptual experience of listening to music \cite{schaefer_name_2011}.
 Individuals can imagine themselves producing music, imagine listening to others produce music, or simply "hear" the music in their heads. 
-Music imagination is used by musicians to memorize music and anyone who has ever had an "ear-worm" -- a tune stuck in their head -- has experienced imagining music. Because of its simplicity no training is required to imagine a song, and researchers have been investing the utility of music imagery for \acp{BCI}.
+Music imagination is used by musicians to memorize music, and anyone who has ever had an "ear-worm" -- a tune stuck in their head -- has experienced imagining music. 
+Because of its simplicity, no training is required to imagine a song, and researchers have therefore been investigatng the utility of music imagery for \acp{BCI}.
 A \ac{BCI} is a system that allows an external device to be controlled or modified using brain activity. 
 Music imagery appears to be a very promising means for driving \acp{BCI} that use \ac{EEG} -- a popular non-invasive neuroimaging technique that relies on electrodes placed on the scalp to measure the electrical activity of the brain.
-For instance, Schaefer \etal\cite{schaefer_measuring_2011} argue that
+For instance, Schaefer \etal\citeyear{schaefer_measuring_2011} argue that
 \emph{``music is especially suitable to use here as (externally or internally generated) stimulus material, since it unfolds over time, and \ac{EEG} is especially precise in measuring the timing of a response.''}
-For patients that have difficulties communicating behaviourally (e.g. patients with locked-in syndrome) \ac{BCI}s are a promising communication tool. 
-{BCI}s that currently exist are generally binary systems that allow the user to choose between two options to answer yes/no questions. %limiting communication abilities. 
-A system with a larger number of answer options would offer a more complete communication experience. 
-Using music as the basis for a \ac{BCI} is a promising way to build such a system due to the large number of musical pieces that exist. 
-Ideally, a music-based \ac{BCI} would allow the user to imagine a piece of music in order to convey a particular thought. 
+For patients that have difficulties communicating behaviourally (e.g. patients with locked-in syndrome), \ac{BCI}s are a promising communication tool. 
+{BCI}s that currently exist are generally binary systems that allow the user to choose between two options to answer yes/no questions \cite{Owen2006}.
+A system with a larger number of options would allow for a more complete and efficient communication experience. 
+Using music as the basis for a \ac{BCI} is a promising way to build such a system because of the large number of musical pieces that exist. 
+Ideally, a music-based \ac{BCI} would allow the user to imagine a piece of music to convey a particular thought. 
 However, the translation from music imagination will require careful processing of the EEG data. 
 
-EEG data contain a variety of signals, elicited by sounds, that can be exploited by a \ac{BCI}. 
-%However, the EEG data is full of unwanted signals (noise) and extracting the relevant information can be a challenge.
-%Decoding brain wave recordings to classify different states is a relatively new field of research.
-%A recent review of neuroimaging methods for \ac{MIR} that also covers techniques different from EEG is given in \cite{ismir2015kaneshiro}.
-\ac{EEG} signals have been used to measure emotions induced by music perception \cite{lin_eeg_2009,cabredo_emotion_2012} and to distinguish perceived rhythmic stimuli \cite{stober2014nips}.
-Further in the rhythmic domain it has been shown that oscillatory neural activity in the gamma frequency band (20-60 Hz) is sensitive to accented tones in a rhythmic sequence \cite{snyder_gamma-band_2005}.
+EEG data contain a variety of signals (elicited by external stimuli like sounds, lights etc.) that can be exploited by a \ac{BCI}. 
+For a \ac{BCI} to be successful, it must be able to distinguish between different induced brain states. 
+In the rhythmic domain, \ac{EEG} signals have been used to distinguish between perceived rhythmic stimuli \cite{stober2014nips}.
+It has been shown that oscillatory neural activity in the gamma frequency band (20-60 Hz) is sensitive to accented tones in a rhythmic sequence \cite{snyder_gamma-band_2005}.
 Oscillations in the beta band (20-30 Hz) entrain to rhythmic sequences \cite{cirelli_beta_2014, merchant_beta_2015} and increase in anticipation of strong tones in a non-isochronous, rhythmic sequence \cite{iversen_top-down_2009,fujioka_beta_2009,fujioka_internalized_2012}.
-The magnitude of \acp{SSEP}, which reflect neural oscillations entrained to the stimulus, changes when subjects hear rhythmic sequences for frequencies related to the metrical structure of the rhythm.
-This is a sign of entrainment to beat and meter \cite{nozaradan_tagging_2011,nozaradan_selective_2012}. 
-\ac{EEG} studies have further shown that perturbations of the rhythmic pattern lead to distinguishable \acp{ERP} \cite{geiser_early_2009}.
-Furthermore, Vlek \etal \cite{vlek_shared_2011} showed that imagined auditory accents imposed on top of a steady metronome click can be recognized from EEG.
+The magnitude of \acp{SSEP}, which reflect neural oscillations entrained to the stimulus, increases when subjects hear rhythmic sequences for frequencies related to the metrical structure of the rhythm.
+This is a sign of neural entrainment to beat and meter \cite{nozaradan_tagging_2011,nozaradan_selective_2012}, which are the nested structures of intervals between the sounds in a rhythm. 
+The beat is the basic pulse of the rhythm that one might tap their foot to, and these beats can be grouped to create meter; generally into groups of three of four beats. 
+In addition, perturbations of the rhythmic pattern lead to distinguishable \acp{ERP} \cite{geiser_early_2009, vlek_shared_2011}, and imagined auditory accents imposed over a steady metronome click can be recognized from EEG.
+Thus, rhythm alters \ac{EEG} patterns in systematic ways that may be exploited by a \ac{BCI}. 
+Because rhythm is an inherent part of music we expect music to have a similar effect on \ac{EEG} signals. 
 
-Recently studies have identified a close relationship between the brain areas that are active during the imagination and the perception of music \cite{halpern_fmri_2004,Kraemer2005,Herholz2008,herholz_2012}. 
-Although not directly relevant to a \ac{BCI}, we can learn a lot from \ac{EEG} data collected while participants listen to melodies.
-Exploring EEG data during music perception can inform how we approach music imagination data and the brain signals recorded while listening to music could serve as reference data to determine which salient elements are to be expected during imagination. 
-By using perception data as a way to train our \ac{BCI} we can cut down on the amount of imagination training needed which will reduce potential user fatigue.
+Recently studies have identified an overlap between the brain areas that are active during the imagination and the perception of music \cite{halpern_fmri_2004,Kraemer2005,Herholz2008,herholz_2012}. 
+We therefore can examine \ac{EEG} data collected while participants listen to melodies to learn about the neural responses during music perception, and determine which salient elements are to be expected during music imagination.
+Exploring EEG data during music perception can inform how we approach music imagination data, and the brain signals recorded while listening to music could serve as reference data for decoding music imagination. 
+To use a \ac{BCI} effectively both the system and the user need to be trained. 
+The user needs to learn how to effectively modify brain states in a way that the computer can understand, and the system needs to learn to recognize the different brain states of the unique user.
+By using perception data to train a \ac{BCI} we can cut down on the amount of imagination training needed, which will reduce potential user fatigue.
 
 EEG has already successfully been used to classify perceived melodies. 
-In a study by Schaefer \etal \cite{schaefer_name_2011}, 10 participants \textit{listened} to 7 short melody clips with a length between 3.26s and 4.36s.
-For single-trial classification, each stimulus was presented 140 times in randomized back-to-back sequences of all stimuli.
-Using a quadratically regularized linear logistic-regression classifier with 10-fold cross-validation, they were able to successfully classify the \acp{ERP} of single trials.
-Within subjects, the accuracy varied between 25\% and 70\%.
+In a study by Schaefer \etal \citeyear{schaefer_name_2011}, 10 participants listened to 7 short melody clips 3-4 seconds long.
+Each stimulus was presented 140 times in randomized back-to-back sequences of all stimuli.
+%Using a quadratically regularized linear logistic-regression classifier with 10-fold cross-validation, they were able to successfully classify the \acp{ERP} of single trials.
+The classification accuracy varied between 25\% and 70\% within subjects.
 Applying the same classification scheme across participants, they obtained between 35\% and 53\% accuracy.
 %In a further analysis, they combined all trials from all subjects and stimuli into a grand average \ac{ERP}.
 %Using singular-value decomposition, they obtained a fronto-central component that explained 23\% of the total signal variance.
@@ -44,32 +47,34 @@ Applying the same classification scheme across participants, they obtained betwe
 %As Hubbard concludes in his recent review of the literature on auditory imagery, \emph{``auditory imagery preserves many structural and temporal properties of auditory stimuli''} and \emph{``involves many of the same brain areas as auditory perception''} \cite{hubbard_auditory_2010}. 
 %This is also underlined by Schaefer \cite[p. 142]{schaefer_measuring_2011} whose \emph{``most important conclusion is that there is a substantial amount of overlap between the two tasks} [music perception and imagination]\emph{, and that `internally' creating a perceptual experience uses functionalities of `normal' perception.''}
 
-Brain activity during music imagination has also been detected by \ac{EEG} \cite{schaefer_shared_2013}, and encouraging preliminary results for recognizing imagined music fragments from \ac{EEG} recordings were reported in \cite{schaefer_single_2009} in which 4 out of 8 participants produced imagery that was classifiable (in a binary comparison) with an accuracy between 70\% and 90\% after 11 trials.
+Brain activity induced by music imagination has also been detected by \ac{EEG} \cite{schaefer_shared_2013}, and encouraging preliminary results for classifying imagined music fragments from \ac{EEG} recordings were reported in \cite{schaefer_single_2009} in which 4 out of 8 participants produced imagery that was classifiable. 
+In this experiment participants imagined four different musical phrases, but classification was done within pairs of stimuli.
+The best results in a single pair of stimuli showed an accuracy between 70\% and 90\% after 11 repetitions of the imagined musical phrase. 
 
-Although \ac{EEG} has been used to decode music imagination the accuracy levels are not robust enough for these decoding techniques to be used in a \ac{BCI}. 
-This could be because the EEG processing methods may not be sensitive enough to the subtle changes that occur during music imagination. 
-The sophisticated signal processing techniques used in machine learning can lend expertise to this challenge. 
+Although \ac{EEG} has been used to decode music imagination, the accuracy levels were not robust enough for these decoding techniques to be used in a \ac{BCI}. 
+EEG processing methods may not be sensitive enough to the subtle changes that occur during music imagination. 
+However, the sophisticated signal processing techniques used in machine learning may be more suited to this challenge. 
 
 Machine learning is a technique that uses algorithms that can learn from and make predictions about data.
 For example, the programs used by postal services to recognize handwriting on envelopes or the speech recognition software in your cell phone are based on machine learning techniques.
 One such technique is based on convolutional neural networks (\acp{CNN}).
 \acp{CNN} were inspired by the powerfully complex visual system found in humans and other animals.
-In the retina we have cells that are responsive to small regions of the visual field \cite{hubel_receptive_1963}. 
-As information moves along the visual processing stream and into the brain single cells in higher layers receive input from multiple cells in lower layers.
-At each level of this process more information is combined.
-This gives cells higher up in the processing stream an increasingly global view of what information was collected by the retinal cells.
+In the retina cells respond to small regions of the visual field \cite{hubel_receptive_1963}. 
+As information moves along the visual processing stream, single cells in higher layers receive input from multiple cells in lower layers.
+At each level, more information is combined, giving cells higher up in the processing stream an increasingly global view of the information collected by the retinal cells.
+For example, when looking at a house information about edges and colour are processed at lower levels.
+This information is then combined as it moves into higher levels that process information like shape.
 Complex visual information is processed farther along the processing stream than simple information as cells in these far layers are sent information from a larger number of retinal cells.
 \acp{CNN} work in a similar way to process complex data. 
 The processing units in a \ac{CNN} act like cells in the visual system.
-The ``receptive field'' of each one of these units is determined by a filter.
+The ``receptive field'' of each one of these units is determined by a filter, which can be thought of as a pattern of weights.
 Each filter is created based on a variety of parameters set by the researcher or determined by the network during the training process.
 Before a \ac{CNN} can be used to classify data it must learn the characteristics of the data. 
 The \ac{CNN} is trained using a subset of the data and the filters are optimized to produce the best classification results. 
 The optimized filters are applied to new data and the accuracy of the classification is determined. 
+In this study, a convolutional neural network is used to classify music stimuli from brain data collected during music perception and imagination. 
 
-%SUMMARY OF WHAT WE TRIED AND THE TECHNIQUES WE USED
-To approach this problem we first tried an ERP analysis similar to that of Schaefer \etal\cite{schaefer_name_2011} in order to determine which piece of music a participant was listening to or imagining.
-When this proved unsuccessful we used a machine learning technique called deep learning to detect more subtle differences in the EEG that would be more useful in classifying stimuli. 
+To classify our music stimuli from EEG data we first tried an ERP analysis similar to that of Schaefer \etal\cite{schaefer_name_2011} to determine which piece of music a participant was listening to or imagining.
+This proved unsuccessful, so we used a machine learning technique called deep learning to detect characteristics of the music from EEG that would better allow us to classify stimuli.
 Using this technique we were able to classify perception of 12 music pieces with a 28.7\% accuracy (chance=8.3\%).
 Using this same technique we were unable to accurately classify imagination of music (accuracy = 7.41\%). 
-\hl{how to finish the intro?}

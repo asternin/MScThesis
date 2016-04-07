@@ -1,31 +1,34 @@
 \chapter{ERP Analysis}
 %\addcontentsline{toc}{chapter}{ERP Analysis}	
 
-Our first analysis of the data followed a strategy similar to the one used in \cite{schaefer_name_2011}.
-Schaefer \etal \cite{schaefer_name_2011} used very short stimuli (3.26s) allowing each stimulus to be repeated many times during during the experiment. 
-This allowed them to average across hundreds of short trials. 
-They then concatenated the grand average ERPs and applied a \ac{PCA}, which resulted in clearly defined spatial features. 
-The differences in the time courses of these spatial features allowed for classification of their stimuli. 
-We tried to replicate these results, but we had fewer repetitions of our stimuli. 
-Therefore, to preserve as much data as possible we used the full length of the trials as opposed to the first 3.26 seconds. 
-We computed grand average \acp{ERP}s by aggregating over the full length of all trials (excluding the cue) of the same stimulus from all subjects. 
+Our first analysis of the data followed a strategy similar to the one used in Schaefer \etal \citeyear{schaefer_name_2011}.
+Schaefer \etal \citeyear{schaefer_name_2011} used short stimuli (3.26s) allowing each stimulus to be repeated many times and the data to be averaged across hundreds of short trials. 
+The grand average \acp{ERP} were concatenated and subjected to a \ac{PCA}, yielding clearly defined spatial features. 
+The differences in the time courses of these components were used to classify their stimuli. 
+We tried to replicate these results, using the time courses of components derived from the average of the first 3.26 seconds of each of our stimuli. 
+We were unable to achieve significant classification results, likely because of our small number of stimuli repetitions.
+Therefore, to preserve as much data as possible we conducting a second \ac{PCA} using the full length of the trials as opposed to the first 3.26 seconds. 
+We computed grand average \acp{ERP} for each stimulus by averaging the full length trials (excluding the cue).
 We then concatenated the grand average \acp{ERP} and applied a \ac{PCA}. 
 This resulted in principle components with poorly defined spatial components in \autoref{fig:components} (A and B).
 \begin{figure}[htb]	%[htbp] is the default: here, top of page, bottom of page, page by itself
-  \centerline{\includegraphics[width=0.6\textwidth]{Figures/principle_components.pdf}}
+  \centerline{\includegraphics[width=0.7\textwidth]{Figures/principal_components_labels.pdf}}
   \caption{Topographic visualization of the top 4 principle components with percentage of the explained signal variance. Channel positions in the 64-channel EEG layout are shown as dots. Colors are interpolated based on the channel weights. The PCA was computed on {\bf A}: the grand average \acp{ERP} of all perception trials; {\bf B}: the grand average \acp{ERP} of all cued imagination trials; {\bf C}: the concatenated perception trials; {\bf D}: the concatenated cued imagination trials.}
   \label{fig:components}
 \end{figure}
 
-In order to preserve even more of the data and we took an alternative approach. 
-All of the raw trials were concatenated to create a single, long trial that contained all of the raw EEG information.
+When calculating an average, some data is lost. 
+In this experiment we have a small amount of data and this loss of data may be detrimental.
+To preserve even more of the data, we took an alternative approach. 
+All of the raw trials, rather than the averages, were concatenated to create a single, long trial that contained all of the raw EEG information.
 We ran a \ac{PCA} on the concatenated raw trials without first calculating an average across trials. 
 This produced clearly defined spatial components \autoref{fig:components} (C and D).
-Except for their (arbitrary) polarity the components are very similar across the two conditions, which replicates the results found in \cite{schaefer_name_2011}.
+Except for their (arbitrary) polarity, the components are very similar across perception and imagination, which replicates the results found in \cite{schaefer_name_2011}.
 
-In order to investigate how similar the activation of these components is across conditions and stimuli we took the time course of component three over the first three seconds of each stimulus during perception and imagination and performed a correlation.
+To investigate how similar these components were across conditions and stimuli, we correlated the time courses of component three during perception and imagination.
 We used component three as it accounts for the most variance while being similar to a typical auditory component.
-The highest correlations produced by this component is r=0.40 (p$<$0.001) for ``Eine Klein Nachtmusic'' (\autoref{fig:nachtmusic})
+The correlation was performed over the first three seconds because we expected the correlations to be highest near the beginning of the trial, before participants's imagination had a chance to drift too far from the cued tempo.
+The highest correlations produced by this component were r=0.40 (p$<$0.001) for ``Eine Klein Nachtmusic'' (\autoref{fig:nachtmusic})
 \begin{figure}[htbp]
   \centerline{\includegraphics[scale=0.4]{Figures/EineKleineCorrelation}}
   \caption{The time course of component three during perception (blue) and imagination (red) of Eine Kleine Nachtmusic. The correlation between the two time courses is r=0.40 (p$<$0.001).}
@@ -37,7 +40,7 @@ and r=0.30 (p$<$0.001) for ``The Emperor Waltz'' (\autoref{fig:emperor}).
   \caption{The time course of component three during perception (blue) and imagination (red) of The Emperor Waltz. The correlation between the two time courses is r=0.30 (p$<$0.001).}
   \label{fig:emperor}
 \end{figure}
-Although these correlate well the perception of Eine Kleine Nachtmusic correlates well with the imagination of Jingle Bells without lyrics (r=0.30). 
+Although these correlations seem promising for stimulus classification, the perception of Eine Kleine Nachtmusic correlates well with the imagination of Jingle Bells without lyrics (r=0.30). 
 The highest correlation of r=0.52 (p$<$0.001) occurs between the imagination of Jingle Bells (without lyrics) and the perception of the Star Wars theme \autoref{fig:starjingle}.
 \begin{figure}[htbp]
   \centerline{\includegraphics[scale=0.4]{Figures/StarJingle}}
@@ -47,5 +50,5 @@ The highest correlation of r=0.52 (p$<$0.001) occurs between the imagination of 
 Because high correlations occur between trials from different stimuli we can not use this approach to classify our stimuli.
 %\hl{include a Table of correlations? with Component 2? component 3?}
 
-Our inability to accurately classify stimuli using this technique could be caused by our much smaller number of trials which are substantially longer than those used by \cite{schaefer_name_2011}. 
-We only had 5 trials per stimulus, ranging from 6.9s to 16s, while Schaefer et al. (2011) collected 145 trials of each of their stimuli each approximately 3s long.
+Our inability to accurately classify stimuli using this technique could be caused by our much smaller number of trials.
+We only had 5 trials per stimulus, ranging from 6.9s to 16s, while Schaefer et al. (2011) collected 145 trials of each of their stimuli, each approximately 3s long.

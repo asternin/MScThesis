@@ -309,33 +309,6 @@ Hubel, D\BPBI H.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Intrator%
-\ \BBA {} Intrator%
-}{%
-Intrator%
-\ \BBA {} Intrator%
-}{%
-{\protect \APACyear {2001}}%
-}]{%
-intrator_2001_interpreting}
-\APACinsertmetastar {%
-intrator_2001_interpreting}%
-\begin{APACrefauthors}%
-Intrator, O.%
-\BCBT {}\ \BBA {} Intrator, N.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2001}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Interpreting neural-network results: a simulation study}
-  {Interpreting neural-network results: a simulation study}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Computational statistics \& data
-  analysis}{37}{3}{373-393}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Iversen%
 , Repp%
 \BCBL {}\ \BBA {} Patel%
@@ -603,6 +576,39 @@ Nozaradan, S.%
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1523/JNEUROSCI.3203-12.2012} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Owen%
+\ \protect \BOthers {.}}{%
+Owen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2006}}%
+}]{%
+Owen2006}
+\APACinsertmetastar {%
+Owen2006}%
+\begin{APACrefauthors}%
+Owen, A\BPBI M.%
+, Coleman, M\BPBI R.%
+, Boly, M.%
+, Davis, M\BPBI H.%
+, Laureys, S.%
+\BCBL {}\ \BBA {} Pickard, J\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{sep}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Detecting awareness in the vegetative state.}}
+  {{Detecting awareness in the vegetative state.}}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Science (New York, N.Y.)}{313}{5792}{1402}.
+\newblock
+\begin{APACrefURL} \url{http://www.sciencemag.org/content/313/5792/1402.short
+  http://www.ncbi.nlm.nih.gov/pubmed/16959998} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1126/science.1130197} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
