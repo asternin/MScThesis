@@ -1,18 +1,18 @@
 \chapter{Questionnaire}\label{appendix:questionnaire}
 \myappendices{Appendix \ref{appendix:questionnaire} {Questionnaire}}
 
-% this text is not necessary even if the rest is a blank page... ES
-%The questionnaire used during both the EEG and the behavioural experiment can be found on the following pages.
-%\includepdf[pages={1,2}]{Figures/questionnaire.pdf}
-
-%Let's see if we can fit it on the same page
 \begin{figure}[h]
-% 0.6 is the largest number that can be used with your margins
-%\centerline{{\includegraphics[scale=0.6]{Figures/questionnaire-1.pdf}}
-%
-%However, if you trim the white space from the PDF, and maybe cut off the bottom address line, this might look better.
-\adjustbox{trim={.05\width} {0.30\height} {0.12\width} {.03\height},clip}%
-   {\includegraphics[width=1.2\textwidth]{Figures/questionnaire-1.pdf}}
+   \centerline{\includegraphics[page=1,scale=0.75,trim={0.75in 2in 0.75in 1in},clip]{Figures/questionnaire.pdf}}
 \end{figure}
-%\newpage
-%\includepdf[pages={2}]{Figures/questionnaire.pdf}
+
+% this is shorter but does not generate page numbers and headers - they get taken from the included pdf
+%\includepdf[pages={2-3},scale=0.75,trim={0in 1in 0in 0.5in},clip]{Figures/questionnaire.pdf}
+
+%% you only have two pages! so do brute force, one page at a time, same scale as before
+\begin{figure}[h]
+   \centerline{\includegraphics[page=2,scale=0.75,trim={0in 1in 0in 0.5in},clip]{Figures/questionnaire.pdf}}
+\end{figure}
+
+\begin{figure}[h]
+   \centerline{\includegraphics[page=3,scale=0.75,trim={0in 1in 0in 0.5in},clip]{Figures/questionnaire.pdf}}
+\end{figure}

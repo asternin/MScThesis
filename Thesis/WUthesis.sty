@@ -64,7 +64,7 @@
       \rm\thepage \hfil {\sc\leftmark}
       }
    \def\chaptermark##1{\markboth{\ifnum \c@secnumdepth >\m@ne
-      Chapter\ \thechapter. \ \fi ##1}{}}
+      \@chapapp\ \thechapter. \ \fi ##1}{}}
    \def\sectionmark##1{\markright{\ifnum \c@secnumdepth >\z@
       \thesection. \ \fi ##1}}}
 \else % If one-sided printing.
@@ -74,7 +74,7 @@
       {\sc\rightmark} \hfil \rm\thepage
       }
    \def\chaptermark##1{\markright{\ifnum \c@secnumdepth >\m@ne
-      Chapter\ \thechapter. \ \fi ##1}}}
+      \@chapapp\ \thechapter. \ \fi ##1}}}
 \fi
 
 \newcommand\isco[1]{%
@@ -128,6 +128,7 @@
   \def\@tempb{}%
   \ifx\@tempa\@tempb
 	\else \newpage \Large\begin{center}\textbf{Acknowledgements}\end{center}\normalsize\indent\\#1\newpage
+	
   \fi
 }
 

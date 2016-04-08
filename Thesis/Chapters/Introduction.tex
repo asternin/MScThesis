@@ -2,8 +2,8 @@
 %\addcontentsline{toc}{chapter}{1. Introduction}
 
 Everybody imagines music. Imagining music can be defined as a deliberate internal recreation of the perceptual experience of listening to music \cite{schaefer_name_2011}.
-Individuals can imagine themselves producing music, imagine listening to others produce music, or simply "hear" the music in their heads. 
-Music imagination is used by musicians to memorize music, and anyone who has ever had an "ear-worm" -- a tune stuck in their head -- has experienced imagining music. 
+Individuals can imagine themselves producing music, imagine listening to others produce music, or simply ``hear'' the music in their heads. 
+Music imagination is used by musicians to memorize music, and anyone who has ever had an ``ear-worm'' -- a tune stuck in their head -- has experienced imagining music. 
 Because of its simplicity, no training is required to imagine a song, and researchers have therefore been investigatng the utility of music imagery for \acp{BCI}.
 A \ac{BCI} is a system that allows an external device to be controlled or modified using brain activity. 
 Music imagery appears to be a very promising means for driving \acp{BCI} that use \ac{EEG} -- a popular non-invasive neuroimaging technique that relies on electrodes placed on the scalp to measure the electrical activity of the brain.
@@ -22,18 +22,18 @@ In the rhythmic domain, \ac{EEG} signals have been used to distinguish between p
 It has been shown that oscillatory neural activity in the gamma frequency band (20-60 Hz) is sensitive to accented tones in a rhythmic sequence \cite{snyder_gamma-band_2005}.
 Oscillations in the beta band (20-30 Hz) entrain to rhythmic sequences \cite{cirelli_beta_2014, merchant_beta_2015} and increase in anticipation of strong tones in a non-isochronous, rhythmic sequence \cite{iversen_top-down_2009,fujioka_beta_2009,fujioka_internalized_2012}.
 The magnitude of \acp{SSEP}, which reflect neural oscillations entrained to the stimulus, increases when subjects hear rhythmic sequences for frequencies related to the metrical structure of the rhythm.
-This is a sign of neural entrainment to beat and meter \cite{nozaradan_tagging_2011,nozaradan_selective_2012}, which are the nested structures of intervals between the sounds in a rhythm. 
-The beat is the basic pulse of the rhythm that one might tap their foot to, and these beats can be grouped to create meter; generally into groups of three of four beats. 
+%This is a sign of neural entrainment to beat and meter \cite{nozaradan_tagging_2011,nozaradan_selective_2012}, which are the nested structures of intervals between the sounds in a rhythm. 
+%The beat is the basic pulse of the rhythm that one might tap their foot to, and these beats can be grouped to create meter; generally into groups of three of four beats. 
 In addition, perturbations of the rhythmic pattern lead to distinguishable \acp{ERP} \cite{geiser_early_2009, vlek_shared_2011}, and imagined auditory accents imposed over a steady metronome click can be recognized from EEG.
 Thus, rhythm alters \ac{EEG} patterns in systematic ways that may be exploited by a \ac{BCI}. 
-Because rhythm is an inherent part of music we expect music to have a similar effect on \ac{EEG} signals. 
+Because rhythm is an inherent part of music, we expect music to have a similar effect on \ac{EEG} signals. 
 
 Recently studies have identified an overlap between the brain areas that are active during the imagination and the perception of music \cite{halpern_fmri_2004,Kraemer2005,Herholz2008,herholz_2012}. 
-We therefore can examine \ac{EEG} data collected while participants listen to melodies to learn about the neural responses during music perception, and determine which salient elements are to be expected during music imagination.
-Exploring EEG data during music perception can inform how we approach music imagination data, and the brain signals recorded while listening to music could serve as reference data for decoding music imagination. 
-To use a \ac{BCI} effectively both the system and the user need to be trained. 
+We could therefore examine \ac{EEG} data collected while participants listen to melodies to learn about the neural responses during music perception, and determine which salient elements are to be expected during music imagination.
+Exploring EEG data during music perception could inform how we approach music imagination data, and the brain signals recorded while listening to music could serve as reference data for decoding music imagination. 
+This is particularly relevant to developing an effective \ac{BCI} because of the need for training both the system and the user.
 The user needs to learn how to effectively modify brain states in a way that the computer can understand, and the system needs to learn to recognize the different brain states of the unique user.
-By using perception data to train a \ac{BCI} we can cut down on the amount of imagination training needed, which will reduce potential user fatigue.
+By using perception data to train a \ac{BCI} we cut down on the amount of imagination training needed, which will reduce potential user fatigue.
 
 EEG has already successfully been used to classify perceived melodies. 
 In a study by Schaefer \etal \citeyear{schaefer_name_2011}, 10 participants listened to 7 short melody clips 3-4 seconds long.
@@ -59,22 +59,24 @@ Machine learning is a technique that uses algorithms that can learn from and mak
 For example, the programs used by postal services to recognize handwriting on envelopes or the speech recognition software in your cell phone are based on machine learning techniques.
 One such technique is based on convolutional neural networks (\acp{CNN}).
 \acp{CNN} were inspired by the powerfully complex visual system found in humans and other animals.
-In the retina cells respond to small regions of the visual field \cite{hubel_receptive_1963}. 
+In the retina, cells respond to small regions of the visual field \cite{hubel_receptive_1963} called receptive fields. 
 As information moves along the visual processing stream, single cells in higher layers receive input from multiple cells in lower layers.
-At each level, more information is combined, giving cells higher up in the processing stream an increasingly global view of the information collected by the retinal cells.
-For example, when looking at a house information about edges and colour are processed at lower levels.
-This information is then combined as it moves into higher levels that process information like shape.
+At each level, more information is combined, giving cells higher up in the processing stream an increasingly global view of the information collected by the retinal cells (i.e. what the retinal cells are `seeing').
 Complex visual information is processed farther along the processing stream than simple information as cells in these far layers are sent information from a larger number of retinal cells.
+For example, when looking at a house, information about edges and colour are processed at lower levels.
+Information from multiple low-level cells is combined and passed to high-level cells that process more global information like shape. 
+The recognition of the full object as being a house occurs at the highest level in the stream. 
 \acp{CNN} work in a similar way to process complex data. 
 The processing units in a \ac{CNN} act like cells in the visual system.
 The ``receptive field'' of each one of these units is determined by a filter, which can be thought of as a pattern of weights.
-Each filter is created based on a variety of parameters set by the researcher or determined by the network during the training process.
+Each filter is created based on a variety of parameters set by the researcher, or determined by the network during the training process.
+The filters in each subsequent layer of the network `see' larger amounts of the original input data, and the input is classified in the final layer of the network. 
 Before a \ac{CNN} can be used to classify data it must learn the characteristics of the data. 
 The \ac{CNN} is trained using a subset of the data and the filters are optimized to produce the best classification results. 
 The optimized filters are applied to new data and the accuracy of the classification is determined. 
 In this study, a convolutional neural network is used to classify music stimuli from brain data collected during music perception and imagination. 
 
-To classify our music stimuli from EEG data we first tried an ERP analysis similar to that of Schaefer \etal\cite{schaefer_name_2011} to determine which piece of music a participant was listening to or imagining.
+To classify our music stimuli from EEG data we first tried an ERP analysis similar to that of Schaefer \etal\citeyear{schaefer_name_2011} to determine which piece of music a participant was listening to or imagining.
 This proved unsuccessful, so we used a machine learning technique called deep learning to detect characteristics of the music from EEG that would better allow us to classify stimuli.
-Using this technique we were able to classify perception of 12 music pieces with a 28.7\% accuracy (chance=8.3\%).
+Using this technique we were able to classify perception of 12 music pieces with a 28.7\% accuracy (chance = 8.3\%).
 Using this same technique we were unable to accurately classify imagination of music (accuracy = 7.41\%). 

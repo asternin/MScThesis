@@ -11,12 +11,13 @@ Each musical fragment was preceded by approximately two seconds of clicks as a c
 \section{Equipment and Procedure}
 \subsection{Behavioural Testing}
 We collected information about the participants' previous music experience, their ability to imagine sounds, and information about musical sophistication using an adapted version of the widely used Goldsmith's Musical Sophistication Index (G-MSI) \cite{mullensiefen_musicality_2014} combined with an adapted clarity of auditory imagination scale \cite{willander_imagery_scale_2010}. 
+The questionnaire can be found in Appendix \ref{appendix:questionnaire}.
 We also had participants complete a beat tapping and a stimuli familiarity task. 
 Participants listened to each stimulus and were asked to tap along with the music on the table top. The experimenter then rated their tapping ability on a scale from 1 (difficult to assess) to 3 (tapping done properly). 
 After listening to each stimulus participants rated their familiarity with the stimuli on a scale from 1 (unfamiliar) to 3 (very familiar).
 To participate in the \ac{EEG} portion of the study, the participants had to receive a score of at least 90\% on our beat tapping task. Participants received scores from 75\%--100\% with an average score of 96\%.
 Furthermore, they needed to receive a score of at least 80\% on our stimuli familiarity task. 
-Participants received scores from 71\%--100\% with an average score 87\%.
+Participants received scores from 71\%--100\% with an average score of 87\%.
 These requirements resulted in rejecting 4 participants.
 This left 10 participants (3 male), aged 19--36, with normal hearing and no history of brain injury. 
 These 10 participants had an average tapping score of 98\% and an average familiarity score of 92\%.
@@ -70,7 +71,7 @@ The presentation and recording systems were placed outside to reduce the impact 
 \end{figure}
 Horizontal and vertical EOG channels were used to record eye movements. 
 We also recorded the left and right mastoid channel as EEG reference signals. 
-Due to an oversight, the mastoid data was not collected for the first 5 subjects.
+Due to an oversight, the mastoid data were not collected for the first 5 subjects.
 The presented audio %and the recorded EEG were 
 was routed through a Cedrus StimTracker connected to the EEG receiver, which allowed a high-precision synchronization ($<$0.05 ms) of the stimulus onsets with the \ac{EEG} data.
 The experiment was programmed and presented using PsychToolbox run in Matlab 2014a. 
@@ -105,9 +106,9 @@ Stimulus imagination without cue clicks, with feedback
 
 The goal was to use the cue to align trials of the same stimulus collected under conditions 1 and 2. Lining up the trials allows us to directly compare the perception and imagination of music and to identify overlapping features in the data. 
 Conditions 3 and 4 simulate a more realistic query scenario during which the system does not have prior information about the tempo and meter of the imagined stimulus.
-These two conditions were identical except for the trial context.
+Conditions 3 and 4 were identical except for the trial context.
 While the condition 1--3 trials were recorded directly back-to-back within the first part of the experiment, 
-all condition 4 trials were recorded separately in the second part, without any cue clicks or tempo priming by prior presentation of the stimulus.
+all condition 4 trials were recorded separately in the second part without any cue clicks or tempo priming by prior presentation of the stimulus.
 After each condition 4 trial, participants provided feedback by pressing one of two buttons indicating whether or not they felt they had imagined the stimulus correctly.
 In total, 240 trials (12 stimuli x 4 conditions x 5 blocks) were recorded per subject.
 
@@ -117,7 +118,7 @@ For recordings with additional mastoid channels, the EEG data was re-referenced 
 We then removed and interpolated bad EEG channels identified by manual visual inspection.
 For interpolation, the spherical splines method described in \cite{perrin_spherical_1989} was applied.
 The data were then filtered with an fft-bandpass, keeping a frequency range between 0.5 and 30 Hz.
-This also removed any slow signal drift in the EEG.
+This removed unwanted high frequency information and any slow signal drift in the EEG.
 Afterwards, we down-sampled to a sampling rate of 64 Hz.
 To remove artifacts caused by eye blinks, we computed independent components using extended Infomax \ac{ICA} \cite{lee_independent_1999} and semi-automatically removed components that had a high correlation with the EOG channels.
 Finally, the 64 EEG channels were reconstructed from the remaining independent components.

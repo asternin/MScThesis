@@ -33,10 +33,10 @@ Here, $a$ is the reference trial used for this comparison, $b$ is a trial from t
 This similarity constraint is used as a cost function for learning features of the data that are important for stimulus classification. 
 A cost function describes the characteristics of the system that we want to minimize -- in this case we want to minimize the number of violations to the similarity constraint.
 The number of violated constraints is minimized using the standard back propagation training technique used for artificial neural networks.
-To this end, we combine all pairs of trials $(a,b)$ from the same stimulus with all trials $c$ from other stimuli and tell the system that $a$ and $b$ must be more similar.
-For example, we create all possible pairs of trials from the perception of Jingle Bells with lyrics and then combine each of those pairs with all other perception trials.
-Each one of these triplets is then processed by a \ac{SCE} under the similarity constraint.
-In this way, the system learns similarities between trials from the same stimulus and differences between trials from different stimuli.  
+To this end, we combined all pairs of trials $(a,b)$ from the same stimulus with all trials $c$ from other stimuli and told the system that $a$ and $b$ must be more similar.
+For example, we created all possible pairs of trials from the perception of Jingle Bells with lyrics and then combined each of those pairs with all other perception trials.
+Each one of these triplets was then processed by a \ac{SCE} under the similarity constraint.
+In this way, the system learned similarities between trials from the same stimulus and differences between trials from different stimuli.  
 The spatial representation of the features learned by this \ac{SCE} is visualized in Layer 1 of \autoref{fig:model_W}. 
 The coloured areas represent the regions and the electrode weightings that the encoder has determined are optimal for differentiating stimuli.
 This spatial representation acts as a spatial filter that processes the raw data.
@@ -56,7 +56,7 @@ We used the tanh function here.}.
 Layers two and three were trained together with supervised learning and optimized by back propagation through the entire model with a cost function to minimize classification error.
 We employed a 9-fold cross validation scheme by training on the data from 9 subjects (384 trials) and validating on the remaining subject (48 trials).
 The cross-validation was done within the training set with the aim of finding the optimal hyper-parameters (learning rate, filter size, etc.) for our neural network. 
-The final version of layer 2 and 3 is an average of the model parameters over all 9 fold models (see Layer 2 in \autoref{fig:model_W}).
+The final version of layer 2 and 3 is an average of the model parameters over all 9 fold models.
 \section{Full model explanation}
 The single data stream output from layer 1 enters the second layer where it is convolved with a filter. 
 After the data is convolved with the filter in layer 2 and then pooled with a subsampling factor of 11, a single stream of data is produced.
@@ -65,6 +65,6 @@ These representations are shown in Layer 3 of \autoref{fig:model_W}.
 
 The model was then tested with the test set of 108 trials. 
 The test data passes through the layers of the model and the representations produced in layer 3 are compared against the optimized versions. 
-The dot product of the test data's output from layer 2 is taken to each of the optimized layer 3 representations created during the training phase. 
+The dot product of the test data's output from layer 2 is taken with each of the optimized layer 3 representations created during the training phase. 
 This produces 12 values (one for each stimulus) that describe the similarity of the test data with each of the optimized layer 3 representations. 
 The test data is given the label of the stimulus whose representation it matches the most, i.e. the highest similarity value from the dot product. 

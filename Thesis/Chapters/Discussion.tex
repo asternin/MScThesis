@@ -1,10 +1,10 @@
 \chapter{Discussion}
 %\addcontentsline{toc}{chapter}{6. Discussion}
 The goal of these experiments was to investigate whether the perception and imagination of short musical pieces could be classified using EEG.  
-The ability to classify musical pieces from imagination could lead to the building of a \ac{BCI} that would allow patients with motor deficits to communicate through music imagination.
-Ideally, patients would be able to imagine a piece of music to convey a certain thought (i.e. imagining "Jingle Bells" to indicate hunger).
+The ability to classify musical pieces from imagination could lead to the development of a \ac{BCI} that would allow patients with motor deficits to communicate through music imagination.
+Ideally, patients would be able to imagine a piece of music to convey a certain thought (i.e. imagining ``Jingle Bells'' to indicate hunger).
 Schaefer \etal \citeyear{schaefer_name_2011} were able to classify \emph{perceived} music stimuli based on the unique time courses of principal components that occurred during music perception, but we were unable to achieve the same result. 
-The most likely reason is the number of stimuli presented to participants, as we presented far fewer trials per stimulus (5 vs 100). 
+The most likely reason is the number of stimuli presented to participants, as we presented far fewer trials per stimulus (5 vs 145). 
 The small number of trials is also likely responsible for our inability to classify imagination using either the PCA technique or machine learning. 
 
 The rationale for including so few trials per stimulus stemmed from the end-goal of building a music-based \ac{BCI}. 
@@ -16,7 +16,7 @@ By training on perception data we hoped to keep patient fatigue to a minimum.
 However, our results indicate that this is currently not a viable option with the existing data.  
 
 Using machine learning techniques, we were able to train our system and classify the perception of music stimuli from the recorded EEG signal at a 28.7\% accuracy level (chance = 8.3\%)
-However, the technique failed when applied data collected during imagination of music.
+However, the technique failed when applied to data collected during imagination of music.
 There are multiple reasons that could explain why we were unable to classify music imagination.
 During perception, the timing of the music is consistent across trials (e.g. the second beat of the song always occurs at a consistent time point) because the timing is driven by the stimulus. 
 During imagination, this timing may fluctuate across trials and across participants, because after the end of the tempo cue there is no external stimulus.
@@ -25,10 +25,10 @@ Another inconsistency that may occur across participants, and across trials, is 
 It is possible that different participants focus on different aspects of the music while imagining.
 Participants may choose to imagine the melody, the lyrics, or the instrumentation, and their focus may shift across trials.
 There are also differences in `how' participants imagine music. 
-After the experiment was completed, we asked participants what technique they had used to imagine. 
+After the experiment was completed, we asked participants what technique they used to imagine the music.
 There was a 50-50 split between participants imagining themselves producing the music (i.e. singing the music) and participants ``hearing the music in their head''. 
 Some participants also reported imagining vivid scenes, either from existing movies or completely novel scenes, to illustrate their music imagination.
-This wide array of differences are likely the cause of our low imagination classification rates. 
+This wide array of differences is likely the cause of our low imagination classification rates. 
 
 The secondary goal of these experiments was to determine what neural processes drive the classification of music perception and imagination.
 Although it is tempting to interpret the results of a neural network, it is difficult to determine why a trained neural network makes a particular decision \cite{towell_1992_interpretation}.
@@ -37,7 +37,7 @@ However, understanding the structure of a neural network may not necessarily inf
 %There are a few things to keep in mind about neural network solutions. 
 First, the network's solution may not be unique and may simply be one of many possible solutions. 
 Although the network is constrained to minimize misclassification error, the solution reached by the network could be a local minimum. 
-With further tweaking of the network, it may be possible to uncover the global minimum of the problem. 
+With further tweaking of the network, it may be possible to uncover the global minimum of the problem, but there is no way to be sure that the global minimum has been reached.
 Second, interpretation is difficult because a solution is reached based on parameters set by the researcher. 
 It is not possible to untangle whether aspects of the solution are necessary for solving the problem or if they are influenced by the chosen network architecture. 
 Lastly, artificial neural networks, like the one used in this experiment, are \emph{artificial}, and only superficially resemble the way a biological system processes information. 
@@ -53,18 +53,18 @@ Because there is more than one way to identify sources within the brain that cou
 
 One approach to breaking an EEG signal down into constituent parts is to use \ac{PCA}.
 The auditory research literature is in consensus on what principal components of auditory processing look like.
-However, the spatial filter in layer 1 does not match what is seen in a \ac{PCA}. 
+However, the spatial filter in layer 1 does not match what is seen in a \ac{PCA} of auditory \ac{EEG}.
 Generally auditory component peaks are located in the fronto-central region of the topographic spatial map. 
 The layer 1 filter does not have any similarities to the biologically produced components and has lateral peaks. 
 Because we could not relate the layer 1 filter to any biological information, and we had no way to interpret what type of signals are picked up by the electrodes the model has labeled as important for classification, we decided to force the net to use biologically produced information to see whether the model's classification abilities change. 
 We exchanged the neural net's first layer with the principal components calculated in \autoref{fig:components} (C). 
 This resulted in a decrease in classification accuracy. The results from the neural net using biologically produced spatial maps can be seen in Appendix \ref{appendix:PCAInvestigation}.
 
-The second layer of the neural net produced temporal filters that indicate time periods in the stimuli that are important for classification. 
+The second and third layers of the neural net produced temporal filters and compressed representations of the data that highlight time periods in the stimuli that are important for classification. 
 Upon closer investigation there were no auditory characteristics that stood out as being unique to each of the important time periods.
 These time periods did not relate to salient auditory events, important points in the musical structure of the piece, or any obvious aspect of the lyrics, such as word repetition. 
 To determine whether the patterns in the filters were driven by a cognitive process such as recognition of the music we conducted a behavioural experiment.
-The results showed that the important time periods do not coincide with the moment participants recognize the piece of music. 
+The results showed that the highlighted time periods do not coincide with the moment participants recognize the piece of music. 
 \autoref{fig:RecognitionTime} shows that participants consistently recognize the pieces of music well before the important time periods occur in the temporal filters. 
 Based on these results we know what is \emph{not} responsible for highlighting these moments in the classifier: the importance of these moments is not due to auditory characteristics of the stimuli or a moment of recognition.
 At this time we are unable to say what is causing these time periods to be flagged as important for stimulus classification. 
