@@ -5,7 +5,7 @@ With our components we were unable to reproduce this stimulus classification acc
 %This could be caused by our much smaller number of trials which are substantially longer than those used by \cite{schaefer_name_2011}. 
 %On average we used \hl{X number of} trials in our analysis, while Schaefer et al. (2011) collected 145 trials of each of their stimuli.
  
-To classify our data, I used a technique from the computer science field of Deep Learning called a \ac{CNN} in order to classify our data.
+To classify our data, I used a technique from the computer science field of Deep Learning called a \ac{CNN}.
 A \ac{CNN} contains one or more convolutional layers that process the data.
 In these layers, the input is processed by a filter (weight matrix) that is trained using back propagation. 
 Our \ac{CNN} was optimized for our stimuli classification task and includes three processing layers.
@@ -19,7 +19,7 @@ Our \ac{CNN} was optimized for our stimuli classification task and includes thre
 The full explanation of how we arrived at the best model can be found in \cite{stober_ICLR2016} (arXiv:1511.04306).
 
 \section{Layer 1: Similarity Constraint Encoding}
-The first layer was pre-trained using 432 trials (9 subjects x 12 stimuli x 4 trials) and then was not changed during training of the full 3-layer model. 
+The first layer was pre-trained on the perception data using 432 trials (9 subjects x 12 stimuli x 4 trials) and then was not changed during training of the full 3-layer model. 
 The third trial of each stimulus from each subject's data was left out to be used as the test set for later model testing (108 trials (9 subjects x 12 stimuli x 1 trial) ).
 %Techniques such as \ac{PCA} and \ac{ICA} can be used to find stable and representative patterns (or components) in the \ac{EEG} data.
 %Another way to learn such patterns is by using \acp{CAE}.
@@ -30,13 +30,13 @@ To identify such features, we used a pre-training strategy called \emph{similari
 % in which the \ac{CAE} is trained to encode relative similarity constraints. 
 As introduced by \cite{schultz_learning_2004}, a relative similarity constraint $(a,b,c)$ describes a relative comparison of the trials $a$, $b$, and $c$ in the form ``$a$ is more similar to $b$ than $a$ is to $c$.''
 Here, $a$ is the reference trial used for this comparison, $b$ is a trial from the same stimulus, and $c$ is a trial from another stimulus.
-This similarity constraint is used as a cost function for learning features of the data that are important for stimulus classification. 
+The number of violated constraints is used as a cost function for learning features of the data that are important for stimulus classification. 
 A cost function describes the characteristics of the system that we want to minimize -- in this case we want to minimize the number of violations to the similarity constraint.
 The number of violated constraints is minimized using the standard back propagation training technique used for artificial neural networks.
 To this end, we combined all pairs of trials $(a,b)$ from the same stimulus with all trials $c$ from other stimuli and told the system that $a$ and $b$ must be more similar.
 For example, we created all possible pairs of trials from the perception of Jingle Bells with lyrics and then combined each of those pairs with all other perception trials.
-Each one of these triplets was then processed by a \ac{SCE} under the similarity constraint.
-In this way, the system learned similarities between trials from the same stimulus and differences between trials from different stimuli.  
+Each one of these triplets was then processed by the \ac{SCE} (under the similarity constraint).
+In this way, the system learned features (signal components) that result in high similarities between trials from the same stimulus and differences between trials from different stimuli.  
 The spatial representation of the features learned by this \ac{SCE} is visualized in Layer 1 of \autoref{fig:model_W}. 
 The coloured areas represent the regions and the electrode weightings that the encoder has determined are optimal for differentiating stimuli.
 This spatial representation acts as a spatial filter that processes the raw data.
