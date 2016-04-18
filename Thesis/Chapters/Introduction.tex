@@ -10,7 +10,7 @@ Music imagery appears to be a very promising means for driving \acp{BCI} that us
 For instance, Schaefer \etal\citeyear{schaefer_measuring_2011} argue that
 \emph{``music is especially suitable to use here as (externally or internally generated) stimulus material, since it unfolds over time, and \ac{EEG} is especially precise in measuring the timing of a response.''}
 For patients that have difficulties communicating behaviourally (e.g. patients with locked-in syndrome), \ac{BCI}s are a promising communication tool. 
-{BCI}s that currently exist are generally binary systems that allow the user to choose between two options to answer yes/no questions \cite{Owen2006}.
+{BCI}s that currently exist are generally binary systems that allow the user to choose between two options to answer yes/no questions \cite{Monti2010}.
 A system with a larger number of options would allow for a more complete and efficient communication experience. 
 Using music as the basis for a \ac{BCI} is a promising way to build such a system because of the large number of musical pieces that exist. 
 Ideally, a music-based \ac{BCI} would allow the user to imagine a piece of music to convey a particular thought. 
@@ -77,6 +77,7 @@ The optimized filters are applied to new data and the accuracy of the classifica
 In this study, a convolutional neural network is used to classify music stimuli from brain data collected during music perception and imagination. 
 
 To classify our music stimuli from EEG data we first tried an ERP analysis similar to that of Schaefer \etal\citeyear{schaefer_name_2011} to determine which piece of music a participant was listening to or imagining.
-This proved unsuccessful, so we used a machine learning technique called deep learning to detect characteristics of the music from EEG that would better allow us to classify stimuli.
+In this experiment, we collected fewer trials per stimulus and therefore had much less data than Schaefer \etal
+As a result, the ERP analysis proved unsuccessful, so we used a machine learning technique called deep learning to detect characteristics of the music from EEG that would better allow us to classify stimuli.
 Using this technique we were able to classify perception of 12 music pieces with a 28.7\% accuracy (chance = 8.3\%).
 Using this same technique we were unable to accurately classify imagination of music (accuracy = 7.41\%). 

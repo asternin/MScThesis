@@ -408,6 +408,36 @@ Merchant, H.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Monti%
+\ \protect \BOthers {.}}{%
+Monti%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+Monti2010}
+\APACinsertmetastar {%
+Monti2010}%
+\begin{APACrefauthors}%
+Monti, M\BPBI M.%
+, Vanhaudenhuyse, A.%
+, Coleman, M\BPBI R.%
+, Boly, M.%
+, Pickard, J\BPBI D.%
+, Tshibanda, L.%
+\BDBL {}Laureys, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Willful Modulation of Brain Activity in Disorders of
+  Consciousness}} {{Willful Modulation of Brain Activity in Disorders of
+  Consciousness}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The New England Journal of Medicine}{}{362}{579--589}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 M{\"u}llensiefen%
 , Gingras%
 , Musil%
@@ -442,105 +472,6 @@ M{\"u}llensiefen, D.%
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1371/journal.pone.0089642} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Nozaradan%
-, Peretz%
-, Missal%
-\BCBL {}\ \BBA {} Mouraux%
-}{%
-Nozaradan%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2011}}%
-}]{%
-nozaradan_tagging_2011}
-\APACinsertmetastar {%
-nozaradan_tagging_2011}%
-\begin{APACrefauthors}%
-Nozaradan, S.%
-, Peretz, I.%
-, Missal, M.%
-\BCBL {}\ \BBA {} Mouraux, A.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2011}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Tagging the neuronal entrainment to beat and meter.}
-  {Tagging the neuronal entrainment to beat and meter.}{\BBCQ}
-\newblock
-\APACjournalVolNumPages{The Journal of Neuroscience}{31}{28}{10234--10240}.
-\newblock
-\begin{APACrefDOI} \doi{10.1523/JNEUROSCI.0411-11.2011} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Nozaradan%
-, Peretz%
-\BCBL {}\ \BBA {} Mouraux%
-}{%
-Nozaradan%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2012}}%
-}]{%
-nozaradan_selective_2012}
-\APACinsertmetastar {%
-nozaradan_selective_2012}%
-\begin{APACrefauthors}%
-Nozaradan, S.%
-, Peretz, I.%
-\BCBL {}\ \BBA {} Mouraux, A.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2012}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Selective {Neuronal} {Entrainment} to the {Beat} and
-  {Meter} {Embedded} in a {Musical} {Rhythm}} {Selective {Neuronal}
-  {Entrainment} to the {Beat} and {Meter} {Embedded} in a {Musical}
-  {Rhythm}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{The Journal of Neuroscience}{32}{49}{17572--17581}.
-\newblock
-\begin{APACrefURL}
-  [{2015-04-26}]\url{http://www.jneurosci.org/content/32/49/17572}
-  \end{APACrefURL}
-\newblock
-\begin{APACrefDOI} \doi{10.1523/JNEUROSCI.3203-12.2012} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Owen%
-\ \protect \BOthers {.}}{%
-Owen%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2006}}%
-}]{%
-Owen2006}
-\APACinsertmetastar {%
-Owen2006}%
-\begin{APACrefauthors}%
-Owen, A\BPBI M.%
-, Coleman, M\BPBI R.%
-, Boly, M.%
-, Davis, M\BPBI H.%
-, Laureys, S.%
-\BCBL {}\ \BBA {} Pickard, J\BPBI D.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2006}{sep}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{Detecting awareness in the vegetative state.}}
-  {{Detecting awareness in the vegetative state.}}{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Science (New York, N.Y.)}{313}{5792}{1402}.
-\newblock
-\begin{APACrefURL} \url{http://www.sciencemag.org/content/313/5792/1402.short
-  http://www.ncbi.nlm.nih.gov/pubmed/16959998} \end{APACrefURL}
-\newblock
-\begin{APACrefDOI} \doi{10.1126/science.1130197} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

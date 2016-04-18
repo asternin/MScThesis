@@ -5,7 +5,7 @@ With our components we were unable to reproduce this stimulus classification acc
 %This could be caused by our much smaller number of trials which are substantially longer than those used by \cite{schaefer_name_2011}. 
 %On average we used \hl{X number of} trials in our analysis, while Schaefer et al. (2011) collected 145 trials of each of their stimuli.
  
-To classify our data, I used a technique from the computer science field of Deep Learning called a \ac{CNN}.
+To classify our data, we used a technique from the computer science field of Deep Learning called a convolutional neural network (\ac{CNN}).
 A \ac{CNN} contains one or more convolutional layers that process the data.
 In these layers, the input is processed by a filter (weight matrix) that is trained using back propagation. 
 Our \ac{CNN} was optimized for our stimuli classification task and includes three processing layers.
@@ -28,7 +28,7 @@ The third trial of each stimulus from each subject's data was left out to be use
 We wanted to find features in the data that were stable across trials and subjects, and also distinguished between classes. 
 To identify such features, we used a pre-training strategy called \emph{similarity-constraint encoding}.
 % in which the \ac{CAE} is trained to encode relative similarity constraints. 
-As introduced by \cite{schultz_learning_2004}, a relative similarity constraint $(a,b,c)$ describes a relative comparison of the trials $a$, $b$, and $c$ in the form ``$a$ is more similar to $b$ than $a$ is to $c$.''
+As introduced by Schultz and Joachims \citeyear{schultz_learning_2004}, a relative similarity constraint $(a,b,c)$ describes a relative comparison of the trials $a$, $b$, and $c$ in the form ``$a$ is more similar to $b$ than $a$ is to $c$.''
 Here, $a$ is the reference trial used for this comparison, $b$ is a trial from the same stimulus, and $c$ is a trial from another stimulus.
 The number of violated constraints is used as a cost function for learning features of the data that are important for stimulus classification. 
 A cost function describes the characteristics of the system that we want to minimize -- in this case we want to minimize the number of violations to the similarity constraint.

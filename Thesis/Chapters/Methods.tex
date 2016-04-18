@@ -12,11 +12,14 @@ Each musical fragment was preceded by approximately two seconds of clicks as a c
 \subsection{Behavioural Testing}
 We collected information about the participants' previous music experience, their ability to imagine sounds, and information about musical sophistication using an adapted version of the widely used Goldsmith's Musical Sophistication Index (G-MSI) \cite{mullensiefen_musicality_2014} combined with an adapted clarity of auditory imagination scale \cite{willander_imagery_scale_2010}. 
 The questionnaire can be found in Appendix \ref{appendix:questionnaire}.
-We also had participants complete a beat tapping and a stimuli familiarity task. 
-Participants listened to each stimulus and were asked to tap along with the music on the table top. The experimenter then rated their tapping ability on a scale from 1 (difficult to assess) to 3 (tapping done properly). 
+Participants also completed a beat tapping and a stimuli familiarity task. 
+Participants listened to each stimulus and tapped along with the music on the table top. 
+Participants'  tapping abilities were rated on a scale from 1 (difficult to assess) to 3 (tapping done properly). 
 After listening to each stimulus participants rated their familiarity with the stimuli on a scale from 1 (unfamiliar) to 3 (very familiar).
-To participate in the \ac{EEG} portion of the study, the participants had to receive a score of at least 90\% on our beat tapping task. Participants received scores from 75\%--100\% with an average score of 96\%.
+To participate in the \ac{EEG} portion of the study, the participants had to receive a score of at least 90\% on the beat tapping task to ensure that they could adequately maintain a steady beat.
+Participants received scores from 75\%--100\% with an average score of 96\%.
 Furthermore, they needed to receive a score of at least 80\% on our stimuli familiarity task. 
+This measure ensured that participants were familiar with the stimuli and imagination was as easy as possible. 
 Participants received scores from 71\%--100\% with an average score of 87\%.
 These requirements resulted in rejecting 4 participants.
 This left 10 participants (3 male), aged 19--36, with normal hearing and no history of brain injury. 
@@ -56,7 +59,7 @@ ID		& Name							&Meter 	& Length	& Tempo 		&\#Bars	& Bar Length\\
 
 
 \subsection{EEG recording}
-For the EEG portion of the study, the 10 participants were seated in an audiometric room (Eckel model CL-13) and connected to a BioSemi Active-Two system recording 64+2 EEG channels at 512 Hz as shown in \autoref{fig:eegsetup}.
+For the EEG portion of the study, the 10 participants sat in an audiometric room (Eckel model CL-13) and connected to a BioSemi Active-Two system recording 64+2 EEG channels at 512 Hz as shown in \autoref{fig:eegsetup}.
 \begin{figure}[htb]
   \begin{center}
     \includegraphics[scale=0.48]{Figures/EEG-setup.pdf}
@@ -69,9 +72,10 @@ The presentation and recording systems were placed outside to reduce the impact 
   \end{center}
 % \vspace{-2em}
 \end{figure}
-Horizontal and vertical EOG channels were used to record eye movements. 
+Horizontal and vertical EOG channels recorded eye movements. 
 We also recorded the left and right mastoid channel as EEG reference signals. 
-Due to an oversight, the mastoid data were not collected for the first 5 subjects.
+Due to an oversight, the mastoid data were not collected for the first five subjects.
+In these subjects data was 
 The presented audio %and the recorded EEG were 
 was routed through a Cedrus StimTracker connected to the EEG receiver, which allowed a high-precision synchronization ($<$0.05 ms) of the stimulus onsets with the \ac{EEG} data.
 The experiment was programmed and presented using PsychToolbox run in Matlab 2014a. 
@@ -90,7 +94,7 @@ Illustration of the design for the EEG portion of the study.
     \label{fig:experiment_outline}
   \end{center}
 \end{figure}
-A single block comprised of all 12 stimuli in randomized order.
+A single block comprised all 12 stimuli in randomized order.
 Between blocks, participants could take breaks at their own pace.
 We recorded EEG in 4 conditions:
 \begin{enumerate}
@@ -115,10 +119,12 @@ In total, 240 trials (12 stimuli x 4 conditions x 5 blocks) were recorded per su
 \section{Preprocessing}
 The raw EEG and EOG data were processed using the MNE-Python toolbox. 
 For recordings with additional mastoid channels, the EEG data was re-referenced by subtracting the mean mastoid signal \cite{teplan_fundamentals_2002}.
-We then removed and interpolated bad EEG channels identified by manual visual inspection.
+We then removed and interpolated bad EEG channels identified by manual visual inspection. 
+Channels containing noise that could not be removed using simple filtering techniques were labeled as bad. 
 For interpolation, the spherical splines method described in \cite{perrin_spherical_1989} was applied.
 The data were then filtered with an fft-bandpass, keeping a frequency range between 0.5 and 30 Hz.
 This removed unwanted high frequency information and any slow signal drift in the EEG.
-Afterwards, we down-sampled to a sampling rate of 64 Hz.
+Removing unwanted noise removes signals originating from external sources, and allows analyses to be done on data within the frequency range of signals produced by the brain. 
+%Afterwards, we down-sampled to a sampling rate of 64 Hz.
 To remove artifacts caused by eye blinks, we computed independent components using extended Infomax \ac{ICA} \cite{lee_independent_1999} and semi-automatically removed components that had a high correlation with the EOG channels.
 Finally, the 64 EEG channels were reconstructed from the remaining independent components.
