@@ -68,15 +68,15 @@ It is interesting to note that this does not mirror what is seen in the binary c
 The neural net does not give us information about what characteristics it used to classify the stimuli, and it is difficult to interpret from the results what signals the brain is producing that allow this classification to occur. 
 In layer three of \autoref{fig:model_W} we see compressed representations of the EEG data for each stimulus. 
 One characteristic of these representations is the dark red vertical bands that stand out from the rest of the time course. 
-These red bands indicate time periods that the neural net has identified as being important for classification. 
+These red bands indicate time periods that the neural net has identified as being important for classifying the stimuli.
 When taking a closer look, we see that these bands occur at the same time point for lyric/non-lyric pairs of stimuli. 
 For example, the darkest red band in stimulus 1 (Chim Chim Cheree with lyrics) appears at a very similar time point as the darkest red band in stimulus 11 (Chim Chim Cheree without lyrics).
 A similar pattern can be seen for stimuli 2/12 and 3/13.
-Upon investigation of the audio of the stimuli, there were no characteristics (e.g. lyric repetition, important music moments, end of phrases, change in dynamics, etc.) that stood out as driving these important time periods.
+Upon investigation of the audio of the stimuli at these time periods, there were no characteristics (e.g. lyric repetition, important music moments, end of phrases, change in dynamics, etc.) that stood out as driving these moments to be labeled as important.
 These red bands may represent a cognitive process, such as recognition, that occurs at these time points during perception of the stimuli. 
 To investigate this possibility, we ran a follow-up behavioural experiment asking participants to indicate when they consciously recognized each stimulus. 
 This experiment is described in the next section.
 
 The results of our neural net show that some stimuli are better classified than others, and some pairs of stimuli are more easily differentiated. 
-To investigate whether the neural net is relying on a process similar to that which humans might employ, we decided to run a follow-up, behavioural experiment asking participants to rate the similarity of pairs of stimuli. 
+To investigate whether the neural net is relying on a process similar to that which humans might employ, we decided to run a follow-up experiment asking participants to rate the similarity of pairs of stimuli. 
 The results will tell us whether the neural net confuses songs that humans rate as similar. 

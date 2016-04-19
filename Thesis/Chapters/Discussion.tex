@@ -37,7 +37,10 @@ However, understanding the structure of a neural network may not necessarily inf
 %There are a few things to keep in mind about neural network solutions. 
 First, the network's solution may not be unique and may simply be one of many possible solutions. 
 Although the network is constrained to minimize misclassification error, the solution reached by the network could be a local minimum. 
-With further tweaking of the network, it may be possible to uncover the global minimum of the problem, but there is no way to be sure that the global minimum has been reached.
+The network tries out different combinations of parameters until it finds a solution that it decides best minimizes misclassification error. 
+However, with further tweaking of the network, there may still be a solution that minimizes the misclassification error further.
+It is impossible to know whether the network's solution is the global minimum -- the solution with the lowest possible misclassification error.
+%It may be possible to uncover the global minimum of the problem, but there is no way to be sure that the global minimum has been reached.
 Second, interpretation is difficult because a solution is reached based on parameters set by the researcher. 
 It is not possible to untangle whether aspects of the solution are necessary for solving the problem or if they are influenced by the chosen network architecture. 
 Lastly, artificial neural networks, like the one used in this experiment, are \emph{artificial}, and only superficially resemble the way a biological system processes information. 

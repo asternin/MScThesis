@@ -1,6 +1,7 @@
 \chapter{Behavioural Experiment}
-%\addcontentsline{toc}{chapter}{5. Behavioural}
-%In order to investigate whether the deep learning neural net was identifying characteristics of the music that humans can consciously identify we ran a followup behavioural experiment. 
+We ran a follow-up experiment to learn more about what the deep learning neural net used to classify the stimuli. 
+First, we investigated whether the red bands from layer 3 of \autoref{fig:model_W} represent a cognitive process, such as recognition of the music. 
+Then, we investigated whether the deep learning neural net confuses stimuli that are rated as highly similar by humans.
 \section{Participants}
 Nine participants (four male), aged 22-28, with normal hearing and no history of head injuries took part in this study. 
 Six participants had formal music training (2-15 years), and four of the participants played instruments regularly at the time of data collection. 
@@ -23,7 +24,7 @@ You should focus on how generally similar the songs feel to you. Don't worry abo
 
 \section{Results}
 In order to determine whether the periods of time highlighted by the neural net in layer 3 of \autoref{fig:model_W} (red bands) are representative of a cognitive process, such as recognition, we collected the average time at which people recognize these musical pieces (\autoref{fig:RecognitionTime}). 
-From these results it does not look like the highlighted time periods from layer 3 of the neural net are related to the moment at which people recognize the piece of music. 
+From these results it does not look like the highlighted time periods from layer 3 of the neural net are related to the moment when people recognize the piece of music. 
 \begin{figure}[h] 
   \begin{center}
 %    \includegraphics[width=\textwidth,keepaspectratio=true]{Figures/RecognitionTimeGraph}
@@ -34,6 +35,7 @@ From these results it does not look like the highlighted time periods from layer
   \end{center}
 %  \vspace{-1em}
 \end{figure}
+
 The second part of the experiment asked participants to give similarity ratings of pairs of songs in order to determine whether the neural net confuses songs that humans rate as similar. 
 \autoref{fig:Similarity} shows the similarity rating results. 
 As expected, participants are close to perfect at identifying identical songs. 

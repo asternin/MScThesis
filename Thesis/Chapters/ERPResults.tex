@@ -1,6 +1,4 @@
 \chapter{ERP Analysis}
-%\addcontentsline{toc}{chapter}{ERP Analysis}	
-
 Our first analysis of the data followed a strategy similar to the one used in Schaefer \etal \citeyear{schaefer_name_2011}.
 Schaefer \etal \citeyear{schaefer_name_2011} used short stimuli (3.26s) allowing each stimulus to be repeated many times and the data to be averaged across hundreds of short trials. 
 The grand average \acp{ERP} were concatenated and subjected to a \ac{PCA}, yielding clearly defined spatial features. 
@@ -17,7 +15,7 @@ This resulted in principle components with poorly defined spatial components in 
   \label{fig:components}
 \end{figure}
 
-When we calculated grand average \acp{ERP} some of the data was lost which could have negatively impacted the \ac{PCA} results.
+When we calculated grand average \acp{ERP}, some of the data was lost which could have negatively impacted the \ac{PCA} results.
 To preserve as much of the data as possible, we took an alternative approach. 
 All of the raw trials, rather than the averages, were concatenated to create a single, long trial that contained all of the raw EEG information.
 We ran a \ac{PCA} on the concatenated raw trials. 
@@ -51,5 +49,5 @@ Instead, it may be representative of more general auditory processing that occur
 Because high correlations occurred between trials from different stimuli we could not use this approach to classify our stimuli.
 
 Our inability to accurately classify stimuli using this technique could be caused by our much smaller number of trials.
-We only had 5 trials per stimulus, ranging from 6.9s to 16s, while Schaefer et al. (2011) collected 145 trials of each of their stimuli, each approximately 3s long.
 We recorded so few trials per stimulus because the end-goal was to build a music-based BCI, and a BCI must operate with as little training as possible when used with patients. 
+We only had 5 trials per stimulus, ranging from 6.9s to 16s, while Schaefer et al. (2011) collected 145 trials of each of their stimuli, each approximately 3s long.
