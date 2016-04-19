@@ -89,10 +89,9 @@ Fujioka, T.%
 \newblock
 \APACrefYearMonthDay{2012}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Internalized {Timing} of {Isochronous} {Sounds} {Is}
-  {Represented} in {Neuromagnetic} {Beta} {Oscillations}} {Internalized
-  {Timing} of {Isochronous} {Sounds} {Is} {Represented} in {Neuromagnetic}
-  {Beta} {Oscillations}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Internalized Timing of Isochronous Sounds Is Represented
+  in Neuromagnetic Beta Oscillations} {Internalized timing of isochronous
+  sounds is represented in neuromagnetic beta oscillations}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Neuroscience}{32}{5}{1791--1802}.
 \newblock
@@ -226,7 +225,7 @@ Herholz, S.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2008}{{\APACmonth{12}}}{}.
+\APACrefYearMonthDay{2008}{December}{}.
 \newblock
 {\BBOQ}\APACrefatitle {{Neural basis of music imagery and the effect of musical
   expertise.}} {{Neural basis of music imagery and the effect of musical
@@ -265,7 +264,7 @@ Hubel, D\BPBI H.%
   young, visually inexperienced kittens}} {{Receptive fields of cells in
   striate cortex of very young, visually inexperienced kittens}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{J. neurophysiol}{26}{}{994--1002}.
+\APACjournalVolNumPages{Journal of Neurophysiology}{26}{}{994--1002}.
 \newblock
 \begin{APACrefURL}
   \url{http://www.inf.ed.ac.uk/teaching/courses/inf1-cg/readings/HubelWiesel1963Jneurophysiol.pdf}
@@ -359,11 +358,10 @@ Lee, T\BHBI W.%
 \newblock
 \APACrefYearMonthDay{1999}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Independent {Component} {Analysis} {Using} an {Extended}
-  {Infomax} {Algorithm} for {Mixed} {Subgaussian} and {Supergaussian}
-  {Sources}} {Independent {Component} {Analysis} {Using} an {Extended}
-  {Infomax} {Algorithm} for {Mixed} {Subgaussian} and {Supergaussian}
-  {Sources}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Independent Component Analysis Using an Extended Infomax
+  Algorithm for Mixed Subgaussian and Supergaussian Sources} {Independent
+  component analysis using an extended infomax algorithm for mixed subgaussian
+  and supergaussian sources}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Neural Computation}{11}{2}{417--441}.
 \newblock
@@ -460,10 +458,10 @@ M{\"u}llensiefen, D.%
 \newblock
 \APACrefYearMonthDay{2014}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {The {Musicality} of {Non}-{Musicians}: {An} {Index} for
-  {Assessing} {Musical} {Sophistication} in the {General} {Population}} {The
-  {Musicality} of {Non}-{Musicians}: {An} {Index} for {Assessing} {Musical}
-  {Sophistication} in the {General} {Population}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {The Musicality of Non-Musicians: {An} Index for
+  Assessing Musical Sophistication in the General Population} {The musicality
+  of non-musicians: {An} index for assessing musical sophistication in the
+  general population}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{PLoS ONE}{9}{2}{}.
 \newblock
@@ -715,9 +713,9 @@ Stober, S.%
 \newblock
 \APACrefYearMonthDay{2014{\protect \BCnt {1}}}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Does the Beat go on? -- Identifying Rhythms from Brain
+{\BBOQ}\APACrefatitle {Does the Beat go on? -- {Identifying} Rhythms from Brain
   Waves Recorded after Their Auditory Presentation} {Does the beat go on? --
-  identifying rhythms from brain waves recorded after their auditory
+  {Identifying} rhythms from brain waves recorded after their auditory
   presentation}.{\BBCQ}
 \newblock
 \BIn{} \APACrefbtitle {9th Audio Mostly: A Conf. on Interaction With Sound

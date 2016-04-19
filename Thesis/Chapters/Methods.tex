@@ -128,9 +128,9 @@ The `bad' channels were removed and interpolated.
 For interpolation, the spherical splines method described in \cite{perrin_spherical_1989} was applied.
 The data were then filtered with an fft-bandpass, keeping a frequency range between 0.5 and 30 Hz.
 This removed unwanted high frequency information and any slow signal drift in the EEG.
+Removing unwanted noise (i.e. from external sources or muscle movements) allows analyses to be done on data within the frequency range of signals produced by the brain. 
 %Afterwards, we down-sampled to a sampling rate of 64 Hz.
 We computed independent components using extended Infomax \ac{ICA} \cite{lee_independent_1999} and semi-automatically removed components that had a high correlation with the EOG channels.
 This allowed us to remove artifacts caused by eye blinks.
-Removing unwanted noise (i.e. from external sources, muscle movements, or eye blinks) allows analyses to be done on data within the frequency range of signals produced by the brain. 
-This ensures that the final results can be solely attributed to a brain process and are not confounded by other sources of electrical activity.
+This ensures that the final results can be solely attributed to a brain process and are not confounded by electrical activity from other sources.
 Finally, the 64 EEG channels were reconstructed from the remaining independent components.
