@@ -1,18 +1,18 @@
 \chapter{Behavioural Experiment}
-We ran a follow-up experiment to learn more about what the deep learning neural net used to classify the stimuli. 
-First, we investigated whether the red bands from layer 3 of \autoref{fig:model_W} represent a cognitive process, such as recognition of the music. 
-Then, we investigated whether the deep learning neural net confuses stimuli that are rated as highly similar by humans.
+We ran a follow-up experiment to learn more about what information from the EEG data the deep learning neural net used to classify the stimuli. 
+First, we investigated whether the vertical red bands from layer 3 (\autoref{fig:model_W}) were associated with a cognitive process that may have supported the neural net's classification, such as recognition of the music. 
+Then, we investigated whether the deep learning neural net confused stimuli that were rated as highly similar by humans.
 \section{Participants}
 Nine participants (four male), aged 22-28, with normal hearing and no history of head injuries took part in this study. 
-Six participants had formal music training (2-15 years), and four of the participants played instruments regularly at the time of data collection. 
+Six participants had formal music training (2-15 years), and four of those participants played instruments regularly at the time of data collection. 
 %On average participants listened attentively to music 1.5 hours per day and had music playing in the background for 3.6 hours per day.
 \section{Procedure}
-The 12 stimuli were the same songs as those in the original experiment (See \autoref{tab:stimuli_information}.)
+The 12 stimuli were the same songs as those in the original experiment (See \autoref{tab:stimuli_information}).
 The experiment had two parts and lasted about 50 mins.
 First, participants listened to each of the 12 stimuli and pressed a button when (and if) they recognized the piece of music.
 The timing of their key press was recorded. 
-During the second part of the experiment participants were presented with all possible paired combinations of stimuli (78 pairs). 
-They listened to the first song followed immediately by the second and then rated how similar the two songs sounded on a scale from 0 - 100 (0 = the songs sound nothing alike, 100 = the songs sound exactly the same).
+During the second part of the experiment, participants were presented with all possible paired combinations of stimuli (78 pairs). 
+They listened to the first song followed immediately by the second, and then rated how similar the two songs sounded on a scale from 0 - 100 (0 = the songs sound nothing alike, 100 = the songs sound exactly the same).
 Participants were given the following instructions:
 \begin{quote}\textit{
 Different pieces of music can sound similar or different for many reasons.
@@ -23,8 +23,8 @@ You should focus on how generally similar the songs feel to you. Don't worry abo
 \end{quote}
 
 \section{Results}
-In order to determine whether the periods of time highlighted by the neural net in layer 3 of \autoref{fig:model_W} (red bands) are representative of a cognitive process, such as recognition, we collected the average time at which people recognize these musical pieces (\autoref{fig:RecognitionTime}). 
-From these results it does not look like the highlighted time periods from layer 3 of the neural net are related to the moment when people recognize the piece of music. 
+To determine whether the periods of time highlighted by the neural net in layer 3 of \autoref{fig:model_W} (vertical red bands) are related to a cognitive process, such as recognition, we collected the average time at which people recognized these musical pieces (\autoref{fig:RecognitionTime}). 
+Based on these results, the highlighted time periods from layer 3 of the neural net were unrelated to the time at which people recognized the piece of music. 
 \begin{figure}[h] 
   \begin{center}
 %    \includegraphics[width=\textwidth,keepaspectratio=true]{Figures/RecognitionTimeGraph}
@@ -36,14 +36,14 @@ From these results it does not look like the highlighted time periods from layer
 %  \vspace{-1em}
 \end{figure}
 
-The second part of the experiment asked participants to give similarity ratings of pairs of songs in order to determine whether the neural net confuses songs that humans rate as similar. 
+To determine whether the neural net confused songs that humans rated as similar, participants rated pairs of songs on similarity. 
 \autoref{fig:Similarity} shows the similarity rating results. 
-As expected, participants are close to perfect at identifying identical songs. 
-Lyric/non-lyric pairs of songs were also rated as highly similar and that is seen in the four, dark squares parallel to the diagonal.
+As expected, participants were nearly perfect at identifying identical songs. 
+Lyric/non-lyric pairs of songs were also rated as highly similar, and that is seen in the four, dark squares that are parallel to the diagonal.
 
-The classification accuracy values seen in the confusion matrix in \autoref{fig:model_W_binary_confusion} can be interpreted as ``dissimilarity'' scores, so we took their inverse (100 - score) to produce similarity scores and correlated this matrix with the average similarity ratings given by our participants.
-The correlation was r = 0.03 (p$>$0.05).
-This lack of correlation indicates that the neural net is doing something different from humans when determining similarities between stimuli. 
+The classification accuracy values produced by the neural network in the confusion matrix in \autoref{fig:model_W_binary_confusion} can be interpreted as ``dissimilarity'' scores, so we took their inverse (100 - score) to produce similarity scores, and correlated the similarity matrix with the similarity ratings given by our participants.
+The correlation was not significant (r = 0.03, p$>$0.05).
+The lack of correlation suggests that the neural network is doing something different from humans when determining similarities between stimuli. 
 \begin{figure}[htb] 
   \begin{center}
 %    \includegraphics[width=\textwidth,keepaspectratio=true]{Figures/Similarity}

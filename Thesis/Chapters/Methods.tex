@@ -3,7 +3,7 @@
 This experiment was granted ethics approval from the Western University Non-Medical Research Ethics Board. 
 The approval form can be found in Appendix \ref{appendix:ethics}.
 \section{Participants}
-Fourteen participants (3 male), aged 19-36, with normal hearing and no history of brain injury took part in this study. Eight participants had formal musical training (1- 26 years), and four of the participants played instruments regularly at the time of data collection.
+Fourteen participants (3 male), aged 19-36, with normal hearing and no history of brain injury took part in this study. Eight participants had formal musical training (1- 26 years), and four of those participants played instruments regularly at the time of data collection.
 \section{Stimuli}
 Stimuli were fragments of familiar musical pieces and were selected based on key signature (3/4 or 4/4 time) and the presence and absence of lyrics. The stimuli were kept as similar in length as possible with care taken to ensure that they all contained complete musical phrases. Stimulus details can be found in \autoref{tab:stimuli_information}.
 Each musical fragment was preceded by approximately two seconds of clicks as a cue to the tempo and onset of the music. The beats began to fade out at the one second mark and stopped at the onset of the music. 
@@ -18,10 +18,11 @@ Participants'  tapping abilities were rated on a scale from 1 (difficult to asse
 After listening to each stimulus, participants rated their familiarity with the stimuli on a scale from 1 (unfamiliar) to 3 (very familiar).
 To participate in the \ac{EEG} portion of the study, the participants had to receive a score of at least 90\% on the beat tapping task.
 This measure ensured that participants could adequately maintain a steady beat.
+We anticipated that participants able to maintain a steady beat would have fewer tempo fluctuations during music imagination.
 Participants received scores from 75\%--100\% with an average score of 96\%.
 Furthermore, they needed to receive a score of at least 80\% on our stimuli familiarity task. 
 This measure ensured that participants were familiar with the stimuli.
-We wanted participants to be very familiar with the stimuli with the rationale that imagination is easiest with familiar music.
+We anticipated that imagination would be easiest for familiar music.
 Participants received scores from 71\%--100\% with an average score of 87\%.
 These requirements resulted in rejecting 4 participants.
 This left 10 participants (3 male), aged 19--36, with normal hearing and no history of brain injury. 
@@ -33,7 +34,7 @@ Eight participants had formal musical training (1--10 years), and four of those 
 %\setlength{\tabcolsep}{2.5pt}  % use to control space between columns
 %\renewcommand{\arraystretch}{1}
 \centering
-\caption{Tempo, meter and length of the stimuli used in the beat-tapping and stimuli-familiarity experiment.}
+\caption{Tempo, meter and length of the stimuli used in the experiment.}
 %Mean and standard deviation over individual subjects.}
 \label{tab:stimuli_information}
 %{\footnotesize % \sffamily \fontfamily{anttlc}\selectfont
@@ -61,10 +62,11 @@ ID		& Name							&Meter 	& Length	& Tempo 		&\#Bars	& Bar Length\\
 
 
 \subsection{EEG recording}
-For the EEG portion of the study, the 10 participants sat in an audiometric room (Eckel model CL-13) and connected to a BioSemi Active-Two system recording 64+2 EEG channels at 512 Hz as shown in \autoref{fig:eegsetup}.
+For the EEG portion of the study, the 10 participants sat in an audiometric room (Eckel model CL-13). 
+A BioSemi Active-Two system with 64+2 EEG channels recorded EEG data at 512 Hz as shown in \autoref{fig:eegsetup}.
 \begin{figure}[htb]
   \begin{center}
-    \includegraphics[scale=0.48]{Figures/EEG-setup.pdf}
+    \includegraphics[scale=0.48]{Figures/EEG-setup-edit.pdf}
 %   \\\vspace{-0.8em}
     \caption{%
 Setup for the EEG experiment.
@@ -77,13 +79,13 @@ The presentation and recording systems were placed outside to reduce the impact 
 Horizontal and vertical EOG channels recorded eye movements. 
 We also recorded the left and right mastoid channel as EEG reference signals. 
 Due to an oversight, the mastoid data were not collected for the first five subjects.
-In these subjects, data were not re-referenced.
+%In these subjects, data were not re-referenced.
 The presented audio %and the recorded EEG were 
 was routed through a Cedrus StimTracker connected to the EEG receiver, which allowed a high-precision synchronization ($<$0.05 ms) of the stimulus onsets with the \ac{EEG} data.
 The experiment was programmed and presented using PsychToolbox run in Matlab 2014a. 
 A computer monitor displayed the instructions and fixation cross for the participants to focus on during the trials to reduce eye movements.
 The stimuli and cue clicks were played through speakers at a comfortable volume that was kept constant across participants. Headphones were not used because pilot participants reported headphones caused them to hear their heartbeat which interfered with the imagination portion of the experiment. 
-After the experiment, we asked participants the method they used to imagine music. 
+After the experiment, we asked participants the method they used to imagine the music stimuli.
 The participants were split evenly between imagining themselves producing the music (singing or humming) and simply ``hearing the music in [their] head.'' 
 
 The EEG experiment was divided into 2 parts with 5 blocks each as illustrated in \autoref{fig:experiment_outline}.
@@ -98,6 +100,7 @@ Illustration of the design for the EEG portion of the study.
 \end{figure}
 A single block comprised all 12 stimuli in randomized order.
 Between blocks, participants could take breaks at their own pace.
+\newpage
 We recorded EEG in 4 conditions:
 \begin{enumerate}
 \item
@@ -110,8 +113,8 @@ Stimulus imagination without cue clicks
 Stimulus imagination without cue clicks, with feedback
 \end{enumerate}
 
-The goal was to use the cue to align trials of the same stimulus collected under conditions 1 and 2. Lining up the trials allows us to directly compare the perception and imagination of music and to identify overlapping features in the data. 
-Conditions 3 and 4 simulate a more realistic query scenario during which the system does not have prior information about the tempo and meter of the imagined stimulus.
+%The goal was to use the cue to align trials of the same stimulus collected under conditions 1 and 2. Lining up the trials allows us to directly compare the perception and imagination of music and to identify overlapping features in the data. 
+Conditions 3 and 4 simulate a more realistic query scenario during which the participant has not heard the stimulus immediately prior to imagining.
 Conditions 3 and 4 were identical except for the trial context.
 While the condition 1--3 trials were recorded directly back-to-back within the first part of the experiment, 
 all condition 4 trials were recorded separately in the second part without any cue clicks or tempo priming by prior presentation of the stimulus.
@@ -119,18 +122,17 @@ After each condition 4 trial, participants provided feedback by pressing one of 
 In total, 240 trials (12 stimuli x 4 conditions x 5 blocks) were recorded per subject.
 
 \section{Preprocessing}
-The raw EEG and EOG data were processed using the MNE-Python toolbox. 
-For recordings with additional mastoid channels, the EEG data was re-referenced by subtracting the mean mastoid signal \cite{teplan_fundamentals_2002}.
+The raw EEG and EOG data were preprocessed using the MNE-Python toolbox. 
+For the recordings collected with mastoid channels, the EEG data were re-referenced by subtracting the mean mastoid signal \cite{teplan_fundamentals_2002}.
 Data collected from participants without recorded mastoid channels were not re-referenced. 
-This difference in preprocessing had no effect on the final results.
-Channels containing noise that could not be removed using simple filtering techniques (i.e. resulting from muscle movements or bad electrical contact with scalp) were identified as `bad' by manual inspection.
-The `bad' channels were removed and interpolated.
-For interpolation, the spherical splines method described in \cite{perrin_spherical_1989} was applied.
+This preprocessing difference did not effect the final results.
+Channels containing noise that could not be removed by simple filtering techniques (i.e., resulting from muscle movements or bad electrical contact with scalp) were identified as `bad' by manual inspection.
+The bad channels were removed and interpolated.
+For interpolation, the spherical splines method described in Perrin \etal \citeyear{perrin_spherical_1989} was applied.
 The data were then filtered with an fft-bandpass, keeping a frequency range between 0.5 and 30 Hz.
-This removed unwanted high frequency information and any slow signal drift in the EEG.
-Removing unwanted noise (i.e. from external sources or muscle movements) allows analyses to be done on data within the frequency range of signals produced by the brain. 
+The filtering removed unwanted high frequency information and any slow signal drift in the EEG.
+Removing unwanted noise (i.e. from external sources or muscle movements) restricts analyses to data within the frequency range of signals produced by the brain. 
 %Afterwards, we down-sampled to a sampling rate of 64 Hz.
-We computed independent components using extended Infomax \ac{ICA} \cite{lee_independent_1999} and semi-automatically removed components that had a high correlation with the EOG channels.
-This allowed us to remove artifacts caused by eye blinks.
-This ensures that the final results can be solely attributed to a brain process and are not confounded by electrical activity from other sources.
-Finally, the 64 EEG channels were reconstructed from the remaining independent components.
+We computed independent components using extended Infomax \ac{ICA} \cite{lee_independent_1999} and removed components that had a high correlation with the EOG channels to remove artifacts caused by eye blinks.
+This ensures that the final results can be attributed to brain responses, not other sources of electrical activity.
+Finally, the data from the 64 EEG channels were reconstructed from the remaining independent components.

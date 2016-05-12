@@ -13,7 +13,7 @@ The patients that require such interfaces to communicate may have difficulty dir
 A system that requires minimal training cuts down on patient fatigue during the training stage, ensuring that patients have enough energy to use the system for communication. 
 Ideally, our \ac{BCI} would be trained on brain data collected during the \emph{perception} of music and tested on brain data collected during \emph{imagination} of music. 
 By training on perception data we hoped to keep patient fatigue to a minimum. 
-However, our results indicate that this is currently not a viable option with the existing data.  
+However, our results indicated that this is currently not a viable option with the existing data.  
 
 Using machine learning techniques, we were able to train our system and classify the perception of music stimuli from the recorded EEG signal at a 28.7\% accuracy level (chance = 8.3\%)
 However, the technique failed when applied to data collected during imagination of music.
@@ -36,9 +36,9 @@ One way of understanding a neural network's decisions is by investigating the la
 However, understanding the structure of a neural network may not necessarily inform us about what the brain is doing to perform the same task. 
 %There are a few things to keep in mind about neural network solutions. 
 First, the network's solution may not be unique and may simply be one of many possible solutions. 
-Although the network is constrained to minimize misclassification error, the solution reached by the network could be a local minimum. 
+Although the network is constrained to minimize misclassification error, the solution reached by the network could be a local minimum -- the best solution for this particular combination of parameters.
 The network tries out different combinations of parameters until it finds a solution that it decides best minimizes misclassification error. 
-However, with further tweaking of the network, there may still be a solution that minimizes the misclassification error further.
+However, with further tweaking of the network, and a different combination of parameters, there may be a solution that minimizes the misclassification error further.
 It is impossible to know whether the network's solution is the global minimum -- the solution with the lowest possible misclassification error.
 %It may be possible to uncover the global minimum of the problem, but there is no way to be sure that the global minimum has been reached.
 Second, interpretation is difficult because a solution is reached based on parameters set by the researcher. 
@@ -67,7 +67,7 @@ The second and third layers of the neural net produced temporal filters and comp
 Upon closer investigation there were no auditory characteristics that stood out as being unique to each of the important time periods.
 These time periods did not relate to salient auditory events, important points in the musical structure of the piece, or any obvious aspect of the lyrics, such as word repetition. 
 To determine whether the patterns in the filters were driven by a cognitive process such as recognition of the music we conducted a behavioural experiment.
-The results showed that the highlighted time periods do not coincide with the moment participants recognize the piece of music. 
+The results showed that the highlighted time periods do not coincide with the moment participants recognized the piece of music. 
 \autoref{fig:RecognitionTime} shows that participants consistently recognize the pieces of music well before the important time periods occur in the temporal filters. 
 Based on these results we know what is \emph{not} responsible for highlighting these moments in the classifier: the importance of these moments is not due to auditory characteristics of the stimuli or a moment of recognition.
 At this time we are unable to say what is causing these time periods to be flagged as important for stimulus classification. 

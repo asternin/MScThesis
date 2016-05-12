@@ -7,7 +7,7 @@ With our components we were unable to reproduce this stimulus classification acc
 To classify our data, we used a technique from the computer science field of Deep Learning called a convolutional neural network (\ac{CNN}).
 A \ac{CNN} contains one or more convolutional layers that process the data.
 In these layers, the input is processed by a filter (weight matrix) that is trained using back propagation. 
-Our \ac{CNN} was optimized for our stimuli classification task and includes three processing layers.
+Our \ac{CNN} was optimized for our stimuli classification task and included three processing layers.
 %The first layer consists of a filter of electrode weights that reduces the 64 channel data to a single data stream and gives us information about which EEG channels are important for differentiating classes.
 %The second layer consists of an optimized filter that convolves the single data stream.
 %This results in a compressed representation of the original EEG data.
@@ -34,12 +34,12 @@ A cost function describes the characteristics of the system that we want to mini
 The number of violated constraints is minimized using the standard back propagation training technique used for artificial neural networks.
 To this end, we combined all pairs of trials $(a,b)$ from the same stimulus with all trials $c$ from other stimuli and told the system that $a$ and $b$ must be more similar.
 For example, we created all possible pairs of trials from the perception of Jingle Bells with lyrics and then combined each of those pairs with all other perception trials.
-Each one of these triplets was then processed by the \ac{SCE} (under the similarity constraint).
+Each one of these triplets was then processed by the \ac{SCE}. % (under the similarity constraint).
 In this way, the system learned features (signal components) that result in high similarities between trials from the same stimulus and differences between trials from different stimuli.  
 The spatial representation of the features learned by this \ac{SCE} is visualized in Layer 1 of \autoref{fig:model_W}. 
 The coloured areas represent the regions and the electrode weightings that the encoder has determined are optimal for differentiating stimuli.
-This spatial representation acts as a spatial filter that processes the raw data.
-The 64 EEG channels are reduced to a single data stream of weighted EEG\footnote{After being processed by the spatial filter we applied a non-linear activation function to the data (a step which generally occurs in all neural network layers).
+This representation acts as a spatial filter that processes the raw data.
+The 64 EEG channels are reduced to a single data stream of weighted EEG by this filter\footnote{After being processed by the spatial filter we applied a non-linear activation function to the data (a step which generally occurs in all neural network layers).
 We used the tanh function here.}. 
 \begin{figure}[h] 
   \begin{center}
@@ -53,17 +53,17 @@ We used the tanh function here.}.
 \end{figure}
 \section{Layer 2: Convolution Filter \& Layer 3: Templates}
 Layers two and three were trained together with supervised learning and optimized by back propagation through the entire model with a cost function to minimize classification error.
-We employed a 9-fold cross validation scheme by training on the data from 9 subjects (384 trials) and validating on the remaining subject (48 trials).
-The cross-validation was done within the training set with the aim of finding the optimal hyper-parameters (learning rate, filter size, etc.) for our neural network. 
-The final version of layer 2 and 3 is an average of the model parameters over all 9 fold models.
-\section{Full model explanation}
-The single data stream output from layer 1 enters the second layer where it is convolved with a filter. 
-After the data is convolved with the filter in layer 2 and then pooled with a subsampling factor of 11, a single stream of data is produced.
-This stream is an optimized, compressed representation of the original raw EEG data.
-These representations are shown in Layer 3 of \autoref{fig:model_W}. 
+The single data stream output from layer 1 entered the second layer where it was convolved with a filter and pooled with a subsampling factor of 11.
+This produced a compressed representation of the original EEG data.
 
-The model was then tested with the test set of 108 trials. 
-The test data passes through the layers of the model and the representations produced in layer 3 are compared against the optimized versions. 
-The dot product of the test data's output from layer 2 is taken with each of the optimized layer 3 representations created during the training phase. 
-This produces 12 values (one for each stimulus) that describe the similarity of the test data with each of the optimized layer 3 representations. 
-The test data is given the label of the stimulus whose representation it matches the most, i.e. the highest similarity value from the dot product. 
+To find the optimal parameters (learning rate, filter size, etc.) for our neural network, we employed a 9-fold cross validation scheme by training on the data from 9 subjects (384 trials) and validating on the remaining subject (48 trials).
+The cross-validation was done within the training set. %This process created optimized, compressed representations of the EEG data for each stimuli.
+The final versions of layer 2 and 3 seen in \autoref{fig:model_W} are an average of the model parameters over all 9 folds.
+Layer 2 is the filter that processes the data stream from layer 1, and layer 3 is made up of the optimized, compressed representations of the original EEG data for each stimulus.
+\section{Full model explanation}
+The classification accuracy of the model was then tested with the test set of 108 trials. 
+Each trial in the test set was processed by the filters in layer 1 and layer 2. 
+The resulting compressed representation (the output from layer 2) of the test trial was compared against each of the optimized representations in layer 3 of the model.
+The dot product of the test trial's representation was taken with each of the optimized layer 3 representations.
+This produced 12 values (one for each stimulus) that described the similarity of the test trial's representation with each of the optimized representations. 
+The test trial was given the label of the stimulus whose representation it matched the most, i.e., the highest similarity value from the dot product. 

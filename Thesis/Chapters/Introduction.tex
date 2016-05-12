@@ -21,10 +21,11 @@ For a \ac{BCI} to be successful, it must be able to distinguish between differen
 Perceived rhythmic sequences have been shown to alter \ac{EEG} signals resulting in unique brain states.
 It has been shown that oscillatory neural activity in the gamma frequency band (20-60 Hz) is sensitive to accented tones in a rhythmic sequence \cite{snyder_gamma-band_2005}.
 Oscillations in the beta band (20-30 Hz) entrain to rhythmic sequences \cite{cirelli_beta_2014, merchant_beta_2015} and increase in anticipation of strong tones in a non-isochronous, rhythmic sequence \cite{iversen_top-down_2009,fujioka_beta_2009,fujioka_internalized_2012}.
-The magnitude of \acp{SSEP}, which reflect neural oscillations entrained to the stimulus, increases when subjects hear rhythmic sequences for frequencies related to the metrical structure of the rhythm.
+The magnitude of \acp{SSEP}, which reflect neural oscillations entrained to the stimulus, increases in frequencies related to the metrical structure of the rhythm when subjects hear rhythmic sequences.
 %This is a sign of neural entrainment to beat and meter \cite{nozaradan_tagging_2011,nozaradan_selective_2012}, which are the nested structures of intervals between the sounds in a rhythm. 
 %The beat is the basic pulse of the rhythm that one might tap their foot to, and these beats can be grouped to create meter; generally into groups of three of four beats. 
-In addition, perturbations of the rhythmic pattern lead to distinguishable \acp{ERP} \cite{geiser_early_2009, vlek_shared_2011}, and imagined auditory accents imposed over a steady metronome click can be recognized from EEG.
+In addition, perturbations of the rhythmic pattern lead to distinguishable \acp{ERP} \cite{geiser_early_2009, vlek_shared_2011}.
+It is also possible to detect imagined auditory accents imposed over a steady metronome click from EEG \cite{nozaradan_tagging_2011}.
 Finally, \ac{EEG} signals have been used to distinguish between perceived rhythmic stimuli \cite{stober2014nips}.
 Thus, rhythm alters \ac{EEG} patterns in systematic ways that may be exploited by a \ac{BCI}. 
 Because rhythm is an inherent part of music, we expect music to have a similar effect on \ac{EEG} signals. 
@@ -33,7 +34,7 @@ Recently, studies have identified an overlap between the brain areas that are ac
 We could therefore examine \ac{EEG} data collected while participants listen to melodies to learn about the neural responses during music perception, and determine which salient elements are to be expected during music imagination.
 Exploring EEG data during music perception could inform how we approach music imagination data, and the brain signals recorded while listening to music could serve as reference data for decoding music imagination. 
 This is particularly relevant to developing an effective \ac{BCI} because of the need for training both the system and the user.
-The user needs to learn how to effectively modify brain states in a way that the computer can understand, and the system needs to learn to recognize the different brain states of the unique user.
+The user needs to learn how to effectively modify brain states in a way that the system can understand, and the system needs to learn to recognize the different brain states of the unique user.
 By using perception data to train a \ac{BCI} we cut down on the amount of imagination training needed, which will reduce potential user fatigue.
 
 EEG has already successfully been used to classify perceived melodies. 
@@ -48,12 +49,12 @@ Applying the same classification scheme across participants, they obtained betwe
 %As Hubbard concludes in his recent review of the literature on auditory imagery, \emph{``auditory imagery preserves many structural and temporal properties of auditory stimuli''} and \emph{``involves many of the same brain areas as auditory perception''} \cite{hubbard_auditory_2010}. 
 %This is also underlined by Schaefer \cite[p. 142]{schaefer_measuring_2011} whose \emph{``most important conclusion is that there is a substantial amount of overlap between the two tasks} [music perception and imagination]\emph{, and that `internally' creating a perceptual experience uses functionalities of `normal' perception.''}
 
-Brain activity induced by music imagination has also been detected by \ac{EEG} \cite{schaefer_shared_2013}, and encouraging preliminary results for classifying imagined music fragments from \ac{EEG} recordings were reported in \cite{schaefer_single_2009} in which 4 out of 8 participants produced imagery that was classifiable. 
+Brain activity induced by music imagination has also been detected by \ac{EEG} \cite{schaefer_shared_2013}, and encouraging preliminary results for classifying imagined music fragments from \ac{EEG} recordings were reported in Schaefer \etal \citeyear{schaefer_single_2009} in which 4 out of 8 participants produced imagery that was classifiable. 
 In this experiment participants imagined four different musical phrases, but classification was done within pairs of stimuli.
 The best results in a single pair of stimuli showed an accuracy between 70\% and 90\% after 11 repetitions of the imagined musical phrase. 
 
 Although \ac{EEG} has been used to decode music imagination, the accuracy levels were not robust enough for these decoding techniques to be used in a \ac{BCI}. 
-EEG processing methods may not be sensitive enough to the subtle changes that occur during music imagination. 
+Basic EEG processing methods may not have the sensitivity to detect the subtle changes that occur during music imagination. 
 However, the sophisticated signal processing techniques used in machine learning may be more suited to this challenge. 
 
 Machine learning is a technique that uses algorithms that can learn from and make predictions about data.
@@ -62,7 +63,7 @@ One such technique is based on convolutional neural networks (\acp{CNN}).
 \acp{CNN} were inspired by the powerfully complex visual system found in humans and other animals.
 In the retina, cells respond to small regions of the visual field \cite{hubel_receptive_1963} called receptive fields. 
 As information moves along the visual processing stream, single cells in higher layers receive input from multiple cells in lower layers.
-At each level, more information is combined, giving cells higher up in the processing stream an increasingly global view of the information collected by the retinal cells (i.e. what the retinal cells are `seeing').
+At each level, more information is combined, giving cells higher up in the processing stream an increasingly global view of the information collected by the retinal cells (i.e., what the retinal cells are `seeing').
 Complex visual information is processed farther along the processing stream than simple information as cells in these far layers are sent information from a larger number of retinal cells.
 For example, when looking at a house, information about edges and colour are processed at lower levels.
 Information from multiple low-level cells is combined and passed to high-level cells that process more global information like shape. 
@@ -78,7 +79,7 @@ The optimized filters are applied to new data and the accuracy of the classifica
 In this study, a convolutional neural network is used to classify music stimuli from brain data collected during music perception and imagination. 
 
 To classify our music stimuli from EEG data we first tried an ERP analysis similar to that of Schaefer \etal\citeyear{schaefer_name_2011} to determine which piece of music a participant was listening to or imagining.
-In this experiment, we collected fewer trials per stimulus and therefore had much less data than Schaefer \etal
+In this experiment, we collected fewer trials per stimulus and therefore had much less data than Schaefer \etal\citeyear{schaefer_name_2011}. 
 As a result, the ERP analysis proved unsuccessful, so we used a machine learning technique called deep learning to detect characteristics of the music from EEG that would better allow us to classify stimuli.
 Using this technique we were able to classify perception of 12 music pieces with a 28.7\% accuracy (chance = 8.3\%).
 Using this same technique we were unable to accurately classify imagination of music (accuracy = 7.41\%). 

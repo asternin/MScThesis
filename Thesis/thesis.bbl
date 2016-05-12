@@ -473,6 +473,37 @@ M{\"u}llensiefen, D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Nozaradan%
+, Peretz%
+, Missal%
+\BCBL {}\ \BBA {} Mouraux%
+}{%
+Nozaradan%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+nozaradan_tagging_2011}
+\APACinsertmetastar {%
+nozaradan_tagging_2011}%
+\begin{APACrefauthors}%
+Nozaradan, S.%
+, Peretz, I.%
+, Missal, M.%
+\BCBL {}\ \BBA {} Mouraux, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Tagging the neuronal entrainment to beat and meter.}
+  {Tagging the neuronal entrainment to beat and meter.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The Journal of Neuroscience}{31}{28}{10234--10240}.
+\newblock
+\begin{APACrefDOI} \doi{10.1523/JNEUROSCI.0411-11.2011} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Perrin%
 , Pernier%
 , Bertrand%
