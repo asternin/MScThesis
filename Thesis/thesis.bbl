@@ -34,6 +34,40 @@ Cirelli, L\BPBI K.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Combrisson%
+\ \BBA {} Jerbi%
+}{%
+Combrisson%
+\ \BBA {} Jerbi%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+Combrisson2015}
+\APACinsertmetastar {%
+Combrisson2015}%
+\begin{APACrefauthors}%
+Combrisson, E.%
+\BCBT {}\ \BBA {} Jerbi, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Exceeding chance level by chance: The caveat of
+  theoretical chance levels in brain signal classification and statistical
+  assessment of decoding accuracy}} {{Exceeding chance level by chance: The
+  caveat of theoretical chance levels in brain signal classification and
+  statistical assessment of decoding accuracy}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Neuroscience Methods}{}{}{1--11}.
+\newblock
+\begin{APACrefURL} \url{http://dx.doi.org/10.1016/j.jneumeth.2015.01.010}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.jneumeth.2015.01.010} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Fujioka%
 , Trainor%
 , Large%
@@ -565,6 +599,33 @@ Rumelhart, D\BPBI E.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Rumelhart%
+, Hinton%
+\BCBL {}\ \BBA {} Williams%
+}{%
+Rumelhart%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1988}}%
+}]{%
+rumelhart1988learning}
+\APACinsertmetastar {%
+rumelhart1988learning}%
+\begin{APACrefauthors}%
+Rumelhart, D\BPBI E.%
+, Hinton, G\BPBI E.%
+\BCBL {}\ \BBA {} Williams, R\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1988}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning representations by back-propagating errors}
+  {Learning representations by back-propagating errors}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognitive modeling}{5}{3}{1}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Schaefer%
 }{%
 Schaefer%
@@ -745,6 +806,39 @@ Snyder, J\BPBI S.%
 \APACjournalVolNumPages{Cognitive Brain Research}{24}{}{117--126}.
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.cogbrainres.2004.12.014} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Srivastava%
+, Hinton%
+, Krizhevsky%
+, Sutskever%
+\BCBL {}\ \BBA {} Salakhutdinov%
+}{%
+Srivastava%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+srivastava2014dropout}
+\APACinsertmetastar {%
+srivastava2014dropout}%
+\begin{APACrefauthors}%
+Srivastava, N.%
+, Hinton, G.%
+, Krizhevsky, A.%
+, Sutskever, I.%
+\BCBL {}\ \BBA {} Salakhutdinov, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Dropout: A simple way to prevent neural networks from
+  overfitting} {Dropout: A simple way to prevent neural networks from
+  overfitting}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The Journal of Machine Learning
+  Research}{15}{1}{1929--1958}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
