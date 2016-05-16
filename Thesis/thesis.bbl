@@ -241,37 +241,6 @@ Herholz, S.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Hubel%
-\ \BBA {} Wiesel%
-}{%
-Hubel%
-\ \BBA {} Wiesel%
-}{%
-{\protect \APACyear {1963}}%
-}]{%
-hubel_receptive_1963}
-\APACinsertmetastar {%
-hubel_receptive_1963}%
-\begin{APACrefauthors}%
-Hubel, D\BPBI H.%
-\BCBT {}\ \BBA {} Wiesel, T\BPBI N.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1963}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{Receptive fields of cells in striate cortex of very
-  young, visually inexperienced kittens}} {{Receptive fields of cells in
-  striate cortex of very young, visually inexperienced kittens}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of Neurophysiology}{26}{}{994--1002}.
-\newblock
-\begin{APACrefURL}
-  \url{http://www.inf.ed.ac.uk/teaching/courses/inf1-cg/readings/HubelWiesel1963Jneurophysiol.pdf}
-  \end{APACrefURL}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Iversen%
 , Repp%
 \BCBL {}\ \BBA {} Patel%
@@ -300,6 +269,32 @@ Iversen, J\BPBI R.%
   Sciences}{1169}{}{58--73}.
 \newblock
 \begin{APACrefDOI} \doi{10.1111/j.1749-6632.2009.04579.x} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kalat%
+}{%
+Kalat%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+Kalat2008}
+\APACinsertmetastar {%
+Kalat2008}%
+\begin{APACrefauthors}%
+Kalat, J\BPBI W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Neural Basis of Visual Perception}} {{Neural Basis of
+  Visual Perception}}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Biological psychology} {Biological psychology}\
+  (\PrintOrdinal{10}\ \BEd, \BPGS\ 165--179).
+\newblock
+\APACaddressPublisher{}{Wadsworth Publishing}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -538,6 +533,35 @@ Perrin, F.%
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1016/0013-4694(89)90180-6} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rumelhart%
+, Hinton%
+\BCBL {}\ \BBA {} Williams%
+}{%
+Rumelhart%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1986}}%
+}]{%
+Rumelhart_backpropagation_1986}
+\APACinsertmetastar {%
+Rumelhart_backpropagation_1986}%
+\begin{APACrefauthors}%
+Rumelhart, D\BPBI E.%
+, Hinton, G\BPBI E.%
+\BCBL {}\ \BBA {} Williams, R\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1986}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning representations by back-propagating errors}
+  {Learning representations by back-propagating errors}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature}{323}{6088}{533--536}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/323533a0} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -813,33 +837,6 @@ Stober, S.%
 \newblock
 \APACrefbtitle {Deep Feature Learning for {EEG} Recordings.} {Deep feature
   learning for {EEG} recordings.}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Teplan%
-}{%
-Teplan%
-}{%
-{\protect \APACyear {2002}}%
-}]{%
-teplan_fundamentals_2002}
-\APACinsertmetastar {%
-teplan_fundamentals_2002}%
-\begin{APACrefauthors}%
-Teplan, M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2002}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Fundamentals of {EEG} measurement} {Fundamentals of
-  {EEG} measurement}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Measurement science review}{2}{2}{1--11}.
-\newblock
-\begin{APACrefURL}
-  [{2015-04-27}]\url{http://www.edumed.org.br/cursos/neurociencia/MethodsEEGMeasurement.pdf}
-  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

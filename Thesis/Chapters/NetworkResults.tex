@@ -1,6 +1,7 @@
 \section{Results}
 First, we tested the model with the perception data. 
-Significance values were determined by using the cumulative binomial distribution to estimate the likelihood of observing a given classification rate by chance. 
+Significance values were determined by using the cumulative binomial distribution to estimate the likelihood of observing a given classification rate by chance \cite{Combrisson2015}. 
+Using the cumulative binomial distribution allows us to determine the number of observations that are correctly classified by chance with respect to the number of observations.
 Our model was able to classify the 12-classes (12 stimuli listed in \autoref{tab:stimuli_information}) with a 28.7\% accuracy rate (chance = 8.3\%) at a significance level of p=0.001. 
 \autoref{fig:model_W_confusion} is a confusion matrix which shows the classification results for each stimulus.
 \begin{figure}[htb] 
@@ -14,7 +15,7 @@ Our model was able to classify the 12-classes (12 stimuli listed in \autoref{tab
 \end{figure}
 From the confusion matrix we can see that some stimuli were more accurately classified than others. 
 Stimulus 2 (Take Me Out to the Ballgame with lyrics) is the most accurately classified. 
-Stimuli 13 and 14 are also classified with some accuracy, and some confusion with their lyric counterparts (stimuli 3 and 4) can be seen.
+Stimuli 13 and 14 are also accurately classified, but confusion with their lyric counterparts (stimuli 3 and 4) can be seen.
 Confusion between lyric and non-lyric pairs can also be seen with stimulus 1 being classified as stimulus 11.
 
 To further investigate which pairs of stimuli the classifier could distinguish best, we put all combinations of paired stimuli through our classifier.
@@ -37,6 +38,7 @@ Most of the binary comparisons are classified correctly at a statistically signi
 The imagination data was then tested on the same model (i.e. there was no additional training using the imagination data). 
 The model was not able to classify the 12 stimuli from the EEG data collected during music imagination. 
 \autoref{fig:model_W_confusion_cond2} is a confusion matrix which shows the imagination classification results at 7.41\% (below chance = 8.3\%). 
+\hl{There }
 \begin{figure}[htb] 
   \begin{center}
     \includegraphics[width=.83\textwidth,keepaspectratio=true]{Figures/model_W_confusion_cond2}
@@ -49,7 +51,7 @@ The model was not able to classify the 12 stimuli from the EEG data collected du
 
 We investigated whether there were pairs of imagined stimuli that the classifier could distinguish.
 \autoref{fig:model_W_binary_confusion_cond2} shows the binary confusion matrix.
-Most of the stimuli pairs were not classified at a statistically significant level. 
+Most of the stimulus pairs were not classified at a statistically significant level. 
 However, one binary comparison stood out. 
 Stimulus 1 (Chim Chim Cheree with lyrics) with 12 (Take Me Out to the Ballgame without lyrics) is classified at a rate of 62.2\% (p$<$0.05). 
 It is interesting to note that this does not mirror what is seen in the binary comparisons of perception data, where the most classifiable pair was stimulus 1 with 13 (Jingle Bells without lyrics). 

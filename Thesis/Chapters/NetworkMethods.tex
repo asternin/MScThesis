@@ -1,25 +1,16 @@
-\chapter{Deep Learning}
+\chapter{Neural Network}
 Schaefer \etal \citeyear{schaefer_name_2011} were able to use the unique time course of the component responsible for the most variance to differentiate between stimuli.
 With our components we were unable to reproduce this stimulus classification accuracy. 
-%This could be caused by our much smaller number of trials which are substantially longer than those used by \cite{schaefer_name_2011}. 
-%On average we used \hl{X number of} trials in our analysis, while Schaefer et al. (2011) collected 145 trials of each of their stimuli.
  
-To classify our data, we used a technique from the computer science field of Deep Learning called a convolutional neural network (\ac{CNN}).
-A \ac{CNN} contains one or more convolutional layers that process the data.
-In these layers, the input is processed by a filter (weight matrix) that is trained using back propagation. 
-Our \ac{CNN} was optimized for our stimuli classification task and included three processing layers.
-%The first layer consists of a filter of electrode weights that reduces the 64 channel data to a single data stream and gives us information about which EEG channels are important for differentiating classes.
-%The second layer consists of an optimized filter that convolves the single data stream.
-%This results in a compressed representation of the original EEG data.
-%In the third layer, these compressed representations are classified by comparing them to learned temporal patterns (one for each class)
-%During the training phase these compressed representations of each of our stimuli are optimized using back propagation.
-%During the testing phase the compressed representations describing the test data are compared to the optimized versions. 
-%This matching in the third layer is what allows us to classify our data.
+To classify our data, we used a technique from the computer science called an artificial neural network (\ac{ANN}).
+A neural network contains one or more layers that process the data.
+In these layers, the input is processed by a filter (weight matrix) that is trained using backpropagation \cite{Rumelhart_backpropagation_1986}. 
+Our network was optimized for our stimulus classification task and included three processing layers.
 The full explanation of how we arrived at the best model can be found in \cite{stober_ICLR2016} (arXiv:1511.04306).
 
 \section{Layer 1: Similarity Constraint Encoding}
 The first layer was pre-trained on the perception data using 432 trials (9 subjects x 12 stimuli x 4 trials) and then was not changed during training of the full 3-layer model. 
-The third trial of each stimulus from each subject's data was left out to be used as the test set for later model testing (108 trials (9 subjects x 12 stimuli x 1 trial) ).
+One trial of each stimulus from each subject's data was left out to be used as the test set for later model testing (108 trials (9 subjects x 12 stimuli x 1 trial) ).
 %Techniques such as \ac{PCA} and \ac{ICA} can be used to find stable and representative patterns (or components) in the \ac{EEG} data.
 %Another way to learn such patterns is by using \acp{CAE}.
 %\acp{CAE} are a special variant of \acp{CNN} that encode their input using convolution into a compressed internal representation which is then decoded using de-convolution into the original space trying to minimize the reconstruction error. 
@@ -31,7 +22,7 @@ As introduced by Schultz and Joachims \citeyear{schultz_learning_2004}, a relati
 Here, $a$ is the reference trial used for this comparison, $b$ is a trial from the same stimulus, and $c$ is a trial from another stimulus.
 The number of violated constraints is used as a cost function for learning features of the data that are important for stimulus classification. 
 A cost function describes the characteristics of the system that we want to minimize -- in this case we want to minimize the number of violations to the similarity constraint.
-The number of violated constraints is minimized using the standard back propagation training technique used for artificial neural networks.
+The number of violated constraints is minimized using the standard backpropagation training technique used for artificial neural networks.
 To this end, we combined all pairs of trials $(a,b)$ from the same stimulus with all trials $c$ from other stimuli and told the system that $a$ and $b$ must be more similar.
 For example, we created all possible pairs of trials from the perception of Jingle Bells with lyrics and then combined each of those pairs with all other perception trials.
 Each one of these triplets was then processed by the \ac{SCE}. % (under the similarity constraint).
@@ -45,15 +36,15 @@ We used the tanh function here.}.
   \begin{center}
     \includegraphics[width=\textwidth,keepaspectratio=true]{Figures/model_W}
 %   \\\vspace{-0.8em}
-    \caption{Visualization of our \ac{CNN}, which processes raw EEG at a sampling rate of 512\,Hz.
+    \caption{Visualization of our neural network, which processes raw EEG at a sampling rate of 512\,Hz.
     Layer 1 was pre-trained using similarity-constraint encoding and is a spatial representation of EEG electrode weights. Layer 2 is a 37 sample long temporal filter. Layer 3 shows the compressed representations of the raw EEG data. The numbers are the ID numbers of the stimuli found in \autoref{tab:stimuli_information}. The colours are an indication of the weighting decided on by the model. We can interpret the intense red and blue colours as being more important for stimulus classification than the white areas.}
     \label{fig:model_W}
   \end{center}
 %  \vspace{-1em}
 \end{figure}
-\section{Layer 2: Convolution Filter \& Layer 3: Templates}
+\section{Layer 2: Temporal Filter \& Layer 3: Templates}
 Layers two and three were trained together with supervised learning and optimized by back propagation through the entire model with a cost function to minimize classification error.
-The single data stream output from layer 1 entered the second layer where it was convolved with a filter and pooled with a subsampling factor of 11.
+The single data stream output from layer one entered the second layer where it was convolved with a filter and pooled with a subsampling factor of 11.
 This produced a compressed representation of the original EEG data.
 
 To find the optimal parameters (learning rate, filter size, etc.) for our neural network, we employed a 9-fold cross validation scheme by training on the data from 9 subjects (384 trials) and validating on the remaining subject (48 trials).

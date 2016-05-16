@@ -5,14 +5,16 @@ The approval form can be found in Appendix \ref{appendix:ethics}.
 \section{Participants}
 Fourteen participants (3 male), aged 19-36, with normal hearing and no history of brain injury took part in this study. Eight participants had formal musical training (1- 26 years), and four of those participants played instruments regularly at the time of data collection.
 \section{Stimuli}
-Stimuli were fragments of familiar musical pieces and were selected based on key signature (3/4 or 4/4 time) and the presence and absence of lyrics. The stimuli were kept as similar in length as possible with care taken to ensure that they all contained complete musical phrases. Stimulus details can be found in \autoref{tab:stimuli_information}.
+Stimulus details can be found in \autoref{tab:stimuli_information}.
+Stimuli were fragments of familiar musical pieces and were selected based on time signature (3/4 or 4/4 time) and the presence and absence of lyrics. 
+The stimuli were kept as similar in length as possible with care taken to ensure that they all contained complete \hl{musical phrases (complete musical thoughts).}
 Each musical fragment was preceded by approximately two seconds of clicks as a cue to the tempo and onset of the music. The beats began to fade out at the one second mark and stopped at the onset of the music. 
 
 \section{Equipment and Procedure}
 \subsection{Behavioural Testing}
 We collected information about participants' previous music experience, their ability to imagine sounds, and information about musical sophistication using an adapted version of the widely used Goldsmith's Musical Sophistication Index (G-MSI) \cite{mullensiefen_musicality_2014} combined with an adapted clarity of auditory imagination scale \cite{willander_imagery_scale_2010}. 
 The questionnaire can be found in Appendix \ref{appendix:questionnaire}.
-Participants also completed a beat tapping and a stimuli familiarity task. 
+Participants also completed a beat tapping and a stimulus familiarity task. 
 Participants listened to each stimulus and tapped along with the music on the table top. 
 Participants'  tapping abilities were rated on a scale from 1 (difficult to assess) to 3 (tapping done properly). 
 After listening to each stimulus, participants rated their familiarity with the stimuli on a scale from 1 (unfamiliar) to 3 (very familiar).
@@ -20,7 +22,7 @@ To participate in the \ac{EEG} portion of the study, the participants had to rec
 This measure ensured that participants could adequately maintain a steady beat.
 We anticipated that participants able to maintain a steady beat would have fewer tempo fluctuations during music imagination.
 Participants received scores from 75\%--100\% with an average score of 96\%.
-Furthermore, they needed to receive a score of at least 80\% on our stimuli familiarity task. 
+Furthermore, they needed to receive a score of at least 80\% on our stimulus familiarity task. 
 This measure ensured that participants were familiar with the stimuli.
 We anticipated that imagination would be easiest for familiar music.
 Participants received scores from 71\%--100\% with an average score of 87\%.
@@ -77,14 +79,12 @@ The presentation and recording systems were placed outside to reduce the impact 
 % \vspace{-2em}
 \end{figure}
 Horizontal and vertical EOG channels recorded eye movements. 
-We also recorded the left and right mastoid channel as EEG reference signals. 
-Due to an oversight, the mastoid data were not collected for the first five subjects.
 %In these subjects, data were not re-referenced.
 The presented audio %and the recorded EEG were 
 was routed through a Cedrus StimTracker connected to the EEG receiver, which allowed a high-precision synchronization ($<$0.05 ms) of the stimulus onsets with the \ac{EEG} data.
 The experiment was programmed and presented using PsychToolbox run in Matlab 2014a. 
 A computer monitor displayed the instructions and fixation cross for the participants to focus on during the trials to reduce eye movements.
-The stimuli and cue clicks were played through speakers at a comfortable volume that was kept constant across participants. Headphones were not used because pilot participants reported headphones caused them to hear their heartbeat which interfered with the imagination portion of the experiment. 
+The stimuli and cue clicks were played through two \hl{TYPE OF} speakers at a comfortable level that was kept constant across participants. Headphones were not used because pilot participants reported headphones caused them to hear their heartbeat which interfered with the imagination portion of the experiment. 
 After the experiment, we asked participants the method they used to imagine the music stimuli.
 The participants were split evenly between imagining themselves producing the music (singing or humming) and simply ``hearing the music in [their] head.'' 
 
@@ -123,11 +123,9 @@ In total, 240 trials (12 stimuli x 4 conditions x 5 blocks) were recorded per su
 
 \section{Preprocessing}
 The raw EEG and EOG data were preprocessed using the MNE-Python toolbox. 
-For the recordings collected with mastoid channels, the EEG data were re-referenced by subtracting the mean mastoid signal \cite{teplan_fundamentals_2002}.
-Data collected from participants without recorded mastoid channels were not re-referenced. 
-This preprocessing difference did not effect the final results.
-Channels containing noise that could not be removed by simple filtering techniques (i.e., resulting from muscle movements or bad electrical contact with scalp) were identified as `bad' by manual inspection.
-The bad channels were removed and interpolated.
+The EEG data were re-referenced \hl{to the average?}.
+Channels containing noise that could not be removed by simple filtering techniques (i.e., resulting from muscle movements or bad electrical contact with scalp) were identified as `bad' by visual inspection.
+The bad channels were removed and interpolated (between 0 and 3 per subject).
 For interpolation, the spherical splines method described in Perrin \etal \citeyear{perrin_spherical_1989} was applied.
 The data were then filtered with an fft-bandpass, keeping a frequency range between 0.5 and 30 Hz.
 The filtering removed unwanted high frequency information and any slow signal drift in the EEG.
