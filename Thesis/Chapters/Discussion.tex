@@ -15,10 +15,12 @@ Ideally, our \ac{BCI} would be trained on brain data collected during the \emph{
 By training on perception data we hoped to keep patient fatigue to a minimum. 
 However, our results indicated that this is currently not a viable option with the existing data.  
 
-Using machine learning techniques, we were able to train our system and classify the perception of music stimuli from the recorded EEG signal at a 28.7\% accuracy level (chance = 8.3\%)
-However, the technique failed when applied to data collected during imagination of music.
+Using machine learning techniques, we were able to train our system and classify the perception of music stimuli from the recorded EEG signal at a 28.7\% accuracy rate (chance = 17.59\%) at a significance level of p=0.001.
+When investigating the pairs of stimuli that were most easily classified, there was no relationship to the energy attribute (calculated using EchoNest) of each musical piece (i.e., pieces with the most different energy levels were not more easily classifed). 
+However, our neural network failed when applied to data collected during imagination of music.
 The confusion matrix produced by the network (\autoref{fig:model_W_confusion_cond2}) is similar to what one would expect when trying to classify noise.
 This result indicates that the system was not systematically misclassifying stimuli.
+
 There are multiple reasons that could explain why we were unable to classify music imagination.
 During perception, the timing of the music is consistent across trials (e.g. the second beat of the song always occurs at a consistent time point) because the timing is driven by the stimulus. 
 During imagination, this timing may fluctuate across trials and across participants, because after the end of the tempo cue there is no external stimulus.

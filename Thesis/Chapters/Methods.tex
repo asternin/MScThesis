@@ -8,6 +8,10 @@ Fourteen participants (3 male), aged 19-36, with normal hearing and no history o
 Stimulus details can be found in \autoref{tab:stimuli_information}.
 Stimuli were fragments of familiar musical pieces and were selected based on time signature (3/4 or 4/4 time) and the presence and absence of lyrics. 
 By listening to songs from existing lists of children's nursery rhymes, movie soundtracks, Christmas carols etc. we chose stimuli that fit into our time signature and lyric categories, but otherwise sounded very different from each other. 
+Using EchoNest software \cite{ellis2010echo} the `energy' of the stimuli was assessed. 
+The energy attribute of a piece of music encompasses perceptual features such as dynamic range, perceived loudness, timbre, onset rate, and general entropy, and typical songs with high energy feel fast and loud.
+Energy values fall on a scale from 0 to 1.
+Our stimuli had energy values from 0.06 to 0.64, and no two stimuli had the same energy value.
 The stimuli were kept as similar in length as possible with care taken to ensure that they all contained complete musical phrases (complete musical thoughts).
 Each musical fragment was preceded by approximately two seconds of clicks as a cue to the tempo and onset of the music. The beats began to fade out at the one second mark and stopped at the onset of the music. 
 
@@ -129,7 +133,8 @@ The EEG data were re-referenced \hl{to the average?}.
 Channels containing noise that could not be removed by simple filtering techniques (i.e., resulting from muscle movements or bad electrical contact with scalp) were identified as `bad' by visual inspection.
 The bad channels were removed and interpolated (between 0 and 3 per subject).
 For interpolation, the spherical splines method described in Perrin \etal \citeyear{perrin_spherical_1989} was applied.
-The data were then filtered with an fft-bandpass, keeping a frequency range between 0.5 and 30 Hz.
+The data were then filtered with an overlap-add FIR filter (filter length 10s), keeping a frequency range between 0.5 and 30 Hz.
+The width of the transition band was 0.1 at 0.5Hz and 0.5 at 30Hz.
 The filtering removed unwanted high frequency information and any slow signal drift in the EEG.
 Removing unwanted noise (i.e. from external sources or muscle movements) restricts analyses to data within the frequency range of signals produced by the brain. 
 %Afterwards, we down-sampled to a sampling rate of 64 Hz.

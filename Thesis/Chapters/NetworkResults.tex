@@ -2,7 +2,7 @@
 First, we tested the model with the perception data. 
 Significance values were determined by using the cumulative binomial distribution to estimate the likelihood of observing a given classification rate by chance \cite{Combrisson2015}. 
 Using the cumulative binomial distribution allows us to determine the number of observations that are correctly classified by chance with respect to the number of observations.
-Our model was able to classify the 12-classes (12 stimuli listed in \autoref{tab:stimuli_information}) with a 28.7\% accuracy rate (chance = 8.3\%) at a significance level of p=0.001. 
+Our model was able to classify the 12-classes (12 stimuli listed in \autoref{tab:stimuli_information}) with a 28.7\% accuracy rate (chance = 17.59\%) at a significance level of p=0.001.
 \autoref{fig:model_W_confusion} is a confusion matrix which shows the classification results for each stimulus.
 \begin{figure}[htb] 
   \begin{center}
@@ -31,13 +31,13 @@ This resulted in the series of binary confusion matrices in \autoref{fig:model_W
   \vspace{-1em}
 \end{figure}
 For example: Chim Chim Cheree with lyrics is classified correctly 100\% of the time when paired with Jingle Bells without lyrics. 
-Within each binary confusion matrix chance is 50\%.
+Within each binary confusion matrix chance is 66.67\% (alpha = 0.05).
 The statistical significance (p-value) of each of the comparisons is visualized in the figure's inset. 
-Most of the binary comparisons are classified correctly at a statistically significant level (p$<$0.05). 
+%Most of the binary comparisons are classified correctly at a statistically significant level (p$<$0.05). 
 
 The imagination data was then tested on the same model (i.e. there was no additional training using the imagination data). 
 The model was not able to classify the 12 stimuli from the EEG data collected during music imagination. 
-\autoref{fig:model_W_confusion_cond2} is a confusion matrix which shows the imagination classification results at 7.41\% (below chance = 8.3\%). 
+\autoref{fig:model_W_confusion_cond2} is a confusion matrix which shows the imagination classification results at 7.41\% (below chance = 12.96\%, alpha = 0.05). 
 As can be seen in the figure, there is no clear pattern to the confusion indicating that the system was not making classification errors in a systematic way. 
 \begin{figure}[htb] 
   \begin{center}
@@ -52,9 +52,9 @@ As can be seen in the figure, there is no clear pattern to the confusion indicat
 We investigated whether there were pairs of imagined stimuli that the classifier could distinguish.
 \autoref{fig:model_W_binary_confusion_cond2} shows the binary confusion matrix.
 Most of the stimulus pairs were not classified at a statistically significant level. 
-However, one binary comparison stood out. 
+\hl{However, one binary comparison stood out. 
 Stimulus 1 (Chim Chim Cheree with lyrics) with 12 (Take Me Out to the Ballgame without lyrics) is classified at a rate of 62.2\% (p$<$0.05). 
-It is interesting to note that this does not mirror what is seen in the binary comparisons of perception data, where the most classifiable pair was stimulus 1 with 13 (Jingle Bells without lyrics). 
+It is interesting to note that this does not mirror what is seen in the binary comparisons of perception data, where the most classifiable pair was stimulus 1 with 13 (Jingle Bells without lyrics). }
 \begin{figure}[h] 
   \begin{center}
     \includegraphics[width=.75\textwidth,keepaspectratio=true]{Figures/model_W_binary_confusion_cond2}

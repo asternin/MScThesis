@@ -69,13 +69,13 @@ The ``receptive field'' of each one of these units is determined by a filter, wh
 Each filter is created based on a variety of parameters set by the researcher, or determined by the network during the training process.
 The filters in each subsequent layer of the network `see' larger amounts of the original input data, and the input is classified in the final layer of the network. 
 Before a neural network can be used to classify data it must learn the characteristics of the data. 
-\hl{Through backpropagation and the use of stochastic gradient descent, the layers of the model are trained to optimize the outcome. 
-In our model, the filters were optimized to produce the best classification results.}
+Through backpropagation, the layers of the model were trained to optimize the outcome. 
+In our model, the filters were optimized to produce the best classification results.
 The optimized filters are applied to new data and the accuracy of the classification is determined. 
 In this study, a neural network is used to classify music stimuli from brain data collected during music perception and imagination. 
 
 To classify our music stimuli from EEG data we first tried an ERP analysis, using \ac{PCA}, similar to that of Schaefer \etal\citeyear{schaefer_name_2011} to determine which piece of music a participant was listening to or imagining.
 In this experiment, we collected fewer trials per stimulus and therefore had much less data than Schaefer \etal\citeyear{schaefer_name_2011}. 
 As a result, the ERP analysis proved unsuccessful, so we used a neural network to detect more complex characteristics of the music from EEG that would better allow us to classify stimuli.
-Using this technique we were able to classify perception of 12 music pieces with a 28.7\% accuracy (chance = 8.3\%).
+Using this technique we were able to classify perception of 12 music pieces with a 28.7\% accuracy rate (chance = 17.59\%) at a significance level of p=0.001.
 Using this same technique we were unable to accurately classify imagination of music (accuracy = 7.41\%). 
