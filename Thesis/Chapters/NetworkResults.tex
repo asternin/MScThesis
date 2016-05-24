@@ -2,11 +2,11 @@
 First, we tested the model with the perception data. 
 Significance values were determined by using the cumulative binomial distribution to estimate the likelihood of observing a given classification rate by chance \cite{Combrisson2015}. 
 Using the cumulative binomial distribution allows us to determine the number of observations that are correctly classified by chance with respect to the number of observations.
-Our model was able to classify the 12-classes (12 stimuli listed in \autoref{tab:stimuli_information}) with a 29.6\% accuracy rate (chance = 17.59\%) at a significance level of p=0.001.
+Our model was able to classify the 12-classes (12 stimuli listed in \autoref{tab:stimuli_information}) with a 28.7\% accuracy rate (chance = 17.59\%) at a significance level of p=0.001.
 \autoref{fig:model_W_confusion} is a confusion matrix which shows the classification results for each stimulus.
 \begin{figure}[htb] 
   \begin{center}
-    \includegraphics[width=.75\textwidth,keepaspectratio=true]{Figures/model_W_confusion}
+    \includegraphics[width=.75\textwidth,keepaspectratio=true]{Figures/model_W_confusion-512}
    \\\vspace{-0.8em}
     \caption{12-class confusion matrix for perception data. The numbers are the ID numbers of the stimuli found in \autoref{tab:stimuli_information}. Colour indicates the number of times a true label was classified as a predicted label with darker colours indicating more classifications.}
     \label{fig:model_W_confusion}
@@ -14,14 +14,15 @@ Our model was able to classify the 12-classes (12 stimuli listed in \autoref{tab
 %  \vspace{-1em}
 \end{figure}
 From the confusion matrix we can see that some stimuli were more accurately classified than others. 
-Stimulus 22 (Hedwig's Theme from Harry Potter) is the most accurately classified. 
-Stimulus 1, 2, and 4 are also accurately classified, but confusion with their lyric counterparts (stimuli 11, 12, and 14) can be seen.
+Stimulus 2 (Take Me Out to the Ballgame with lyrics) is the most accurately classified. 
+Stimuli 13 and 14 are also accurately classified, but some confusion with their lyric counterparts (stimuli 3 and 4) can be seen.
+Confusion between lyric and non-lyric pairs can also be seen with stimulus 1 being classified as stimulus 11.
 
 To further investigate which pairs of stimuli the classifier could distinguish best, we put all combinations of paired stimuli through our classifier.
 This resulted in the series of binary confusion matrices in \autoref{fig:model_W_binary_confusion} that show us that some pairs of stimuli are more easily differentiated than others. 
 \begin{figure}[htb] 
   \begin{center}
-    \includegraphics[width=.8\textwidth,keepaspectratio=true]{Figures/model_W_binary_confusion}
+    \includegraphics[width=.8\textwidth,keepaspectratio=true]{Figures/model_W_binary_confusion-512}
    \\\vspace{-0.8em}
     \caption{Binary confusion matrices for perception data.
     The inset shows the p-values determined by using the cumulative binomial distribution to estimate the likelihood of observing the respective binary classification rate by chance. The significance threshold was bonferroni corrected to $alpha$ =  0.05/66 = 7.5e-04}
@@ -29,8 +30,7 @@ This resulted in the series of binary confusion matrices in \autoref{fig:model_W
   \end{center}
   \vspace{-1em}
 \end{figure}
-There are four pairs of stimuli that stand out and are classified correctly 94\% of the time.
-For example: Chim Chim Cheree with lyrics vs. Take Me Out to the Ballgame without lyrics. 
+For example: Chim Chim Cheree with lyrics is classified correctly 100\% of the time when paired with Jingle Bells without lyrics.
 Within each binary confusion matrix chance is 66.67\% (alpha = 0.05).
 The statistical significance (p-value) of each of the comparisons is visualized in the figure's inset. 
 %Most of the binary comparisons are classified correctly at a statistically significant level (p$<$0.05). 
@@ -51,7 +51,9 @@ As can be seen in the figure, there is no clear pattern to the confusion indicat
 
 We investigated whether there were pairs of imagined stimuli that the classifier could distinguish.
 \autoref{fig:model_W_binary_confusion_cond2} shows the binary confusion matrix.
-None of the stimulus pairs were classified at a statistically significant level. \begin{figure}[h] 
+None of the stimulus pairs were classified at a statistically significant level. 
+
+\begin{figure}[h] 
   \begin{center}
     \includegraphics[width=.75\textwidth,keepaspectratio=true]{Figures/model_W_binary_confusion_cond2}
    \\\vspace{-0.8em}
