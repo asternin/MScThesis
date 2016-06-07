@@ -2,12 +2,13 @@
 Schaefer \etal \citeyear{schaefer_name_2011} were able to use the unique time course of the component responsible for the most variance to differentiate between stimuli.
 With our components we were unable to reproduce this stimulus classification accuracy. 
  
-To classify our data, we used a technique from the computer science called an artificial neural network (\ac{ANN}).
-A neural network contains one or more layers that process the data.
-In these layers, the input is processed by a filter (weight matrix) that is trained using backpropagation \cite{Rumelhart_backpropagation_1986}. 
+To classify our data, we used a technique from computer science called a convolutional neural network (\ac{CNN}).
+A \ac{CNN} contains one or more convolutional layers that process the data. 
+In these layers, the input was processed by a filter (weight matrix) that was trained using backpropagation \cite{Rumelhart_backpropagation_1986}. 
+The same filter was applied at different positions (time points) of the input. 
 Our network was optimized for our stimulus classification task and included three processing layers.
-The first layer was pre-trained on the perception data using 432 trials (9 subjects x 12 stimuli x 4 trials) and then was not changed during training of the full 3-layer model. 
-One trial of each stimulus from each subject's data was left out to be used as the test set for later model testing (108 trials (9 subjects x 12 stimuli x 1 trial) ).
+The first layer was pre-trained on the perception data using 384 trials (8 subjects x 12 stimuli x 4 trials) and then was not changed during training of the full 3-layer model. 
+One trial of each stimulus from each subject's data was left out to be used as the test set for later model testing (96 trials (8 subjects x 12 stimuli x 1 trial) ).
 The full explanation of how we arrived at the best model can be found in \cite{stober_ICLR2016} (arXiv:1511.04306).
 
 \section{Layer 1: Similarity Constraint Encoding}
@@ -31,14 +32,15 @@ Based on our constraint, the similarity score between $a$ and $b$ must be higher
 During training, the number of violated constraints was minimized using backpropagation and stochastic gradient descent with a learning rate momentum \cite{rumelhart1988learning}.
 In this scenario, backpropagation allowed the \ac{SCE} to update its learned features (channel weights) to produce representations of the trials that satisfied the constraint. 
 To help the \ac{SCE} hone in on the optimal learned features, stochastic gradient descent forced the learned features to be updated in the direction of minimizing the violations of the constraint. 
-Learning rate momentum is a method for quickly achieving optimal results. Rather than the features (channel weights) being updated after each triplet was processed, the features were updated after 128 trials had been processed.
+Learning rate momentum is a method to improve the performance of stochastic gradient descent by controlling how the model's parameters are modified.
+Rather than the features (channel weights) being updated after each triplet was processed, the features were updated after 128 trials (referred to in the literature as a `mini-batch') had been processed.
 %Dropout regularization was used \cite{srivastava2014dropout} to prevent overfitting.
 %Dropout regularization is a technique that randomly removes parts of the network during training producing a number of ``thinned'' networks. 
-The final features learned by the \ac{SCE} represent those that describe similarities between trials from the same stimulus and differences between trials from different stimuli.  
+The final features learned by the \ac{SCE} were more similar for trials from the same stimulus than for trials from different stimuli.  
 
-The spatial representation of the features learned by this \ac{SCE} is visualized in Layer 1 of \autoref{fig:model_W}. 
+The spatial pattern of the features learned by this \ac{SCE} is visualized in Layer 1 of \autoref{fig:model_W}. 
 The coloured areas represent the regions and the electrode weightings that the encoder has determined are optimal for differentiating stimuli.
-This representation acts as a spatial filter that processes the raw data.
+This pattern acts as a spatial filter that processes the raw data.
 The 64 EEG channels are reduced to a single data stream of weighted EEG by this filter\footnote{After being processed by the spatial filter we applied a non-linear activation function to the data (a step which generally occurs in all neural network layers).
 We used the tanh function here.}. 
 \begin{figure}[h] 
@@ -53,17 +55,19 @@ We used the tanh function here.}.
 \end{figure}
 \section{Layer 2: Temporal Filter \& Layer 3: Templates}
 Layers two and three were trained together with supervised learning and optimized by backpropagation through the entire model with a cost function to minimize classification error.
-The single data stream output from layer one entered the second layer where it was processed the filter and pooled with a subsampling factor of 11.
-This produced a compressed representation of the original EEG data.
+The single data stream output from layer one entered the second layer where it was convolved with the filter (step size of 1).
+The resulting output was then pooled over 21 samples with a step size of 11.
+This produced a compressed representation of the EEG data.
 
-To find the optimal parameters (learning rate, filter size, etc.) for our neural network, we employed a 9-fold cross validation scheme by training on the data from 9 subjects (384 trials) and validating on the remaining subject (48 trials).
+To find the optimal parameters (learning rate, filter size, etc.) for our neural network, we employed a 8-fold cross validation scheme by training on the data from 8 subjects (384 trials) and validating on the remaining subject (48 trials).
 The cross-validation was done within the training set. %This process created optimized, compressed representations of the EEG data for each stimuli.
-The final versions of layer 2 and 3 seen in \autoref{fig:model_W} are an average of the model parameters over all 9 folds.
-Layer 2 is the filter that processes the data stream from layer 1, and layer 3 is made up of the optimized, compressed representations of the original EEG data for each stimulus.
+The final versions of layer 2 and 3 seen in \autoref{fig:model_W} are an average of the model parameters over all folds.
+Layer 2 is the filter that processes the data stream from layer 1, and layer 3 contains a temporal pattern that was learned from the output of layer 2 and is a compressed representation of the EEG data. 
+
 \section{Full model explanation}
-The classification accuracy of the model was then tested with the test set of 108 trials. 
+The classification accuracy of the model was then tested with the test set of 96 trials. 
 Each trial in the test set was processed by the filters in layer 1 and layer 2. 
-The resulting compressed representation (the output from layer 2) of the test trial was compared against each of the optimized representations in layer 3 of the model.
-The dot product of the test trial's representation was taken with each of the optimized layer 3 representations.
-This produced 12 values (one for each stimulus) that described the similarity of the test trial's representation with each of the optimized representations. 
+The resulting compressed representation (the output from layer 2) of the test trial was compared against each of the optimized temporal patterns in layer 3 of the model.
+The dot product of the test trial's representation was taken with each of the optimized layer 3 patterns.
+This produced 12 values (one for each stimulus) that described the similarity of the test trial's representation with each of the optimized patterns. 
 Using the dot product as a similarity measure, the test trial was given the label of the stimulus whose representation it was most similar to. 

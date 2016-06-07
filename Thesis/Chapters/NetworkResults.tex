@@ -8,7 +8,7 @@ Our model was able to classify the 12-classes (12 stimuli listed in \autoref{tab
   \begin{center}
     \includegraphics[width=.75\textwidth,keepaspectratio=true]{Figures/model_W_confusion-512}
    \\\vspace{-0.8em}
-    \caption{12-class confusion matrix for perception data. The numbers are the ID numbers of the stimuli found in \autoref{tab:stimuli_information}. Colour indicates the number of times a true label was classified as a predicted label with darker colours indicating more classifications.}
+    \caption{12-class confusion matrix for perception data. The numbers along the axes correspond to the ID numbers of the stimuli found in \autoref{tab:stimuli_information}. Intensity indicates the number of times a true label was classified as a predicted label with darker colours indicating more classifications.}
     \label{fig:model_W_confusion}
   \end{center}
 %  \vspace{-1em}
@@ -30,10 +30,9 @@ This resulted in the series of binary confusion matrices in \autoref{fig:model_W
   \end{center}
   \vspace{-1em}
 \end{figure}
-For example: Chim Chim Cheree with lyrics is classified correctly 100\% of the time when paired with Jingle Bells without lyrics.
 Within each binary confusion matrix chance is 66.67\% (alpha = 0.05).
+For example: Chim Chim Cheree with lyrics is classified correctly 100\% of the time when paired with Jingle Bells without lyrics.
 The statistical significance (p-value) of each of the comparisons is visualized in the figure's inset. 
-%Most of the binary comparisons are classified correctly at a statistically significant level (p$<$0.05). 
 
 The imagination data was then tested on the same model (i.e. there was no additional training using the imagination data). 
 The model was not able to classify the 12 stimuli from the EEG data collected during music imagination. 
@@ -43,7 +42,7 @@ As can be seen in the figure, there is no clear pattern to the confusion indicat
   \begin{center}
     \includegraphics[width=.83\textwidth,keepaspectratio=true]{Figures/model_W_confusion_cond2}
    \\\vspace{-0.8em}
-    \caption{12-class confusion matrix for imagination data. The numbers are the ID numbers of the stimuli found in \autoref{tab:stimuli_information}. Colour indicates the number of times a true label was classified as a predicted label with darker colours indicating more classifications.}
+    \caption{12-class confusion matrix for imagination data. The numbers along the axes correspond to the ID numbers of the stimuli found in \autoref{tab:stimuli_information}. Intensity indicates the number of times a true label was classified as a predicted label with darker colours indicating more classifications.}
         \label{fig:model_W_confusion_cond2}
   \end{center}
   \vspace{-1em}

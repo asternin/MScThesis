@@ -129,7 +129,7 @@ In total, 240 trials (12 stimuli x 4 conditions x 5 blocks) were recorded per su
 
 \section{Preprocessing}
 The raw EEG and EOG data were preprocessed using the MNE-Python toolbox. 
-The EEG data were re-referenced \hl{to the average?}.
+%The EEG data were not re-referenced.
 Channels containing noise that could not be removed by simple filtering techniques (i.e., resulting from muscle movements or bad electrical contact with scalp) were identified as `bad' by visual inspection.
 The bad channels were removed and interpolated (between 0 and 3 per subject).
 For interpolation, the spherical splines method described in Perrin \etal \citeyear{perrin_spherical_1989} was applied.
@@ -139,5 +139,7 @@ The filtering removed unwanted high frequency information and any slow signal dr
 Removing unwanted noise (i.e. from external sources or muscle movements) restricts analyses to data within the frequency range of signals produced by the brain. 
 %Afterwards, we down-sampled to a sampling rate of 64 Hz.
 We computed independent components using extended Infomax \ac{ICA} \cite{lee_independent_1999} and removed components that had a high correlation with the EOG channels to remove artifacts caused by eye blinks.
-This ensures that the final results can be attributed to brain responses, not other sources of electrical activity.
+This ensured that the final results could be attributed to brain responses, not other sources of electrical activity.
 Finally, the data from the 64 EEG channels were reconstructed from the remaining independent components.
+The data from two participants were rejected during preprocessing due to excessive noise caused by coughing and other movements. 
+This left eight datasets for analysis.

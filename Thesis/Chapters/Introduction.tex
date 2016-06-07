@@ -54,8 +54,8 @@ However, sophisticated processing techniques, such as those used in machine lear
 
 Machine learning is a method that produces algorithms that can learn from and make predictions about data.
 For example, the programs used by postal services to recognize handwriting on envelopes or the speech recognition software in your cell phone are based on machine learning techniques.
-One such technique uses \acp{ANN}.
-\acp{ANN} were inspired by the powerfully complex visual system found in humans and other animals.
+One such technique uses \acp{CNN} \cite{LeCun2015}.
+\acp{CNN} were inspired by the powerfully complex visual system found in humans and other animals.
 In the retina, cells respond to small regions of the visual field called receptive fields \cite{Kalat2008}. 
 As information moves along the visual processing stream, single cells in higher layers receive input from multiple cells in lower layers.
 At each level, more information is combined, giving cells higher up in the processing stream an increasingly global view of the information collected by the retinal cells (i.e., what the retinal cells are `seeing').
@@ -63,7 +63,7 @@ Complex visual information is processed farther along the processing stream than
 For example, when looking at a house, information about edges and colour are processed at lower levels.
 Information from multiple low-level cells is combined and passed to high-level cells that process more global information like shape. 
 The recognition of the full object as being a house occurs at the highest level in the stream. 
-\acp{ANN} work in a similar way to process complex data. 
+Neural networks work in a similar way to process complex data. 
 The processing units in a neural network act like cells in the visual system.
 The ``receptive field'' of each one of these units is determined by a filter, which can be thought of as a pattern of weights.
 Each filter is created based on a variety of parameters set by the researcher, or determined by the network during the training process.
@@ -72,10 +72,11 @@ Before a neural network can be used to classify data it must learn the character
 Through backpropagation, the layers of the model were trained to optimize the outcome. 
 In our model, the filters were optimized to produce the best classification results.
 The optimized filters are applied to new data and the accuracy of the classification is determined. 
-In this study, a neural network is used to classify music stimuli from brain data collected during music perception and imagination. 
+In this study, a convolutional neural network is used to classify music stimuli from brain data collected during music perception and imagination. 
 
 To classify our music stimuli from EEG data we first tried an ERP analysis, using \ac{PCA}, similar to that of Schaefer \etal\citeyear{schaefer_name_2011} to determine which piece of music a participant was listening to or imagining.
 In this experiment, we collected fewer trials per stimulus and therefore had much less data than Schaefer \etal\citeyear{schaefer_name_2011}. 
-As a result, the ERP analysis proved unsuccessful, so we used a neural network to detect more complex characteristics of the music from EEG that would better allow us to classify stimuli.
+As a result, the ERP analysis proved unsuccessful, so we used a machine learning technique called a deep neural network to detect more complex characteristics of the music from EEG that would better allow us to classify stimuli.
+Neural networks that use deep learning are characterized by having multiple layers of nonlinear processing units, the learning of features (supervised or unsupervised) in each layer, and the formation of layers into a hierarchy from low- to high-level features \cite{deng2014deep}. 
 Using this technique we were able to classify perception of 12 music pieces with a 28.7\% accuracy rate (chance = 17.59\%) at a significance level of p=0.001.
 Using this same technique we were unable to accurately classify imagination of music (accuracy = 7.41\%). 

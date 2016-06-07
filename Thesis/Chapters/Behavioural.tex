@@ -1,7 +1,7 @@
 \chapter{Behavioural Experiment}
-We ran a follow-up experiment to learn more about what information from the EEG data the deep learning neural net used to classify the stimuli. 
+We ran a follow-up experiment to learn more about what information from the EEG data the neural net used to classify the stimuli. 
 First, we investigated whether the vertical red bands from layer 3 (\autoref{fig:model_W}) were associated with a cognitive process that may have supported the neural net's classification, such as recognition of the music. 
-Then, we investigated whether the deep learning neural net confused stimuli that were rated as highly similar by humans.
+Then, we investigated whether the neural net confused stimuli that were rated as highly similar by humans.
 \section{Participants}
 Nine participants (four male), aged 22-28, with normal hearing and no history of head injuries took part in this study. 
 Six participants had formal music training (2-15 years), and four of those participants played instruments regularly at the time of data collection. 
@@ -42,7 +42,7 @@ As expected, participants were nearly perfect at identifying identical songs.
 Lyric/non-lyric pairs of songs were also rated as highly similar, and that is seen in the four, dark squares that are parallel to the diagonal.
 
 The classification accuracy values produced by the neural network in the confusion matrix in \autoref{fig:model_W_binary_confusion} can be interpreted as ``dissimilarity'' scores, so we took their inverse (100 - score) to produce similarity scores, and correlated the similarity matrix with the similarity ratings given by our participants.
-The correlation was not significant (r = 0.03, p$>$0.05).
+The correlation was not significant ($r$ = 0.03, p $>$ 0.05).
 The lack of correlation suggests that the neural network is doing something different from humans when determining similarities between stimuli. 
 \begin{figure}[htb] 
   \begin{center}

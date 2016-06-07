@@ -61,10 +61,36 @@ Combrisson, E.%
 \newblock
 \APACjournalVolNumPages{Journal of Neuroscience Methods}{}{}{1--11}.
 \newblock
-\begin{APACrefURL} \url{http://dx.doi.org/10.1016/j.jneumeth.2015.01.010}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1016/j.jneumeth.2015.01.010} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Deng%
+\ \BBA {} Yu%
+}{%
+Deng%
+\ \BBA {} Yu%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+deng2014deep}
+\APACinsertmetastar {%
+deng2014deep}%
+\begin{APACrefauthors}%
+Deng, L.%
+\BCBT {}\ \BBA {} Yu, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep Learning: Methods and Applications} {Deep learning:
+  Methods and applications}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Foundations and Trends in Signal
+  Processing}{7}{3--4}{197-387}.
+\newblock
+\begin{APACrefDOI} \doi{10.1561/2000000039} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -193,10 +219,6 @@ Geiser, E.%
 \newblock
 \APACjournalVolNumPages{Cortex}{45}{1}{93--102}.
 \newblock
-\begin{APACrefURL}
-  [{2015-04-26}]\url{http://www.sciencedirect.com/science/article/pii/S0010945208002475}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1016/j.cortex.2007.09.010} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -229,9 +251,6 @@ Halpern, A\BPBI R.%
 \newblock
 \APACjournalVolNumPages{Neuropsychologia}{42}{9}{1281--92}.
 \newblock
-\begin{APACrefURL} \url{http://www.ncbi.nlm.nih.gov/pubmed/15178179}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1016/j.neuropsychologia.2003.12.017}
   \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -262,10 +281,6 @@ Herholz, S.%
   for familiar tunes}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of cognitive neuroscience}{24}{6}{1382--97}.
-\newblock
-\begin{APACrefURL}
-  \url{http://www.mitpressjournals.org/doi/abs/10.1162/jocn\_a\_00216
-  http://www.ncbi.nlm.nih.gov/pubmed/22360595} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1162/jocn\_a\_00216} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -299,9 +314,6 @@ Herholz, S.%
 \newblock
 \APACjournalVolNumPages{The European journal of
   neuroscience}{28}{11}{2352--60}.
-\newblock
-\begin{APACrefURL} \url{http://www.ncbi.nlm.nih.gov/pubmed/19046375}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1111/j.1460-9568.2008.06515.x} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -392,10 +404,35 @@ Kraemer, D\BPBI J\BPBI M.%
 \newblock
 \APACjournalVolNumPages{Nature}{434}{7030}{158}.
 \newblock
-\begin{APACrefURL} \url{http://www.ncbi.nlm.nih.gov/pubmed/15758989}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1038/434158a} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+LeCun%
+, Bengio%
+\BCBL {}\ \BBA {} Hinton%
+}{%
+LeCun%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+LeCun2015}
+\APACinsertmetastar {%
+LeCun2015}%
+\begin{APACrefauthors}%
+LeCun, Y.%
+, Bengio, Y.%
+\BCBL {}\ \BBA {} Hinton, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{may}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Deep learning}} {{Deep learning}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature}{521}{7553}{436--444}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/nature14539} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -425,10 +462,6 @@ Lee, T\BHBI W.%
   and supergaussian sources}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Neural Computation}{11}{2}{417--441}.
-\newblock
-\begin{APACrefURL}
-  [{2015-04-27}]\url{http://dx.doi.org/10.1162/089976699300016719}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1162/089976699300016719} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -526,10 +559,6 @@ M{\"u}llensiefen, D.%
 \newblock
 \APACjournalVolNumPages{PLoS ONE}{9}{2}{}.
 \newblock
-\begin{APACrefURL}
-  [{2015-04-27}]\url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3935919/}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1371/journal.pone.0089642} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -593,10 +622,6 @@ Perrin, F.%
 \newblock
 \APACjournalVolNumPages{Electroencephalography and Clinical
   Neurophysiology}{72}{2}{184--187}.
-\newblock
-\begin{APACrefURL}
-  [{2015-07-16}]\url{http://www.sciencedirect.com/science/article/pii/0013469489901806}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1016/0013-4694(89)90180-6} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -740,10 +765,6 @@ Schaefer, R\BPBI S.%
 \newblock
 \APACjournalVolNumPages{NeuroImage}{70}{}{317--326}.
 \newblock
-\begin{APACrefURL}
-  [{2015-04-25}]\url{http://www.sciencedirect.com/science/article/pii/S1053811913000037}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1016/j.neuroimage.2012.12.064} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -776,10 +797,6 @@ Schaefer, R\BPBI S.%
   brain} {Name that tune: {Decoding} music from the listening brain}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{NeuroImage}{56}{2}{843--849}.
-\newblock
-\begin{APACrefURL}
-  [{2015-04-25}]\url{http://www.sciencedirect.com/science/article/pii/S1053811910008402}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.neuroimage.2010.05.084} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -869,9 +886,6 @@ Stober, S.%
 \BIn{} \APACrefbtitle {9th Audio Mostly: A Conf. on Interaction With Sound
   (AM'14)} {9th audio mostly: A conf. on interaction with sound (am'14)}\
   (\BPGS\ 23:1--23:8).
-\newblock
-\begin{APACrefURL} \url{http://doi.acm.org/10.1145/2636879.2636904}
-  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -990,10 +1004,6 @@ Vlek, R\BPBI J.%
   accents}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Clinical Neurophysiology}{122}{8}{1526--1532}.
-\newblock
-\begin{APACrefURL}
-  [{2015-04-26}]\url{http://www.sciencedirect.com/science/article/pii/S1388245711000927}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.clinph.2011.01.042} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}

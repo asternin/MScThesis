@@ -1,6 +1,6 @@
 \chapter{Discussion}
 %\addcontentsline{toc}{chapter}{6. Discussion}
-The goal of these experiments was to investigate whether the perception and imagination of short musical pieces could be classified using EEG.  
+The goal of these experiments was to investigate whether the perception and imagination of short musical pieces could be classified from EEG data.  
 The ability to classify musical pieces from imagination could lead to the development of a \ac{BCI} that would allow patients with motor deficits to communicate through music imagination.
 Ideally, patients would be able to imagine a piece of music to convey a certain thought (i.e. imagining ``Jingle Bells'' to indicate hunger).
 Schaefer \etal \citeyear{schaefer_name_2011} were able to classify \emph{perceived} music stimuli based on the unique time courses of principal components that occurred during music perception, but we were unable to achieve the same result. 
@@ -17,7 +17,7 @@ However, our results indicated that this is currently not a viable option with t
 
 Using machine learning techniques, we were able to train our system and classify the perception of music stimuli from the recorded EEG signal at a 28.7\% accuracy rate (chance = 17.59\%).
 When investigating the pairs of stimuli that were most easily classified, there was no relationship to the energy attribute (calculated using EchoNest) of each musical piece (i.e., pieces with the most different energy levels were not more easily classifed). 
-However, our neural network failed when applied to data collected during imagination of music.
+When applied to data collected during imagination of music, our neural network failed.
 The confusion matrix produced by the network (\autoref{fig:model_W_confusion_cond2}) is similar to what one would expect when trying to classify noise.
 This result indicates that the system was not systematically misclassifying stimuli.
 
@@ -47,7 +47,7 @@ It is impossible to know whether the network's solution is the global minimum --
 %It may be possible to uncover the global minimum of the problem, but there is no way to be sure that the global minimum has been reached.
 Second, interpretation is difficult because a solution is reached based on parameters set by the researcher. 
 It is not possible to untangle whether aspects of the solution are necessary for solving the problem or if they are influenced by the chosen network architecture. 
-Lastly, artificial neural networks, like the one used in this experiment, are \emph{artificial}, and only superficially resemble the way a biological system processes information. 
+Lastly, convolutional neural networks, like the one used in this experiment, are \emph{artificial}, and only superficially resemble the way a biological system processes information. 
 It is not possible to know whether the way an artificial network solves a biological problem is the same way a biological system would solve it. 
 
 However, to investigate whether we could glean any brain-related information from our neural network (\autoref{fig:model_W}), we focused on whether the spatial or temporal filters could be related to any biological or musical characteristics.
