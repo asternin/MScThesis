@@ -65,6 +65,35 @@ Combrisson, E.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Deng%
+\ \BBA {} Yu%
+}{%
+Deng%
+\ \BBA {} Yu%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+deng2014deep}
+\APACinsertmetastar {%
+deng2014deep}%
+\begin{APACrefauthors}%
+Deng, L.%
+\BCBT {}\ \BBA {} Yu, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep Learning: Methods and Applications} {Deep learning:
+  Methods and applications}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Foundations and Trends in Signal
+  Processing}{7}{3--4}{197-387}.
+\newblock
+\begin{APACrefDOI} \doi{10.1561/2000000039} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Ellis%
 , Whitman%
 , Jehan%
@@ -376,6 +405,34 @@ Kraemer, D\BPBI J\BPBI M.%
 \APACjournalVolNumPages{Nature}{434}{7030}{158}.
 \newblock
 \begin{APACrefDOI} \doi{10.1038/434158a} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+LeCun%
+, Bengio%
+\BCBL {}\ \BBA {} Hinton%
+}{%
+LeCun%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+LeCun2015}
+\APACinsertmetastar {%
+LeCun2015}%
+\begin{APACrefauthors}%
+LeCun, Y.%
+, Bengio, Y.%
+\BCBL {}\ \BBA {} Hinton, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{may}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Deep learning}} {{Deep learning}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature}{521}{7553}{436--444}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/nature14539} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
